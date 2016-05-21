@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A8219991CDABC1500F34441 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8219981CDABC1500F34441 /* AudioToolbox.framework */; };
+		0AA1B6F01CB6D83D00A594E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1B6EF1CB6D83D00A594E1 /* main.m */; };
+		0AA1B6F31CB6D83D00A594E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1B6F21CB6D83D00A594E1 /* AppDelegate.m */; };
+		0AA1B6F61CB6D83D00A594E1 /* MirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1B6F51CB6D83D00A594E1 /* MirrorViewController.m */; };
+		0AA1B6F91CB6D83D00A594E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA1B6F71CB6D83D00A594E1 /* Main.storyboard */; };
+		0AA1B6FB1CB6D83D00A594E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA1B6FA1CB6D83D00A594E1 /* Images.xcassets */; };
+		0AA1B6FE1CB6D83D00A594E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA1B6FC1CB6D83D00A594E1 /* LaunchScreen.xib */; };
+		0AA1B70A1CB6D83D00A594E1 /* BeastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1B7091CB6D83D00A594E1 /* BeastTests.m */; };
+		0AB420B81CD4AD7D008B66BD /* WorkoutVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB420B71CD4AD7D008B66BD /* WorkoutVideoViewController.m */; };
+		0ADA768D1CCB27A100E39F39 /* BeastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA768C1CCB27A100E39F39 /* BeastViewController.m */; };
+		0ADA76901CCB2BEA00E39F39 /* BeastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA768F1CCB2BEA00E39F39 /* BeastCell.m */; };
+		0AEED6051CD58C86003DCDE7 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEED6021CD58C86003DCDE7 /* Lato-Light.ttf */; };
+		0AEED6061CD58C86003DCDE7 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEED6031CD58C86003DCDE7 /* Lato-Regular.ttf */; };
+		0AEED6071CD58C86003DCDE7 /* MyriadPro-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEED6041CD58C86003DCDE7 /* MyriadPro-BoldIt.otf */; };
+		CDD265D5D987F8460F81341D /* Pods_Beast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D592D644BCFD69B595A9BA9D /* Pods_Beast.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AA1B7041CB6D83D00A594E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AA1B6E21CB6D83C00A594E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AA1B6E91CB6D83D00A594E1;
+			remoteInfo = Beast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A8219981CDABC1500F34441 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0AA1B6EA1CB6D83D00A594E1 /* Beast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA1B6EE1CB6D83D00A594E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AA1B6EF1CB6D83D00A594E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0AA1B6F11CB6D83D00A594E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0AA1B6F21CB6D83D00A594E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0AA1B6F41CB6D83D00A594E1 /* MirrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MirrorViewController.h; sourceTree = "<group>"; };
+		0AA1B6F51CB6D83D00A594E1 /* MirrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MirrorViewController.m; sourceTree = "<group>"; };
+		0AA1B6F81CB6D83D00A594E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0AA1B6FA1CB6D83D00A594E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0AA1B6FD1CB6D83D00A594E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		0AA1B7031CB6D83D00A594E1 /* BeastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA1B7081CB6D83D00A594E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AA1B7091CB6D83D00A594E1 /* BeastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeastTests.m; sourceTree = "<group>"; };
+		0AB420B61CD4AD7D008B66BD /* WorkoutVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutVideoViewController.h; sourceTree = "<group>"; };
+		0AB420B71CD4AD7D008B66BD /* WorkoutVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutVideoViewController.m; sourceTree = "<group>"; };
+		0ADA768B1CCB27A100E39F39 /* BeastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeastViewController.h; sourceTree = "<group>"; };
+		0ADA768C1CCB27A100E39F39 /* BeastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeastViewController.m; sourceTree = "<group>"; };
+		0ADA768E1CCB2BEA00E39F39 /* BeastCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeastCell.h; sourceTree = "<group>"; };
+		0ADA768F1CCB2BEA00E39F39 /* BeastCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeastCell.m; sourceTree = "<group>"; };
+		0AEED6021CD58C86003DCDE7 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		0AEED6031CD58C86003DCDE7 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		0AEED6041CD58C86003DCDE7 /* MyriadPro-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-BoldIt.otf"; sourceTree = "<group>"; };
+		4F4E57935EE9814B0B9E30A2 /* Pods-Beast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beast/Pods-Beast.debug.xcconfig"; sourceTree = "<group>"; };
+		D592D644BCFD69B595A9BA9D /* Pods_Beast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9CFB6C61BE557775096B841 /* Pods-Beast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beast/Pods-Beast.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AA1B6E71CB6D83D00A594E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A8219991CDABC1500F34441 /* AudioToolbox.framework in Frameworks */,
+				CDD265D5D987F8460F81341D /* Pods_Beast.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA1B7001CB6D83D00A594E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AA1B6E11CB6D83C00A594E1 = {
+			isa = PBXGroup;
+			children = (
+				0AA1B6EC1CB6D83D00A594E1 /* Beast */,
+				0AA1B7061CB6D83D00A594E1 /* BeastTests */,
+				0AA1B6EB1CB6D83D00A594E1 /* Products */,
+				EB4E5D6511AB806F74A7EC92 /* Pods */,
+				97872D4F93C9EB96765FD48E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0AA1B6EB1CB6D83D00A594E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AA1B6EA1CB6D83D00A594E1 /* Beast.app */,
+				0AA1B7031CB6D83D00A594E1 /* BeastTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AA1B6EC1CB6D83D00A594E1 /* Beast */ = {
+			isa = PBXGroup;
+			children = (
+				0AEED6081CD58C8C003DCDE7 /* Resources */,
+				0AA1B6F11CB6D83D00A594E1 /* AppDelegate.h */,
+				0AA1B6F21CB6D83D00A594E1 /* AppDelegate.m */,
+				0ADA768B1CCB27A100E39F39 /* BeastViewController.h */,
+				0ADA768C1CCB27A100E39F39 /* BeastViewController.m */,
+				0ADA768E1CCB2BEA00E39F39 /* BeastCell.h */,
+				0ADA768F1CCB2BEA00E39F39 /* BeastCell.m */,
+				0AA1B6F71CB6D83D00A594E1 /* Main.storyboard */,
+				0AB420B61CD4AD7D008B66BD /* WorkoutVideoViewController.h */,
+				0AB420B71CD4AD7D008B66BD /* WorkoutVideoViewController.m */,
+				0AA1B6F41CB6D83D00A594E1 /* MirrorViewController.h */,
+				0AA1B6F51CB6D83D00A594E1 /* MirrorViewController.m */,
+				0AA1B6FA1CB6D83D00A594E1 /* Images.xcassets */,
+				0AA1B6FC1CB6D83D00A594E1 /* LaunchScreen.xib */,
+				0AA1B6ED1CB6D83D00A594E1 /* Supporting Files */,
+			);
+			path = Beast;
+			sourceTree = "<group>";
+		};
+		0AA1B6ED1CB6D83D00A594E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AA1B6EE1CB6D83D00A594E1 /* Info.plist */,
+				0AA1B6EF1CB6D83D00A594E1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AA1B7061CB6D83D00A594E1 /* BeastTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AA1B7091CB6D83D00A594E1 /* BeastTests.m */,
+				0AA1B7071CB6D83D00A594E1 /* Supporting Files */,
+			);
+			path = BeastTests;
+			sourceTree = "<group>";
+		};
+		0AA1B7071CB6D83D00A594E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AA1B7081CB6D83D00A594E1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0AEED6081CD58C8C003DCDE7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0AEED6021CD58C86003DCDE7 /* Lato-Light.ttf */,
+				0AEED6031CD58C86003DCDE7 /* Lato-Regular.ttf */,
+				0AEED6041CD58C86003DCDE7 /* MyriadPro-BoldIt.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		97872D4F93C9EB96765FD48E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A8219981CDABC1500F34441 /* AudioToolbox.framework */,
+				D592D644BCFD69B595A9BA9D /* Pods_Beast.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB4E5D6511AB806F74A7EC92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F4E57935EE9814B0B9E30A2 /* Pods-Beast.debug.xcconfig */,
+				D9CFB6C61BE557775096B841 /* Pods-Beast.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AA1B6E91CB6D83D00A594E1 /* Beast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AA1B70D1CB6D83D00A594E1 /* Build configuration list for PBXNativeTarget "Beast" */;
+			buildPhases = (
+				6CF8146FDA7AA080AEAD9EB6 /* Check Pods Manifest.lock */,
+				0AA1B6E61CB6D83D00A594E1 /* Sources */,
+				0AA1B6E71CB6D83D00A594E1 /* Frameworks */,
+				0AA1B6E81CB6D83D00A594E1 /* Resources */,
+				FD0B95643DB560FB0AC9174F /* Copy Pods Resources */,
+				54A31C2FBF252DA5638D1931 /* Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Beast;
+			productName = Beast;
+			productReference = 0AA1B6EA1CB6D83D00A594E1 /* Beast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0AA1B7021CB6D83D00A594E1 /* BeastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AA1B7101CB6D83D00A594E1 /* Build configuration list for PBXNativeTarget "BeastTests" */;
+			buildPhases = (
+				0AA1B6FF1CB6D83D00A594E1 /* Sources */,
+				0AA1B7001CB6D83D00A594E1 /* Frameworks */,
+				0AA1B7011CB6D83D00A594E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AA1B7051CB6D83D00A594E1 /* PBXTargetDependency */,
+			);
+			name = BeastTests;
+			productName = BeastTests;
+			productReference = 0AA1B7031CB6D83D00A594E1 /* BeastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AA1B6E21CB6D83C00A594E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Beast;
+				TargetAttributes = {
+					0AA1B6E91CB6D83D00A594E1 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = RXF26HQWHT;
+					};
+					0AA1B7021CB6D83D00A594E1 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 0AA1B6E91CB6D83D00A594E1;
+					};
+				};
+			};
+			buildConfigurationList = 0AA1B6E51CB6D83C00A594E1 /* Build configuration list for PBXProject "Beast" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0AA1B6E11CB6D83C00A594E1;
+			productRefGroup = 0AA1B6EB1CB6D83D00A594E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AA1B6E91CB6D83D00A594E1 /* Beast */,
+				0AA1B7021CB6D83D00A594E1 /* BeastTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AA1B6E81CB6D83D00A594E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA1B6F91CB6D83D00A594E1 /* Main.storyboard in Resources */,
+				0AA1B6FE1CB6D83D00A594E1 /* LaunchScreen.xib in Resources */,
+				0AEED6061CD58C86003DCDE7 /* Lato-Regular.ttf in Resources */,
+				0AEED6071CD58C86003DCDE7 /* MyriadPro-BoldIt.otf in Resources */,
+				0AA1B6FB1CB6D83D00A594E1 /* Images.xcassets in Resources */,
+				0AEED6051CD58C86003DCDE7 /* Lato-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA1B7011CB6D83D00A594E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54A31C2FBF252DA5638D1931 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beast/Pods-Beast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CF8146FDA7AA080AEAD9EB6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD0B95643DB560FB0AC9174F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beast/Pods-Beast-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AA1B6E61CB6D83D00A594E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA1B6F61CB6D83D00A594E1 /* MirrorViewController.m in Sources */,
+				0AA1B6F31CB6D83D00A594E1 /* AppDelegate.m in Sources */,
+				0AB420B81CD4AD7D008B66BD /* WorkoutVideoViewController.m in Sources */,
+				0ADA768D1CCB27A100E39F39 /* BeastViewController.m in Sources */,
+				0ADA76901CCB2BEA00E39F39 /* BeastCell.m in Sources */,
+				0AA1B6F01CB6D83D00A594E1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA1B6FF1CB6D83D00A594E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA1B70A1CB6D83D00A594E1 /* BeastTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AA1B7051CB6D83D00A594E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AA1B6E91CB6D83D00A594E1 /* Beast */;
+			targetProxy = 0AA1B7041CB6D83D00A594E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0AA1B6F71CB6D83D00A594E1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AA1B6F81CB6D83D00A594E1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0AA1B6FC1CB6D83D00A594E1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AA1B6FD1CB6D83D00A594E1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0AA1B70B1CB6D83D00A594E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0AA1B70C1CB6D83D00A594E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0AA1B70E1CB6D83D00A594E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F4E57935EE9814B0B9E30A2 /* Pods-Beast.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Beast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Beast.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		0AA1B70F1CB6D83D00A594E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9CFB6C61BE557775096B841 /* Pods-Beast.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Beast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Beast.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		0AA1B7111CB6D83D00A594E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BeastTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Beast.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beast.app/Beast";
+			};
+			name = Debug;
+		};
+		0AA1B7121CB6D83D00A594E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BeastTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Beast.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beast.app/Beast";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AA1B6E51CB6D83C00A594E1 /* Build configuration list for PBXProject "Beast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA1B70B1CB6D83D00A594E1 /* Debug */,
+				0AA1B70C1CB6D83D00A594E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA1B70D1CB6D83D00A594E1 /* Build configuration list for PBXNativeTarget "Beast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA1B70E1CB6D83D00A594E1 /* Debug */,
+				0AA1B70F1CB6D83D00A594E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA1B7101CB6D83D00A594E1 /* Build configuration list for PBXNativeTarget "BeastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA1B7111CB6D83D00A594E1 /* Debug */,
+				0AA1B7121CB6D83D00A594E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AA1B6E21CB6D83C00A594E1 /* Project object */;
+}

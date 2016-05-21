@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Firebase.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PBJVideoPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Beast.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0B218D291DA6BA6719E6892A395710A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3E576B92DE44C67EC70F68871ACDD491</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C7CA2F1F64BA5A1CA5B086F7ACE9BB64</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D887A9EC54E4371846FA7E0B4B5148D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

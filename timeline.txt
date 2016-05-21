@@ -1,0 +1,13 @@
+1. April 22nd - 
+
+Manu : 
+- learn how to connect Google App Engine and iOS together (should be pretty straight forward hopefully)
+- create a mock app which plays video stored on App Engine to test how quickly can we load videos - 
+- get basic chat interface running on the app 
+- figure out how to make UI changes to the standard message UI offered by the API ~ check out layer.com  
+
+Kevin : add your deliverables :) bro -> lol at 'deliverables' 
+- share dropbox folder with all designs
+- streamline 3 screens - mirror, workout, gym - on sketch based on new insights
+- learn Swift syntax
+- create a prototype for mirror/workout screen on iOS

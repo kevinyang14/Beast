@@ -1,0 +1,18 @@
+PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - Firebase (2.5.1)
+  - PBJVideoPlayer (0.3.1)
+
+DEPENDENCIES:
+  - ChameleonFramework
+  - Firebase (>= 2.5.1a)
+  - PBJVideoPlayer
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
+  PBJVideoPlayer: b1dfee170c1fd6b0a434c1f1c1583dcd1d836d9f
+
+COCOAPODS: 0.38.0
