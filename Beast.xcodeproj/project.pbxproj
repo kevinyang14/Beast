@@ -21,6 +21,9 @@
 		0AEED6051CD58C86003DCDE7 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEED6021CD58C86003DCDE7 /* Lato-Light.ttf */; };
 		0AEED6061CD58C86003DCDE7 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEED6031CD58C86003DCDE7 /* Lato-Regular.ttf */; };
 		0AEED6071CD58C86003DCDE7 /* MyriadPro-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEED6041CD58C86003DCDE7 /* MyriadPro-BoldIt.otf */; };
+		324BF5321CFADBB300E58541 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324BF5311CFADBB300E58541 /* Spotify.framework */; };
+		324BF5341CFADBEA00E58541 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324BF5331CFADBEA00E58541 /* AVFoundation.framework */; };
+		324BF5361CFADBF100E58541 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324BF5351CFADBF100E58541 /* SystemConfiguration.framework */; };
 		CDD265D5D987F8460F81341D /* Pods_Beast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D592D644BCFD69B595A9BA9D /* Pods_Beast.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -58,6 +61,9 @@
 		0AEED6021CD58C86003DCDE7 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		0AEED6031CD58C86003DCDE7 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		0AEED6041CD58C86003DCDE7 /* MyriadPro-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-BoldIt.otf"; sourceTree = "<group>"; };
+		324BF5311CFADBB300E58541 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spotify.framework; path = "ios-sdk-deploy-beta-16/Spotify.framework"; sourceTree = "<group>"; };
+		324BF5331CFADBEA00E58541 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		324BF5351CFADBF100E58541 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4F4E57935EE9814B0B9E30A2 /* Pods-Beast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beast/Pods-Beast.debug.xcconfig"; sourceTree = "<group>"; };
 		D592D644BCFD69B595A9BA9D /* Pods_Beast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9CFB6C61BE557775096B841 /* Pods-Beast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beast/Pods-Beast.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,7 +74,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324BF5361CFADBF100E58541 /* SystemConfiguration.framework in Frameworks */,
+				324BF5341CFADBEA00E58541 /* AVFoundation.framework in Frameworks */,
 				0A8219991CDABC1500F34441 /* AudioToolbox.framework in Frameworks */,
+				324BF5321CFADBB300E58541 /* Spotify.framework in Frameworks */,
 				CDD265D5D987F8460F81341D /* Pods_Beast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +173,9 @@
 		97872D4F93C9EB96765FD48E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				324BF5351CFADBF100E58541 /* SystemConfiguration.framework */,
+				324BF5331CFADBEA00E58541 /* AVFoundation.framework */,
+				324BF5311CFADBB300E58541 /* Spotify.framework */,
 				0A8219981CDABC1500F34441 /* AudioToolbox.framework */,
 				D592D644BCFD69B595A9BA9D /* Pods_Beast.framework */,
 			);
@@ -469,6 +481,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ios-sdk-deploy-beta-16",
+				);
 				INFOPLIST_FILE = Beast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Beast.$(PRODUCT_NAME:rfc1034identifier)";
@@ -484,6 +500,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ios-sdk-deploy-beta-16",
+				);
 				INFOPLIST_FILE = Beast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Beast.$(PRODUCT_NAME:rfc1034identifier)";

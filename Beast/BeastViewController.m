@@ -22,8 +22,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-
 }
+
+//- (IBAction)oneTouchWorkout:(id)sender {
+//    
+//}
 
 - (NSMutableArray *)workoutsArray{
     if(!_workoutsArray){

@@ -62,7 +62,7 @@
 
 - (void)playVideo{
 //    [self.videoPlayerController stop];
-    NSString *url = [NSString stringWithFormat:@"http://manuchopra.in/videos/%d.mp4", self.videoCount];
+    NSString *url = [NSString stringWithFormat:@"http://yangkev.in/videos/%d.mov", self.videoCount];
     self.videoPlayerController.videoPath = url;
     [self.videoPlayerController playFromBeginning];
 }
