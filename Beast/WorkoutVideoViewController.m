@@ -7,9 +7,11 @@
 //
 
 #import "WorkoutVideoViewController.h"
+//#import <PBJVideoPlayer/PBJVideoPlayer.h>
+
 #import <PBJVideoPlayer/PBJVideoPlayer.h>
 #import <QuartzCore/QuartzCore.h>
-#import <ChameleonFramework/Chameleon.h>
+#import "ChameleonFramework/Chameleon.h"
 #import <AudioToolbox/AudioServices.h>
 
 @interface WorkoutVideoViewController () <PBJVideoPlayerControllerDelegate>
@@ -19,6 +21,7 @@
 @end
 
 @implementation WorkoutVideoViewController
+@synthesize exerciseArray = _exerciseArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,7 +37,7 @@
     //gesture recognizers
     [self setupSwipeGestureRecognizer];
     [self setupTapGestureRecognizer];
-
+    self.videoCount = 0;
 }
 
 
@@ -57,12 +60,12 @@
     [self addChildViewController:self.videoPlayerController];
     [self.view addSubview:self.videoPlayerController.view];
     [self.videoPlayerController didMoveToParentViewController:self];
-    self.videoCount = 1;
 }
 
 - (void)playVideo{
 //    [self.videoPlayerController stop];
-    NSString *url = [NSString stringWithFormat:@"http://manuchopra.in/videos/%d.mp4", self.videoCount];
+    int exerciseID = [[self.exerciseArray objectAtIndex:self.videoCount] intValue];
+    NSString *url = [NSString stringWithFormat:@"http://yangkev.in/videos/%d.m4v", exerciseID];
     self.videoPlayerController.videoPath = url;
     [self.videoPlayerController playFromBeginning];
 }
@@ -129,7 +132,10 @@
 }
 
 - (void)playNextVideo{
-    self.videoCount++;
+    if(self.videoCount < [self.exerciseArray count]-1){
+        self.videoCount++;
+        NSLog(@"%d", self.videoCount);
+    }
     [self playVideo];
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
@@ -139,10 +145,18 @@
     return YES;
 }
 
+- (UIColor *) color1 {return HexColor(@"#76F6E5");}
+
+- (UIColor *) color2 {return HexColor(@"#00C6FE");}
+
+
+/*
+
 - (UIColor *) color1 {return [[UIColor alloc] initWithRed:238.0/255.0 green:205.0/255.0 blue:163.0/255.0 alpha:1];}
 
 - (UIColor *) color2 {return [[UIColor alloc] initWithRed:239.0/255.0 green:98.0/255.0 blue:159.0/255.0 alpha:1];}
 
+ */
 
 /*
 #pragma mark - Navigation

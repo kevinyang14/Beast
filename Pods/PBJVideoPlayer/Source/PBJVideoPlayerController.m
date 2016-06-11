@@ -476,9 +476,6 @@ typedef void (^PBJVideoPlayerBlock)();
             [_delegate videoPlayerPlaybackDidEnd:self];
         }
     }
-
-    //LOOP VIDEO
-    [self playFromBeginning];
 }
 
 - (void)_playerItemFailedToPlayToEndTime:(NSNotification *)aNotification

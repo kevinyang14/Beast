@@ -14,10 +14,11 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lion" translatesAutoresizingMaskIntoConstraints="NO" id="cha-Fh-pL4">
-                    <rect key="frame" x="192" y="190" width="96" height="100"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tiger" translatesAutoresizingMaskIntoConstraints="NO" id="cha-Fh-pL4">
+                    <rect key="frame" x="193" y="190" width="94" height="100"/>
+                    <color key="backgroundColor" red="0.12615052379307112" green="0.97580363711605234" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="cha-Fh-pL4" secondAttribute="height" multiplier="24:25" id="GKT-TG-EtQ"/>
+                        <constraint firstAttribute="width" secondItem="cha-Fh-pL4" secondAttribute="height" multiplier="24:25" constant="-2" id="GKT-TG-EtQ"/>
                         <constraint firstAttribute="width" secondItem="cha-Fh-pL4" secondAttribute="height" multiplier="24:25" id="HZQ-3d-Qyt"/>
                         <constraint firstAttribute="height" constant="100" id="g9M-in-cwU"/>
                         <constraint firstAttribute="width" constant="96" id="kjL-3Z-R3A"/>
@@ -33,10 +34,10 @@
                     </variation>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.97670525312423706" green="0.60546392202377319" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.12615052379307112" green="0.97580363711605234" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="cha-Fh-pL4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BUw-zk-kO6"/>
-                <constraint firstItem="cha-Fh-pL4" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.2" id="HMy-xm-Hl7"/>
+                <constraint firstItem="cha-Fh-pL4" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.2" constant="-2" id="HMy-xm-Hl7"/>
                 <constraint firstAttribute="centerY" secondItem="cha-Fh-pL4" secondAttribute="centerY" id="SU8-th-zmN"/>
                 <constraint firstItem="cha-Fh-pL4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WMW-PL-622"/>
                 <constraint firstAttribute="centerX" secondItem="cha-Fh-pL4" secondAttribute="centerX" id="ecH-YX-0Fa"/>
@@ -57,6 +58,6 @@
         </view>
     </objects>
     <resources>
-        <image name="lion" width="156" height="165"/>
+        <image name="tiger" width="115" height="124"/>
     </resources>
 </document>

@@ -86,7 +86,7 @@
                                             <outlet property="numViewsLabel" destination="ZpI-6c-mLf" id="ArM-86-l4Q"/>
                                             <outlet property="workoutLabel" destination="JpR-tq-d6G" id="UIu-7I-r6q"/>
                                             <outlet property="workoutPhoto" destination="rL7-kK-o7j" id="KK6-6f-tuy"/>
-                                            <segue destination="8F6-pU-UHl" kind="modal" id="4MM-Tj-748"/>
+                                            <segue destination="8F6-pU-UHl" kind="modal" identifier="blastSegue" id="4MM-Tj-748"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -102,7 +102,7 @@
                                     <constraint firstAttribute="width" secondItem="QbC-iK-YUA" secondAttribute="height" multiplier="83:18" id="RQn-7U-Zk6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
-                                <state key="normal" title="workout" backgroundImage="button">
+                                <state key="normal" title="workout" backgroundImage="button2">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -164,6 +164,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="button" width="313" height="68"/>
+        <image name="button2" width="313" height="68"/>
     </resources>
 </document>

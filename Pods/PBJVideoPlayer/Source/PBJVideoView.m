@@ -52,7 +52,7 @@
 
 - (void)setVideoFillMode:(NSString *)videoFillMode
 {
-	[self playerLayer].videoGravity = AVLayerVideoGravityResizeAspectFill;
+	[self playerLayer].videoGravity = videoFillMode;
 }
 
 - (NSString *)videoFillMode

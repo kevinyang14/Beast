@@ -7,24 +7,22 @@
 //
 
 #import "AppDelegate.h"
-#import <Firebase/Firebase.h>
-
+//#import <Firebase/Firebase.h>
+@import Firebase;
 @interface AppDelegate ()
-
 @end
 
-static NSString * const kFirebaseURL = @"https://beast.firebaseio.com";
+//static NSString * const kFirebaseURL = @"https://beast.firebaseio.com";
 
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    NSString *videoURL = [NSString stringWithFormat:@"%@/videos", kFirebaseURL];
-    Firebase *myRootRef = [[Firebase alloc] initWithUrl:videoURL];
-    [myRootRef setValue:@"Steph Curry Workout."];
-    
+//    NSString *videoURL = [NSString stringWithFormat:@"%@/workouts", kFirebaseURL];
+//    Firebase *myRootRef = [[Firebase alloc] initWithUrl:videoURL];
+//    [myRootRef setValue:@"Steph Curry Workout."];
+    [FIRApp configure];
     return YES;
 }
 

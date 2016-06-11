@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A56A0511D07E031004BBA7E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A56A0501D07E031004BBA7E /* GoogleService-Info.plist */; };
+		0A56A0521D07E275004BBA7E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A56A0501D07E031004BBA7E /* GoogleService-Info.plist */; };
+		0A5AE27A1D08D35E001A23BC /* BeastWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5AE2791D08D35E001A23BC /* BeastWorkout.m */; };
 		0A8219991CDABC1500F34441 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8219981CDABC1500F34441 /* AudioToolbox.framework */; };
 		0AA1B6F01CB6D83D00A594E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1B6EF1CB6D83D00A594E1 /* main.m */; };
 		0AA1B6F31CB6D83D00A594E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1B6F21CB6D83D00A594E1 /* AppDelegate.m */; };
@@ -21,7 +24,8 @@
 		0AEED6051CD58C86003DCDE7 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEED6021CD58C86003DCDE7 /* Lato-Light.ttf */; };
 		0AEED6061CD58C86003DCDE7 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEED6031CD58C86003DCDE7 /* Lato-Regular.ttf */; };
 		0AEED6071CD58C86003DCDE7 /* MyriadPro-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEED6041CD58C86003DCDE7 /* MyriadPro-BoldIt.otf */; };
-		CDD265D5D987F8460F81341D /* Pods_Beast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D592D644BCFD69B595A9BA9D /* Pods_Beast.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7647D8F4B415488C264A1054 /* libPods-BeastTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3082BE7E8B8CE5F9BC08CF99 /* libPods-BeastTests.a */; };
+		DB0E5080B17C697F7FC32A9F /* Pods_Beast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21419A6830616D952731A38B /* Pods_Beast.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A56A0501D07E031004BBA7E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0A5AE2781D08D35E001A23BC /* BeastWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeastWorkout.h; sourceTree = "<group>"; };
+		0A5AE2791D08D35E001A23BC /* BeastWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeastWorkout.m; sourceTree = "<group>"; };
 		0A8219981CDABC1500F34441 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0AA1B6EA1CB6D83D00A594E1 /* Beast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA1B6EE1CB6D83D00A594E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,9 +65,13 @@
 		0AEED6021CD58C86003DCDE7 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		0AEED6031CD58C86003DCDE7 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		0AEED6041CD58C86003DCDE7 /* MyriadPro-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-BoldIt.otf"; sourceTree = "<group>"; };
-		4F4E57935EE9814B0B9E30A2 /* Pods-Beast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beast/Pods-Beast.debug.xcconfig"; sourceTree = "<group>"; };
-		D592D644BCFD69B595A9BA9D /* Pods_Beast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9CFB6C61BE557775096B841 /* Pods-Beast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beast/Pods-Beast.release.xcconfig"; sourceTree = "<group>"; };
+		1455833F491916DF93D2102D /* Pods-BeastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeastTests/Pods-BeastTests.debug.xcconfig"; sourceTree = "<group>"; };
+		21419A6830616D952731A38B /* Pods_Beast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ABAFE56B93B825A2E848E8A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3082BE7E8B8CE5F9BC08CF99 /* libPods-BeastTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeastTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BF2BE9630EE44D2E6CC675F /* Pods-Beast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beast/Pods-Beast.debug.xcconfig"; sourceTree = "<group>"; };
+		4A9718D382A97895E5DD3F32 /* Pods-BeastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeastTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeastTests/Pods-BeastTests.release.xcconfig"; sourceTree = "<group>"; };
+		A6D2A6573F0E894B80CB1ADA /* Pods-Beast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beast/Pods-Beast.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8219991CDABC1500F34441 /* AudioToolbox.framework in Frameworks */,
-				CDD265D5D987F8460F81341D /* Pods_Beast.framework in Frameworks */,
+				DB0E5080B17C697F7FC32A9F /* Pods_Beast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7647D8F4B415488C264A1054 /* libPods-BeastTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,8 +101,8 @@
 				0AA1B6EC1CB6D83D00A594E1 /* Beast */,
 				0AA1B7061CB6D83D00A594E1 /* BeastTests */,
 				0AA1B6EB1CB6D83D00A594E1 /* Products */,
-				EB4E5D6511AB806F74A7EC92 /* Pods */,
 				97872D4F93C9EB96765FD48E /* Frameworks */,
+				1F34676A2C94801ABDEBF29B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +130,8 @@
 				0AB420B71CD4AD7D008B66BD /* WorkoutVideoViewController.m */,
 				0AA1B6F41CB6D83D00A594E1 /* MirrorViewController.h */,
 				0AA1B6F51CB6D83D00A594E1 /* MirrorViewController.m */,
+				0A5AE2781D08D35E001A23BC /* BeastWorkout.h */,
+				0A5AE2791D08D35E001A23BC /* BeastWorkout.m */,
 				0AA1B6FA1CB6D83D00A594E1 /* Images.xcassets */,
 				0AA1B6FC1CB6D83D00A594E1 /* LaunchScreen.xib */,
 				0AA1B6ED1CB6D83D00A594E1 /* Supporting Files */,
@@ -128,6 +142,7 @@
 		0AA1B6ED1CB6D83D00A594E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0A56A0501D07E031004BBA7E /* GoogleService-Info.plist */,
 				0AA1B6EE1CB6D83D00A594E1 /* Info.plist */,
 				0AA1B6EF1CB6D83D00A594E1 /* main.m */,
 			);
@@ -161,22 +176,26 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		1F34676A2C94801ABDEBF29B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BF2BE9630EE44D2E6CC675F /* Pods-Beast.debug.xcconfig */,
+				A6D2A6573F0E894B80CB1ADA /* Pods-Beast.release.xcconfig */,
+				1455833F491916DF93D2102D /* Pods-BeastTests.debug.xcconfig */,
+				4A9718D382A97895E5DD3F32 /* Pods-BeastTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		97872D4F93C9EB96765FD48E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				0A8219981CDABC1500F34441 /* AudioToolbox.framework */,
-				D592D644BCFD69B595A9BA9D /* Pods_Beast.framework */,
+				2ABAFE56B93B825A2E848E8A /* Pods.framework */,
+				21419A6830616D952731A38B /* Pods_Beast.framework */,
+				3082BE7E8B8CE5F9BC08CF99 /* libPods-BeastTests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EB4E5D6511AB806F74A7EC92 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4F4E57935EE9814B0B9E30A2 /* Pods-Beast.debug.xcconfig */,
-				D9CFB6C61BE557775096B841 /* Pods-Beast.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,12 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AA1B70D1CB6D83D00A594E1 /* Build configuration list for PBXNativeTarget "Beast" */;
 			buildPhases = (
-				6CF8146FDA7AA080AEAD9EB6 /* Check Pods Manifest.lock */,
+				0C44D98FEA5EDB75B1AC53ED /* [CP] Check Pods Manifest.lock */,
 				0AA1B6E61CB6D83D00A594E1 /* Sources */,
 				0AA1B6E71CB6D83D00A594E1 /* Frameworks */,
 				0AA1B6E81CB6D83D00A594E1 /* Resources */,
-				FD0B95643DB560FB0AC9174F /* Copy Pods Resources */,
-				54A31C2FBF252DA5638D1931 /* Embed Pods Frameworks */,
+				61F0197FF1997B09A0CFAFC2 /* [CP] Embed Pods Frameworks */,
+				30E5AAE816C2E1FA0F56B1D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AA1B7101CB6D83D00A594E1 /* Build configuration list for PBXNativeTarget "BeastTests" */;
 			buildPhases = (
+				0E91CA7C98E49415CB53E752 /* [CP] Check Pods Manifest.lock */,
 				0AA1B6FF1CB6D83D00A594E1 /* Sources */,
 				0AA1B7001CB6D83D00A594E1 /* Frameworks */,
 				0AA1B7011CB6D83D00A594E1 /* Resources */,
+				1466557F943E2A888EE729F4 /* [CP] Embed Pods Frameworks */,
+				D1A44F55D067E815C211D4BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -269,6 +291,7 @@
 				0AEED6071CD58C86003DCDE7 /* MyriadPro-BoldIt.otf in Resources */,
 				0AA1B6FB1CB6D83D00A594E1 /* Images.xcassets in Resources */,
 				0AEED6051CD58C86003DCDE7 /* Lato-Light.ttf in Resources */,
+				0A56A0511D07E031004BBA7E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,35 +299,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A56A0521D07E275004BBA7E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		54A31C2FBF252DA5638D1931 /* Embed Pods Frameworks */ = {
+		0C44D98FEA5EDB75B1AC53ED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beast/Pods-Beast-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6CF8146FDA7AA080AEAD9EB6 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,19 +321,79 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FD0B95643DB560FB0AC9174F /* Copy Pods Resources */ = {
+		0E91CA7C98E49415CB53E752 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1466557F943E2A888EE729F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeastTests/Pods-BeastTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30E5AAE816C2E1FA0F56B1D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beast/Pods-Beast-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61F0197FF1997B09A0CFAFC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beast/Pods-Beast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1A44F55D067E815C211D4BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeastTests/Pods-BeastTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -337,6 +406,7 @@
 				0AA1B6F61CB6D83D00A594E1 /* MirrorViewController.m in Sources */,
 				0AA1B6F31CB6D83D00A594E1 /* AppDelegate.m in Sources */,
 				0AB420B81CD4AD7D008B66BD /* WorkoutVideoViewController.m in Sources */,
+				0A5AE27A1D08D35E001A23BC /* BeastWorkout.m in Sources */,
 				0ADA768D1CCB27A100E39F39 /* BeastViewController.m in Sources */,
 				0ADA76901CCB2BEA00E39F39 /* BeastCell.m in Sources */,
 				0AA1B6F01CB6D83D00A594E1 /* main.m in Sources */,
@@ -464,14 +534,27 @@
 		};
 		0AA1B70E1CB6D83D00A594E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F4E57935EE9814B0B9E30A2 /* Pods-Beast.debug.xcconfig */;
+			baseConfigurationReference = 3BF2BE9630EE44D2E6CC675F /* Pods-Beast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Headers",
+					"“${PODS_ROOT}/”/**",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+				);
 				INFOPLIST_FILE = Beast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Beast.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BeastApp.Beast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -479,14 +562,27 @@
 		};
 		0AA1B70F1CB6D83D00A594E1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9CFB6C61BE557775096B841 /* Pods-Beast.release.xcconfig */;
+			baseConfigurationReference = A6D2A6573F0E894B80CB1ADA /* Pods-Beast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/Headers",
+					"“${PODS_ROOT}/”/**",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseInstanceID\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleInterchangeUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleSymbolUtilities\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleUtilities\"",
+				);
 				INFOPLIST_FILE = Beast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Beast.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BeastApp.Beast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -494,12 +590,10 @@
 		};
 		0AA1B7111CB6D83D00A594E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1455833F491916DF93D2102D /* Pods-BeastTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -514,12 +608,10 @@
 		};
 		0AA1B7121CB6D83D00A594E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A9718D382A97895E5DD3F32 /* Pods-BeastTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BeastTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Beast.$(PRODUCT_NAME:rfc1034identifier)";
