@@ -56,7 +56,6 @@
     self.videoPlayerController.delegate = self;
     self.videoPlayerController.view.frame = self.view.bounds;
     self.videoPlayerController.muted = YES;
-    
     [self addChildViewController:self.videoPlayerController];
     [self.view addSubview:self.videoPlayerController.view];
     [self.videoPlayerController didMoveToParentViewController:self];
@@ -70,9 +69,19 @@
     [self.videoPlayerController playFromBeginning];
 }
 
+- (void)playNextVideo{
+    //play next video, if there are videos left to play
+    if(self.videoCount < [self.exerciseArray count]) {
+        self.videoCount++;
+        [self playVideo];
+        [self incrementProgressBar];
+    }
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
+
 #pragma mark delegate methods
 - (void)videoPlayerPlaybackWillStartFromBeginning:(PBJVideoPlayerController *)videoPlayer{
-    NSLog(@"VIDEO WILL START");
+//    NSLog(@"VIDEO WILL START");
 }
 
 #pragma mark ProgressBar
@@ -89,18 +98,49 @@
 }
 
 - (void)drawProgressBar{
-    self.progressBarLayer.strokeColor = ([UIColor colorWithGradientStyle:UIGradientStyleLeftToRight
-                                                              withFrame:self.view.frame
-                                                              andColors:@[[self color1],[self color2]]]).CGColor;
+   //    self.progressBarLayer.strokeColor = ([UIColor colorWithGradientStyle:UIGradientStyleLeftToRight
+//                                                              withFrame:self.view.frame
+//                                                              andColors:@[[self color1],[self color2]]]).CGColor;
 
-//    CABasicAnimation *strokeAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+//    CABasicAnimation *strokeAnimation = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
+//    strokeAnimation.delegate = self;
+//    strokeAnimation.duration = 30.0;
+//    strokeAnimation.fromValue = [NSNumber numberWithFloat:1.0f];
+//    strokeAnimation.toValue = [NSNumber numberWithFloat:0.0f];
+//    [self.progressBarLayer addAnimation:strokeAnimation forKey:@"strokeEndAnimation"];
+}
+
+- (void)incrementProgressBar{
+    float pastVideoNum = (float)self.videoCount;
+    float presentVideoNum = (float)self.videoCount+1.0;
+    float totalVideoNum = (float)[self.exerciseArray count];
+    NSLog(@"pastVideoNum %f \n presentVideoNum: %f \n totalVideoNum %f \n ", pastVideoNum, presentVideoNum, totalVideoNum);
+    float startValue = 1.0 - (float)(pastVideoNum/totalVideoNum);
+    float endValue = 1.0 - (float)(presentVideoNum/totalVideoNum);
+    NSLog(@"startValue %f, endValue %f", startValue, endValue);
     CABasicAnimation *strokeAnimation = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
     strokeAnimation.delegate = self;
-    strokeAnimation.duration = 30.0;
-    strokeAnimation.fromValue = [NSNumber numberWithFloat:1.0f];
-    strokeAnimation.toValue = [NSNumber numberWithFloat:0.0f];
-    [self.progressBarLayer addAnimation:strokeAnimation forKey:@"strokeEndAnimation"];
+    strokeAnimation.duration = 1.0;
+    strokeAnimation.fromValue = [NSNumber numberWithFloat:startValue];
+    strokeAnimation.toValue = [NSNumber numberWithFloat:endValue];
+    strokeAnimation.timingFunction =[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    strokeAnimation.fillMode = kCAFillModeForwards;
+    strokeAnimation.removedOnCompletion = false;
+    [self.progressBarLayer addAnimation:strokeAnimation forKey:@"strokeStart"];
+    self.progressBarLayer.strokeColor = ([UIColor colorWithGradientStyle:UIGradientStyleLeftToRight
+                                                               withFrame:self.view.frame
+                                                               andColors:@[[self color1],[self color2]]]).CGColor;
 }
+
+#pragma mark ShakeGestureRecognizer
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    if(event.type == UIEventSubtypeMotionShake){
+        NSLog(@"SHAKE SHAKE/n");
+        [self playNextVideo];
+    }
+}
+
 
 #pragma mark SwipeGesture
 
@@ -114,6 +154,9 @@
     [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
 }
 
+
+#pragma mark TapGestureRecognizer
+
 - (void)setupTapGestureRecognizer{
     UITapGestureRecognizer* tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
     [self.view addGestureRecognizer:tapGestureRecognizer];
@@ -124,21 +167,7 @@
 }
 
 
-- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
-    if(event.type == UIEventSubtypeMotionShake){
-        NSLog(@"SHAKE SHAKE/n");
-        [self playNextVideo];
-    }
-}
 
-- (void)playNextVideo{
-    if(self.videoCount < [self.exerciseArray count]-1){
-        self.videoCount++;
-        NSLog(@"%d", self.videoCount);
-    }
-    [self playVideo];
-    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-}
 
 - (BOOL)canBecomeFirstResponder
 {
@@ -149,14 +178,6 @@
 
 - (UIColor *) color2 {return HexColor(@"#00C6FE");}
 
-
-/*
-
-- (UIColor *) color1 {return [[UIColor alloc] initWithRed:238.0/255.0 green:205.0/255.0 blue:163.0/255.0 alpha:1];}
-
-- (UIColor *) color2 {return [[UIColor alloc] initWithRed:239.0/255.0 green:98.0/255.0 blue:159.0/255.0 alpha:1];}
-
- */
 
 /*
 #pragma mark - Navigation
