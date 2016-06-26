@@ -7,16 +7,18 @@
 //
 
 #import "WorkoutVideoViewController.h"
-//#import <PBJVideoPlayer/PBJVideoPlayer.h>
-
 #import <PBJVideoPlayer/PBJVideoPlayer.h>
 #import <QuartzCore/QuartzCore.h>
 #import "ChameleonFramework/Chameleon.h"
 #import <AudioToolbox/AudioServices.h>
+#import "FirebaseRefs.h"
+
+@import Firebase;
 
 @interface WorkoutVideoViewController () <PBJVideoPlayerControllerDelegate>
 @property (nonatomic, strong) PBJVideoPlayerController *videoPlayerController;
 @property (strong, nonatomic) CAShapeLayer *progressBarLayer;
+@property (strong, nonatomic) FIRStorageReference *storageRef;
 @property int videoCount;
 @end
 
@@ -49,6 +51,8 @@
     [self drawProgressBar];
 }
 
+
+
 #pragma mark Video
 
 - (void)setupVideo{
@@ -61,13 +65,43 @@
     [self.videoPlayerController didMoveToParentViewController:self];
 }
 
+//- (void)playVideo{
+////    [self.videoPlayerController stop];
+//    int exerciseID = [[self.exerciseArray objectAtIndex:self.videoCount] intValue];
+//    NSString *url = [NSString stringWithFormat:@"http://yangkev.in/videos/%d.m4v", exerciseID];
+//    self.videoPlayerController.videoPath = url;
+//    [self.videoPlayerController playFromBeginning];
+//}
+
 - (void)playVideo{
-//    [self.videoPlayerController stop];
-    int exerciseID = [[self.exerciseArray objectAtIndex:self.videoCount] intValue];
-    NSString *url = [NSString stringWithFormat:@"http://yangkev.in/videos/%d.m4v", exerciseID];
-    self.videoPlayerController.videoPath = url;
+    NSNumber *exerciseNum = [self.exerciseArray objectAtIndex:self.videoCount] ;
+    NSURL *url = [FirebaseRefs videoLocalURL:exerciseNum];
+    NSString *urlPath = [url absoluteString];
+    self.videoPlayerController.videoPath = urlPath;
+    NSDictionary *fileDictionary = [[NSFileManager defaultManager] attributesOfItemAtPath:urlPath error: NULL];
+    NSNumber *size = [fileDictionary objectForKey:NSFileSize];
+    NSLog(@"file size %@", size);
+    [self printAllFiles];
+    
     [self.videoPlayerController playFromBeginning];
 }
+
+- (void)printAllFiles{
+    NSLog(@"printAllFiles");
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *bundleURL = [[NSBundle mainBundle] bundleURL];
+    NSArray *contents = [fileManager contentsOfDirectoryAtURL:bundleURL
+                                   includingPropertiesForKeys:@[]
+                                                      options:NSDirectoryEnumerationSkipsHiddenFiles
+                                                        error:nil];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"pathExtension == 'm4v'"];
+    for (NSURL *fileURL in [contents filteredArrayUsingPredicate:predicate]) {
+        // Enumerate each .png file in directory
+        NSLog(@"%@", fileURL);
+    }
+}
+
 
 - (void)playNextVideo{
     //play next video, if there are videos left to play
@@ -142,7 +176,9 @@
 }
 
 
-#pragma mark SwipeGesture
+#pragma mark Gesture Recognizers
+
+//Swipe
 
 - (void)setupSwipeGestureRecognizer{
     UISwipeGestureRecognizer* swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
@@ -155,7 +191,7 @@
 }
 
 
-#pragma mark TapGestureRecognizer
+//Tap
 
 - (void)setupTapGestureRecognizer{
     UITapGestureRecognizer* tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
@@ -167,7 +203,7 @@
 }
 
 
-
+#pragma mark Helper Methods
 
 - (BOOL)canBecomeFirstResponder
 {
@@ -175,7 +211,6 @@
 }
 
 - (UIColor *) color1 {return HexColor(@"#76F6E5");}
-
 - (UIColor *) color2 {return HexColor(@"#00C6FE");}
 
 

@@ -10,6 +10,6 @@
 
 @interface WorkoutVideoViewController : UIViewController
 
-@property (nonatomic, strong) NSMutableArray *exerciseArray;
+@property (nonatomic, strong) NSArray *exerciseArray;
 
 @end

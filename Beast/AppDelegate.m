@@ -19,10 +19,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    NSString *videoURL = [NSString stringWithFormat:@"%@/workouts", kFirebaseURL];
-//    Firebase *myRootRef = [[Firebase alloc] initWithUrl:videoURL];
-//    [myRootRef setValue:@"Steph Curry Workout."];
     [FIRApp configure];
+    [FIRDatabase database].persistenceEnabled = YES;
+    
+    //silence Auto-Layout warnings
+    [[NSUserDefaults standardUserDefaults] setValue:@(NO) forKey:@"_UIConstraintBasedLayoutLogUnsatisfiable"];
     return YES;
 }
 

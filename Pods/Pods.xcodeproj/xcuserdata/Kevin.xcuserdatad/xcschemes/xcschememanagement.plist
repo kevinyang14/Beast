@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>LLSimpleCamera-framework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>LLSimpleCamera-library.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PBJVideoPlayer-framework.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,17 +62,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7886EA234DFEF8FE05FAAE2DCC15FC03</key>
+		<key>574C6A919BA346E5A002E070E21057F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D7C5C067E53D323B0456853C9AC6751A</key>
+		<key>6F0C136FF2B38A3ACECFE1CC2EDF30FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C7065FFE7146BB7A5D9A5A8FA2EF4753</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>DF395F3D3A9534116E1F315DC6C78D50</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F93B3C55C24EB123805DACFD1762FC6C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

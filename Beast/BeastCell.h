@@ -10,7 +10,7 @@
 
 @interface BeastCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *workoutLabel;
-@property (weak, nonatomic) IBOutlet UILabel *beastLabel;
-@property (weak, nonatomic) IBOutlet UILabel *numViewsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lvlLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *workoutPhoto;
 @end

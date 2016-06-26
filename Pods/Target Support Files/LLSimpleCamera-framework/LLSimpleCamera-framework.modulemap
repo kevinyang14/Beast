@@ -1,0 +1,6 @@
+framework module LLSimpleCamera {
+  umbrella header "LLSimpleCamera-framework-umbrella.h"
+
+  export *
+  module * { export * }
+}

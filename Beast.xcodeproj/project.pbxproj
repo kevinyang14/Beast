@@ -10,10 +10,17 @@
 		0A56A0511D07E031004BBA7E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A56A0501D07E031004BBA7E /* GoogleService-Info.plist */; };
 		0A56A0521D07E275004BBA7E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A56A0501D07E031004BBA7E /* GoogleService-Info.plist */; };
 		0A5AE27A1D08D35E001A23BC /* BeastWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5AE2791D08D35E001A23BC /* BeastWorkout.m */; };
+		0A5AE27D1D1B9088001A23BC /* FirebaseRefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5AE27C1D1B9088001A23BC /* FirebaseRefs.m */; };
 		0A8219991CDABC1500F34441 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8219981CDABC1500F34441 /* AudioToolbox.framework */; };
+		0A880BDF1D1FD6CB00155296 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A880BDE1D1FD6CB00155296 /* ImageViewController.m */; };
+		0A880BE61D1FD6EA00155296 /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A880BE11D1FD6EA00155296 /* UIImage+Crop.m */; };
+		0A880BE71D1FD6EA00155296 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A880BE31D1FD6EA00155296 /* UIImage+Resize.m */; };
+		0A880BE81D1FD6EA00155296 /* ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A880BE51D1FD6EA00155296 /* ViewUtils.m */; };
+		0A8E06971D1D2EC700AAFAC7 /* MirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E06961D1D2EC700AAFAC7 /* MirrorViewController.m */; };
+		0A8E06991D1D378F00AAFAC7 /* Custom Slide Segues in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E06981D1D378F00AAFAC7 /* Custom Slide Segues */; };
+		0A8E069B1D1D8C0900AAFAC7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8E069A1D1D8C0900AAFAC7 /* QuartzCore.framework */; };
 		0AA1B6F01CB6D83D00A594E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1B6EF1CB6D83D00A594E1 /* main.m */; };
 		0AA1B6F31CB6D83D00A594E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1B6F21CB6D83D00A594E1 /* AppDelegate.m */; };
-		0AA1B6F61CB6D83D00A594E1 /* MirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1B6F51CB6D83D00A594E1 /* MirrorViewController.m */; };
 		0AA1B6F91CB6D83D00A594E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA1B6F71CB6D83D00A594E1 /* Main.storyboard */; };
 		0AA1B6FB1CB6D83D00A594E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AA1B6FA1CB6D83D00A594E1 /* Images.xcassets */; };
 		0AA1B6FE1CB6D83D00A594E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA1B6FC1CB6D83D00A594E1 /* LaunchScreen.xib */; };
@@ -42,14 +49,26 @@
 		0A56A0501D07E031004BBA7E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0A5AE2781D08D35E001A23BC /* BeastWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeastWorkout.h; sourceTree = "<group>"; };
 		0A5AE2791D08D35E001A23BC /* BeastWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeastWorkout.m; sourceTree = "<group>"; };
+		0A5AE27B1D1B9088001A23BC /* FirebaseRefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseRefs.h; sourceTree = "<group>"; };
+		0A5AE27C1D1B9088001A23BC /* FirebaseRefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseRefs.m; sourceTree = "<group>"; };
 		0A8219981CDABC1500F34441 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0A880BDD1D1FD6CB00155296 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		0A880BDE1D1FD6CB00155296 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		0A880BE01D1FD6EA00155296 /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
+		0A880BE11D1FD6EA00155296 /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
+		0A880BE21D1FD6EA00155296 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		0A880BE31D1FD6EA00155296 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		0A880BE41D1FD6EA00155296 /* ViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtils.h; sourceTree = "<group>"; };
+		0A880BE51D1FD6EA00155296 /* ViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUtils.m; sourceTree = "<group>"; };
+		0A8E06951D1D2EC700AAFAC7 /* MirrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MirrorViewController.h; sourceTree = "<group>"; };
+		0A8E06961D1D2EC700AAFAC7 /* MirrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MirrorViewController.m; sourceTree = "<group>"; };
+		0A8E06981D1D378F00AAFAC7 /* Custom Slide Segues */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Custom Slide Segues"; sourceTree = "<group>"; };
+		0A8E069A1D1D8C0900AAFAC7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0AA1B6EA1CB6D83D00A594E1 /* Beast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA1B6EE1CB6D83D00A594E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AA1B6EF1CB6D83D00A594E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0AA1B6F11CB6D83D00A594E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0AA1B6F21CB6D83D00A594E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0AA1B6F41CB6D83D00A594E1 /* MirrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MirrorViewController.h; sourceTree = "<group>"; };
-		0AA1B6F51CB6D83D00A594E1 /* MirrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MirrorViewController.m; sourceTree = "<group>"; };
 		0AA1B6F81CB6D83D00A594E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AA1B6FA1CB6D83D00A594E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0AA1B6FD1CB6D83D00A594E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -79,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8E069B1D1D8C0900AAFAC7 /* QuartzCore.framework in Frameworks */,
 				0A8219991CDABC1500F34441 /* AudioToolbox.framework in Frameworks */,
 				DB0E5080B17C697F7FC32A9F /* Pods_Beast.framework in Frameworks */,
 			);
@@ -95,6 +115,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A880BE91D1FD75500155296 /* ViewUtils */ = {
+			isa = PBXGroup;
+			children = (
+				0A880BDD1D1FD6CB00155296 /* ImageViewController.h */,
+				0A880BDE1D1FD6CB00155296 /* ImageViewController.m */,
+				0A880BE01D1FD6EA00155296 /* UIImage+Crop.h */,
+				0A880BE11D1FD6EA00155296 /* UIImage+Crop.m */,
+				0A880BE21D1FD6EA00155296 /* UIImage+Resize.h */,
+				0A880BE31D1FD6EA00155296 /* UIImage+Resize.m */,
+				0A880BE41D1FD6EA00155296 /* ViewUtils.h */,
+				0A880BE51D1FD6EA00155296 /* ViewUtils.m */,
+			);
+			name = ViewUtils;
+			sourceTree = "<group>";
+		};
 		0AA1B6E11CB6D83C00A594E1 = {
 			isa = PBXGroup;
 			children = (
@@ -121,17 +156,21 @@
 				0AEED6081CD58C8C003DCDE7 /* Resources */,
 				0AA1B6F11CB6D83D00A594E1 /* AppDelegate.h */,
 				0AA1B6F21CB6D83D00A594E1 /* AppDelegate.m */,
-				0ADA768B1CCB27A100E39F39 /* BeastViewController.h */,
-				0ADA768C1CCB27A100E39F39 /* BeastViewController.m */,
-				0ADA768E1CCB2BEA00E39F39 /* BeastCell.h */,
-				0ADA768F1CCB2BEA00E39F39 /* BeastCell.m */,
-				0AA1B6F71CB6D83D00A594E1 /* Main.storyboard */,
-				0AB420B61CD4AD7D008B66BD /* WorkoutVideoViewController.h */,
-				0AB420B71CD4AD7D008B66BD /* WorkoutVideoViewController.m */,
-				0AA1B6F41CB6D83D00A594E1 /* MirrorViewController.h */,
-				0AA1B6F51CB6D83D00A594E1 /* MirrorViewController.m */,
 				0A5AE2781D08D35E001A23BC /* BeastWorkout.h */,
 				0A5AE2791D08D35E001A23BC /* BeastWorkout.m */,
+				0A5AE27B1D1B9088001A23BC /* FirebaseRefs.h */,
+				0A5AE27C1D1B9088001A23BC /* FirebaseRefs.m */,
+				0ADA768B1CCB27A100E39F39 /* BeastViewController.h */,
+				0ADA768C1CCB27A100E39F39 /* BeastViewController.m */,
+				0AB420B61CD4AD7D008B66BD /* WorkoutVideoViewController.h */,
+				0AB420B71CD4AD7D008B66BD /* WorkoutVideoViewController.m */,
+				0A8E06951D1D2EC700AAFAC7 /* MirrorViewController.h */,
+				0A8E06961D1D2EC700AAFAC7 /* MirrorViewController.m */,
+				0AA1B6F71CB6D83D00A594E1 /* Main.storyboard */,
+				0ADA768E1CCB2BEA00E39F39 /* BeastCell.h */,
+				0ADA768F1CCB2BEA00E39F39 /* BeastCell.m */,
+				0A8E06981D1D378F00AAFAC7 /* Custom Slide Segues */,
+				0A880BE91D1FD75500155296 /* ViewUtils */,
 				0AA1B6FA1CB6D83D00A594E1 /* Images.xcassets */,
 				0AA1B6FC1CB6D83D00A594E1 /* LaunchScreen.xib */,
 				0AA1B6ED1CB6D83D00A594E1 /* Supporting Files */,
@@ -190,6 +229,7 @@
 		97872D4F93C9EB96765FD48E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A8E069A1D1D8C0900AAFAC7 /* QuartzCore.framework */,
 				0A8219981CDABC1500F34441 /* AudioToolbox.framework */,
 				2ABAFE56B93B825A2E848E8A /* Pods.framework */,
 				21419A6830616D952731A38B /* Pods_Beast.framework */,
@@ -288,6 +328,7 @@
 				0AA1B6F91CB6D83D00A594E1 /* Main.storyboard in Resources */,
 				0AA1B6FE1CB6D83D00A594E1 /* LaunchScreen.xib in Resources */,
 				0AEED6061CD58C86003DCDE7 /* Lato-Regular.ttf in Resources */,
+				0A8E06991D1D378F00AAFAC7 /* Custom Slide Segues in Resources */,
 				0AEED6071CD58C86003DCDE7 /* MyriadPro-BoldIt.otf in Resources */,
 				0AA1B6FB1CB6D83D00A594E1 /* Images.xcassets in Resources */,
 				0AEED6051CD58C86003DCDE7 /* Lato-Light.ttf in Resources */,
@@ -403,11 +444,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AA1B6F61CB6D83D00A594E1 /* MirrorViewController.m in Sources */,
 				0AA1B6F31CB6D83D00A594E1 /* AppDelegate.m in Sources */,
+				0A5AE27D1D1B9088001A23BC /* FirebaseRefs.m in Sources */,
 				0AB420B81CD4AD7D008B66BD /* WorkoutVideoViewController.m in Sources */,
+				0A8E06971D1D2EC700AAFAC7 /* MirrorViewController.m in Sources */,
 				0A5AE27A1D08D35E001A23BC /* BeastWorkout.m in Sources */,
 				0ADA768D1CCB27A100E39F39 /* BeastViewController.m in Sources */,
+				0A880BE81D1FD6EA00155296 /* ViewUtils.m in Sources */,
+				0A880BDF1D1FD6CB00155296 /* ImageViewController.m in Sources */,
+				0A880BE61D1FD6EA00155296 /* UIImage+Crop.m in Sources */,
+				0A880BE71D1FD6EA00155296 /* UIImage+Resize.m in Sources */,
 				0ADA76901CCB2BEA00E39F39 /* BeastCell.m in Sources */,
 				0AA1B6F01CB6D83D00A594E1 /* main.m in Sources */,
 			);

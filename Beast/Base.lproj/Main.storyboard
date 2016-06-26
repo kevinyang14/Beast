@@ -46,10 +46,10 @@
                                                         <constraint firstAttribute="width" constant="50" id="emy-Ly-kC1"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 views" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpI-6c-mLf">
-                                                    <rect key="frame" x="80" y="43" width="77" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30m • gym equipment • chest &amp; back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpI-6c-mLf">
+                                                    <rect key="frame" x="80" y="38" width="190" height="26"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="0.92288086692668336" green="0.92476055803683554" blue="0.9303996313672922" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.70980392156862748" green="0.70980392156862748" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Superman Strong" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpR-tq-d6G">
@@ -63,7 +63,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ZpI-6c-mLf" firstAttribute="top" secondItem="ZAu-Ay-JZO" secondAttribute="topMargin" constant="35" id="0sm-Th-Cth"/>
+                                                <constraint firstItem="ZpI-6c-mLf" firstAttribute="top" secondItem="ZAu-Ay-JZO" secondAttribute="topMargin" constant="30" id="0sm-Th-Cth"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ZpI-6c-mLf" secondAttribute="bottom" constant="5.5" id="ACf-mh-NCT"/>
                                                 <constraint firstItem="ZpI-6c-mLf" firstAttribute="leading" secondItem="rL7-kK-o7j" secondAttribute="trailing" constant="16" id="CYM-eB-VXS"/>
                                                 <constraint firstAttribute="trailing" secondItem="Xum-Uz-I8U" secondAttribute="trailing" id="E80-Fb-UY4"/>
@@ -77,13 +77,13 @@
                                                 <constraint firstItem="Xum-Uz-I8U" firstAttribute="bottom" secondItem="JpR-tq-d6G" secondAttribute="bottom" constant="18.5" id="vYB-aI-aOI"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="rL7-kK-o7j" secondAttribute="bottom" constant="5.5" id="wKM-1K-dXi"/>
                                                 <constraint firstItem="rL7-kK-o7j" firstAttribute="leading" secondItem="ZAu-Ay-JZO" secondAttribute="leadingMargin" constant="6" id="xYd-2b-OqJ"/>
-                                                <constraint firstItem="Xum-Uz-I8U" firstAttribute="leading" secondItem="ZpI-6c-mLf" secondAttribute="trailing" constant="94" id="zji-Gh-MJK"/>
+                                                <constraint firstItem="Xum-Uz-I8U" firstAttribute="leading" secondItem="ZpI-6c-mLf" secondAttribute="trailing" constant="-19" id="zji-Gh-MJK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.18431372549019609" green="0.20392156862745098" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="beastLabel" destination="Xum-Uz-I8U" id="6Mr-AP-CKD"/>
-                                            <outlet property="numViewsLabel" destination="ZpI-6c-mLf" id="ArM-86-l4Q"/>
+                                            <outlet property="descriptionLabel" destination="ZpI-6c-mLf" id="2ax-tp-uzK"/>
+                                            <outlet property="lvlLabel" destination="Xum-Uz-I8U" id="dqK-Td-Qnv"/>
                                             <outlet property="workoutLabel" destination="JpR-tq-d6G" id="UIu-7I-r6q"/>
                                             <outlet property="workoutPhoto" destination="rL7-kK-o7j" id="KK6-6f-tuy"/>
                                             <segue destination="8F6-pU-UHl" kind="modal" identifier="blastSegue" id="4MM-Tj-748"/>
@@ -101,10 +101,13 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QbC-iK-YUA" secondAttribute="height" multiplier="83:18" id="RQn-7U-Zk6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
-                                <state key="normal" title="workout" backgroundImage="button2">
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="JUST WORKOUT" backgroundImage="button2">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="justWorkout:" destination="1Cj-dm-fl3" eventType="touchUpInside" id="dyL-IC-Uie"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -122,11 +125,30 @@
                     <connections>
                         <outlet property="tableView" destination="Fqr-WP-79c" id="YJl-3a-YOW"/>
                         <outlet property="workoutButton" destination="QbC-iK-YUA" id="r4w-dB-lhj"/>
+                        <segue destination="fbt-G0-s9x" kind="modal" identifier="MirrorSegue" id="47T-ld-6dB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMg-vT-9OT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="213" y="-178"/>
+        </scene>
+        <!--Mirror View Controller-->
+        <scene sceneID="0wd-Z1-oBs">
+            <objects>
+                <viewController id="fbt-G0-s9x" customClass="MirrorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f29-Uu-wVd"/>
+                        <viewControllerLayoutGuide type="bottom" id="pHc-FZ-IUn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nEp-4G-9gu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xem-ed-Ubi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="644" y="223"/>
         </scene>
         <!--Workout Video View Controller-->
         <scene sceneID="dXe-BF-zK5">
@@ -144,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8et-6Z-t5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="695" y="-178"/>
+            <point key="canvasLocation" x="644" y="-526"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oH6-Bq-Jsu">
@@ -160,7 +182,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Nf-1z-7uk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-163" y="-178"/>
+            <point key="canvasLocation" x="-198" y="-178"/>
         </scene>
     </scenes>
     <resources>

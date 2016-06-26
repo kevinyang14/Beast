@@ -9,6 +9,7 @@
 #import "BeastViewController.h"
 #import "BeastCell.h"
 #import "BeastWorkout.h"
+#import "FirebaseRefs.h"
 #import "WorkoutVideoViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <ChameleonFramework/Chameleon.h>
@@ -18,120 +19,162 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *workoutsArray;
 @property (weak, nonatomic) IBOutlet UIButton *workoutButton;
-@property (strong, nonatomic) FIRDatabaseReference *ref;
+@property (strong, nonatomic) FIRDatabaseReference *databaseRef;
+@property (strong, nonatomic) FIRStorageReference *storageRef;
 @end
 
 @implementation BeastViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.ref = [[FIRDatabase database] reference];
+    [self setupFirebase];
     [self setupUI];
-    [self uploadWorkouts];
+    [self setupLongPressGestureRecognizer];
+//    [self setupSwipeGestureRecognizer];
+//    [self uploadAllWorkouts];
     [self downloadWorkouts];
-}
-
-- (NSMutableArray *)workoutsArray{
-    if(!_workoutsArray){
-        _workoutsArray = [[NSMutableArray alloc] init];
-    }
-    return _workoutsArray;
 }
 
 #pragma mark - Firebase Methods
 
-- (void)uploadWorkouts{
-    [[[self.ref child:@"workouts"] child:@"Beast Blast"] setValue:@[@"6", @"7",@"8",@"9",@"10",@"17",@"18"]];
-    [[[self.ref child:@"workouts"] child:@"Batman Biceps"] setValue:@[@"8",@"9",@"10",@"17"]];
-    [[[self.ref child:@"workouts"] child:@"Superman Strong"] setValue:@[@"6",@"7",@"11",@"12",@"13",@"14",@"15",@"16"]];
-    [[[self.ref child:@"workouts"] child:@"5x5"] setValue:@[@"1",@"2",@"3",@"4",@"5"]];
-    [[[self.ref child:@"workouts"] child:@"6 Pack Abs"] setValue:@[@"20",@"21",@"22",@"23",@"24",@"25"]];
-    [[[self.ref child:@"workouts"] child:@"Killer Home Workout"] setValue:@[@"18",@"19",@"21",@"22",@"23"]];
+- (void)setupFirebase{
+    self.databaseRef = [FirebaseRefs databaseRef];
+    self.storageRef = [FirebaseRefs storageRef];
 }
 
+
+// Download workout info from Firebase Database
 - (void)downloadWorkouts{
-    [self.ref observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+    [self.databaseRef observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         NSLog(@"\n\n\n");
-        NSLog(@"FIREBASE WORKOUTS:");
+        NSLog(@"Firebase Backend:");
+        NSLog(@"%@", snapshot.value);
         NSDictionary *firebaseDictionary = snapshot.value;
         NSDictionary *workoutsDictionary = [firebaseDictionary objectForKey:@"workouts"];
         for (NSString* key in [workoutsDictionary allKeys])
         {
-            NSMutableArray *exerciseArray = [workoutsDictionary objectForKey:key];
-            BeastWorkout *beastWorkout = [[BeastWorkout alloc] initWithName:key andExerciseArray:exerciseArray];
+            NSDictionary *workoutDictionary = [workoutsDictionary objectForKey:key];
+            BeastWorkout *beastWorkout = [self beastWorkoutFromDict:workoutDictionary];
             [self.workoutsArray addObject:beastWorkout];
-//            NSLog(@"%@", beastWorkout);
         }
+        [self downloadAllVideoWorkouts];
         [self.tableView reloadData];
-    
+        [self selectDefaultWorkout];
     } withCancelBlock:^(NSError * _Nonnull error) {
         NSLog(@"%@", error.localizedDescription);
     }];
 }
 
-
-#pragma mark - UI Magic
-
-
-- (void)setupUI
-{
-    [self setupNavbar];
-    self.view.backgroundColor = [self darkBlack];
-    self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.separatorColor = [UIColor clearColor];
+- (BeastWorkout *)beastWorkoutFromDict:(NSDictionary *)workoutDictionary{
+    NSString *name = [workoutDictionary objectForKey:@"name"];
+    NSString *lvl = [workoutDictionary objectForKey:@"lvl"];
+    NSNumber *time = [workoutDictionary objectForKey:@"time"];
+    NSString *equipment = [workoutDictionary objectForKey:@"equipment"];
+    NSString *bodyParts = [workoutDictionary objectForKey:@"body parts"];
+    NSArray *exerciseArray = [workoutDictionary objectForKey:@"exerciseArray"];
+    BeastWorkout *beastWorkout = [[BeastWorkout alloc] initWithName:name lvl:lvl equipment:equipment bodyParts:bodyParts exerciseArray:exerciseArray andTime:time];
+    [beastWorkout printValues];
+    return beastWorkout;
 }
 
 
-- (CGRect)trueFrame:(CGRect)oldFrame{
-    return CGRectMake(oldFrame.origin.x, oldFrame.origin.y, oldFrame.size.width, oldFrame.size.height+10);
-}
-
-- (void)setupNavbar{
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.barTintColor =  [self darkBlack];
-    self.navigationController.navigationBar.translucent = NO;
-    self.navigationItem.title = @"BEAST";
-    NSDictionary *fontAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    [UIFont fontWithName:@"MyriadPro-BoldIt" size:26], NSFontAttributeName,
-                                    [self lightBlue], NSForegroundColorAttributeName, nil];
-    [self.navigationController.navigationBar setTitleTextAttributes:fontAttributes];
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
-- (void)printFontNames{
-    NSArray *fontFamilies = [UIFont familyNames];
-    for (int i = 0; i < [fontFamilies count]; i++)
-    {
-        NSString *fontFamily = [fontFamilies objectAtIndex:i];
-        NSArray *fontNames = [UIFont fontNamesForFamilyName:[fontFamilies objectAtIndex:i]];
-        NSLog (@"%@: %@", fontFamily, fontNames);
+- (void)downloadAllVideoWorkouts{
+    for (BeastWorkout *workout in self.workoutsArray) {
+        [self downloadVideoWorkout:workout];
     }
 }
 
-#pragma mark - App Colors
+- (void)downloadVideoWorkout:(BeastWorkout *)workout{
+    NSArray *exerciseArray = workout.exerciseArray;
+    for (NSNumber *exerciseNum in exerciseArray) {
+        if([self isExerciseDownloaded:exerciseNum] == NO) [self downloadExercise:exerciseNum];
+    }
+}
 
-- (UIColor *) lightBlue {return HexColor(@"#76F6E5");}
+- (void)downloadExercise:(NSNumber *)videoNumber{
+    // Get firebaseRef & localURL
+    FIRStorageReference *firebaseRef = [FirebaseRefs videoFirebaseRef:videoNumber];
+    NSURL *localURL = [FirebaseRefs videoLocalURL:videoNumber];
+    NSLog(@"downloading video %@", videoNumber);
+    // Download to the local filesystem
+    [firebaseRef writeToFile:localURL completion:^(NSURL *URL, NSError *error){
+        if (error != nil) {
+            //Error!
+            NSLog(@"error %@", error);
+        } else {
+            // Local file URL for "images/island.jpg" is returned
+            NSLog(@"fileURL: %@", [URL path]);
+//            BOOL isDownloaded = [self isExerciseDownloaded:videoNumber];
+//            if(isDownloaded){
+//                NSLog(@"DOWNLOADED!");
+//            }else{
+//                NSLog(@"NOT DOWNLOADED!");
+//            }
+        }
+    }];
+}
 
-- (UIColor *) darkBlue {return HexColor(@"#0E5461");}
+- (BOOL)isWorkoutDownloaded:(NSArray *)exerciseArray{
+    for (NSNumber *exerciseNum in exerciseArray) {
+        if([self isExerciseDownloaded:exerciseNum] == NO) return NO;
+    }
+    return YES;
+}
 
-- (UIColor *) lightOrange {return HexColor(@"#F99A02");}
-
-- (UIColor *) darkOrange {return HexColor(@"#3F2617");}
-
-- (UIColor *) darkBlack{ return HexColor(@"#181C20");}
-
-- (UIColor *) beastBlack{ return [[UIColor alloc] initWithRed:36.0/255.0 green:36.0/255.0 blue:36.0/255.0 alpha:1];}
-
-//- (UIColor *) beastDarkBlack{ return [[UIColor alloc] initWithRed:18.0/255.0 green:19.0/255.0 blue:20.0/255.0 alpha:1];}
+- (BOOL)isExerciseDownloaded:(NSNumber *)videoNum{
+    NSURL *fileURL = [FirebaseRefs videoLocalURL:videoNum];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:[fileURL path]]) return YES;
+    return NO;
+}
 
 
+//-----------------------1-Time Upload--------------------//
 
-- (UIColor *) beastOrange{ return [[UIColor alloc] initWithRed:243.0/255.0 green:144.0/255.0 blue:83.0/255.0 alpha:1];}
+- (void)uploadAllWorkouts{
+    NSArray* array = [self createBeastWorkouts];
+    for (BeastWorkout *workout in array){
+        [self uploadWorkout:workout];
+    }
+}
 
+- (NSArray *)createBeastWorkouts{
+    BeastWorkout *one = [[BeastWorkout alloc] initWithName:@"Superman Strong" lvl:@"🐯" equipment:@"gym equipment" bodyParts:@"chest & back" exerciseArray:@[@"6",@"7",@"11",@"12",@"13",@"14",@"15",@"16"] andTime:@30];
+    
+    BeastWorkout *two = [[BeastWorkout alloc] initWithName:@"5x5" lvl:@"🐼" equipment:@"gym equipment" bodyParts:@"full body" exerciseArray:@[@"1",@"2",@"3",@"4",@"5"] andTime:@40];
+    
+    BeastWorkout *three = [[BeastWorkout alloc] initWithName:@"6 Pack Abs" lvl:@"🐳" equipment:@"no equipment" bodyParts:@"abs" exerciseArray:@[@"20",@"21",@"22",@"23",@"24",@"25"] andTime:@10];
+    
+    BeastWorkout *four = [[BeastWorkout alloc] initWithName:@"Batman Biceps" lvl:@"🦁" equipment:@"dumbbells" bodyParts:@"biceps & triceps" exerciseArray:@[@"8",@"9",@"10",@"17"] andTime:@30];
+    
+    
+    BeastWorkout *five = [[BeastWorkout alloc] initWithName:@"Beast Blast" lvl:@"🦄" equipment:@"gym equipment" bodyParts:@"full body" exerciseArray:@[@"6", @"7",@"8",@"9",@"10",@"17",@"18"] andTime:@30];
+    
+    
+    BeastWorkout *six = [[BeastWorkout alloc] initWithName:@"Killer Home Workout" lvl:@"🐢" equipment:@"no equipment" bodyParts:@"abs" exerciseArray:@[@"18",@"19",@"21",@"22",@"23"] andTime:@10];
+    
+    return @[one, two, three, four, five, six];
+}
+
+- (void)uploadWorkout:(BeastWorkout *)workout{
+    FIRDatabaseReference *workoutRef = [[self.databaseRef child:@"workouts"] childByAutoId];
+    [[workoutRef child:@"name"] setValue:workout.name];
+    [[workoutRef child:@"lvl"] setValue:workout.lvl];
+    [[workoutRef child:@"time"] setValue:workout.time];
+    [[workoutRef child:@"equipment"] setValue:workout.equipment];
+    [[workoutRef child:@"body parts"] setValue:workout.bodyParts];
+    [[workoutRef child:@"exerciseArray"] setValue:workout.exerciseArray];
+}
+
+
+#pragma mark - IBAction Methods
+
+- (IBAction)justWorkout:(id)sender {
+    NSInteger randomIndex = arc4random()%[self.workoutsArray count];
+    NSIndexPath* selectedCellIndexPath= [NSIndexPath indexPathForRow:randomIndex inSection:0];
+    [self.tableView selectRowAtIndexPath:selectedCellIndexPath animated:false scrollPosition:UITableViewScrollPositionMiddle];
+    [self performSegueWithIdentifier:@"blastSegue" sender:sender];
+}
 
 #pragma mark - Table View Data Source
 
@@ -155,19 +198,24 @@
     
     //Create BeastCell
     cell.workoutLabel.text = workout.name;
-//    cell.beastLabel.text =[self getRandomBeastEmoji];
-    cell.beastLabel.text =[self emojiAtIndex:(int)indexPath.row];
-    cell.numViewsLabel.text = [self getRandomViewCount];
-//    NSString *imageName = [self getRandomImageName];
+    cell.lvlLabel.text = workout.lvl;
+    cell.descriptionLabel.text = [workout description];
     NSString *imageName = [self imageAtIndex:(int)indexPath.row];
     cell.workoutPhoto.image = [UIImage imageNamed:imageName];
+    
+    [self setupCellStyle:cell];
+    
+    //Grey out video, if not downloaded
+    if (![self isWorkoutDownloaded:workout.exerciseArray]) {
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }else{
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+    }
     
     //Change highlight color
     UIView *customColorView = [[UIView alloc] init];
     customColorView.backgroundColor = [self darkBlue];
     cell.selectedBackgroundView =  customColorView;
-    
-    [self setupCellStyle:cell];
 
     return cell;
 }
@@ -178,6 +226,61 @@
     cell.workoutPhoto.layer.masksToBounds = YES;
 }
 
+#pragma mark - UI Magic
+
+- (void)setupUI
+{
+    [self setupNavbar];
+    self.view.backgroundColor = [self darkBlack];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.separatorColor = [UIColor clearColor];
+}
+
+- (void)selectDefaultWorkout{
+    NSIndexPath* selectedCellIndexPath= [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView selectRowAtIndexPath:selectedCellIndexPath animated:false scrollPosition:UITableViewScrollPositionMiddle];
+}
+
+
+- (CGRect)trueFrame:(CGRect)oldFrame{
+    return CGRectMake(oldFrame.origin.x, oldFrame.origin.y, oldFrame.size.width, oldFrame.size.height+10);
+}
+
+- (void)setupNavbar{
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.barTintColor =  [self darkBlack];
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationItem.title = @"BEAST";
+    NSDictionary *fontAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    [UIFont fontWithName:@"MyriadPro-BoldIt" size:26], NSFontAttributeName,
+                                    [self lightBlue], NSForegroundColorAttributeName, nil];
+    [self.navigationController.navigationBar setTitleTextAttributes:fontAttributes];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+
+#pragma mark - App Colors
+
+- (UIColor *) lightBlue {return HexColor(@"#76F6E5");}
+
+- (UIColor *) darkBlue {return HexColor(@"#0E5461");}
+
+- (UIColor *) lightOrange {return HexColor(@"#F99A02");}
+
+- (UIColor *) darkOrange {return HexColor(@"#3F2617");}
+
+- (UIColor *) darkBlack{ return HexColor(@"#181C20");}
+
+- (UIColor *) beastBlack{ return [[UIColor alloc] initWithRed:36.0/255.0 green:36.0/255.0 blue:36.0/255.0 alpha:1];}
+
+- (UIColor *) beastOrange{ return [[UIColor alloc] initWithRed:243.0/255.0 green:144.0/255.0 blue:83.0/255.0 alpha:1];}
+
+
+#pragma mark - Cell Population Methods
 
 //---------------ORDERED METHODS-----------//
 
@@ -191,9 +294,6 @@
     NSArray *imageNames = @[@"🐯", @"🐼", @"🐳", @"🦁", @"🦄", @"🐢"];
     return [imageNames objectAtIndex:index];
 }
-
-//----------------------------------------//
-
 
 
 //--------------RANDOM METHODS--------------//
@@ -218,8 +318,56 @@
     return [NSString stringWithFormat:@"%d followers", numViews];
 }
 
-//--------------RANDOM METHODS--------------//
 
+
+#pragma mark - Helper Methods
+
+- (NSMutableArray *)workoutsArray{
+    if(!_workoutsArray){
+        _workoutsArray = [[NSMutableArray alloc] init];
+    }
+    return _workoutsArray;
+}
+
+- (void)printFontNames{
+    NSArray *fontFamilies = [UIFont familyNames];
+    for (int i = 0; i < [fontFamilies count]; i++)
+    {
+        NSString *fontFamily = [fontFamilies objectAtIndex:i];
+        NSArray *fontNames = [UIFont fontNamesForFamilyName:[fontFamilies objectAtIndex:i]];
+        NSLog (@"%@: %@", fontFamily, fontNames);
+    }
+}
+
+/*
+#pragma mark - Swipe Methods
+
+- (void)setupSwipeGestureRecognizer{
+    UISwipeGestureRecognizer* swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+    swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionUp;
+    [self.tableView addGestureRecognizer:swipeGestureRecognizer];
+}
+
+- (void)handleSwipeFrom:(UIGestureRecognizer*)recognizer {
+    NSLog(@"Swipe to Mirror!");
+//    [self performSegueWithIdentifier:@"MoveLeftCustomSegue" sender:self];
+    [self performSegueWithIdentifier:@"MirrorSegue" sender:self];
+
+}
+*/
+
+#pragma mark - Long Press Methods
+
+- (void)setupLongPressGestureRecognizer{
+    UILongPressGestureRecognizer* longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleRecognizer:)];
+    [self.tableView addGestureRecognizer:longPressGestureRecognizer];
+}
+
+- (void)handleRecognizer:(UIGestureRecognizer*)recognizer {
+    NSLog(@"Swipe to Mirror!");
+    //    [self performSegueWithIdentifier:@"MoveLeftCustomSegue" sender:self];
+    [self performSegueWithIdentifier:@"MirrorSegue" sender:self];
+}
 
 
 #pragma mark - Navigation

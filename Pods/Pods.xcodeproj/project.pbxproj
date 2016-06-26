@@ -7,223 +7,283 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04ED55BA60284942C41F5E21CBEA2645 /* UILabel+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 028FE86B91ABA1F264C8DA2C19C6A29C /* UILabel+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		054A64D61AC1497FC7C5D956B08D16B3 /* Pods-BeastTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B298B6C57379260614D10F1EA1FFF94 /* Pods-BeastTests-dummy.m */; };
-		08DFC7BC6F902431A7B4B13504713453 /* PBJVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D56EE085EEDAA7A29C02BB9A7FBB6573 /* PBJVideoView.m */; };
-		0A1BCD55066E2CA27A090F721D84070B /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9005D0C9F9F0608C9EA9A7D2CBCEF01C /* UIColor+ChameleonPrivate.m */; };
-		0BEB724B2D094ED30984DE25D9C08193 /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CA48ABB3EB93A1583CD4434D0FBF86 /* ChameleonConstants.m */; };
-		0CE065735877D57875BC7FD633347E11 /* ChameleonFramework-library-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 29911897358F60D4DEB3E1FE5435CAFF /* ChameleonFramework-library-dummy.m */; };
+		04ED55BA60284942C41F5E21CBEA2645 /* UILabel+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E27C3F74F0D1336AFC61214616027F5 /* UILabel+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08DFC7BC6F902431A7B4B13504713453 /* PBJVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC23CF18FBF74D6549BD6F5D84F6415 /* PBJVideoView.m */; };
+		0A1BCD55066E2CA27A090F721D84070B /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB3012363936ACBEEDEF1A7E88BF10D /* UIColor+ChameleonPrivate.m */; };
+		0BE067E5C6BE3CFB725A9C02D36E8136 /* LLSimpleCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = C007062CDC787A16ADEC3AB4E6A4D151 /* LLSimpleCamera.m */; };
+		0BEB724B2D094ED30984DE25D9C08193 /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF1E41D53B817288C81B9F632B79594 /* ChameleonConstants.m */; };
+		0CE065735877D57875BC7FD633347E11 /* ChameleonFramework-library-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF5C8C4C71182544EF959296797585D /* ChameleonFramework-library-dummy.m */; };
 		0D85DC6C68ABBD58CE2B0165D967845D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146A449FB44431C0A1F3005982203CC8 /* QuartzCore.framework */; };
-		0E3127792198F7E862B1DD9887BEED29 /* Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EC09CCF3623DB42BA47D8F0816CFB3C /* Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E3127792198F7E862B1DD9887BEED29 /* Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 838CBAB3757FF28CF27DEDA1CA8EEBA4 /* Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E43C6BDFEDE138E6BFD6651CDDDA4D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B06759201A475DEACE2A01A54DA7DD /* Foundation.framework */; };
-		12006DA949C94415ABAABF6D93D5CDDE /* UINavigationController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = E39734E27BCEDF22DE27C79C9DB0683A /* UINavigationController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		13C864AD4C374FB02588BE96095F267E /* Pods-Beast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB98AE57207307F6A91ADBB032CED56 /* Pods-Beast-dummy.m */; };
-		13E6F91BDDB91E231CA8C75185A77AF0 /* PBJVideoPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 18A64546D8D81BF3933FF48C8F0EAA94 /* PBJVideoPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		207581257E0E21FAF3F1531ECD48D2C6 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A5D06A22BD4B55EA386350C46974F4 /* UIButton+Chameleon.m */; };
-		229F7653F0E0EFB9E711B20578529E4C /* UIColor+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = AE1197CD26946AE594F09E04B2134116 /* UIColor+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12006DA949C94415ABAABF6D93D5CDDE /* UINavigationController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = DC420B578E2F6FA83E0CC9CF73AF71EF /* UINavigationController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13E6F91BDDB91E231CA8C75185A77AF0 /* PBJVideoPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2843E0F5B0391AED246826B00B6FF495 /* PBJVideoPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		151B58361AC04F1238E28491F6EF6F1E /* Pods-Beast-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1CC925B9F7C48215A50A8350B80790F /* Pods-Beast-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EC50916D2AD2308FBAA0400E9D5FB16 /* LLSimpleCamera-library-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F372F12E0D9F202E1900E03E5C8B711F /* LLSimpleCamera-library-dummy.m */; };
+		207581257E0E21FAF3F1531ECD48D2C6 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEDA8E7E08C5992FC3BEC816210A2D9 /* UIButton+Chameleon.m */; };
+		21C6001EF618B7FFBF20D665F242516A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B06759201A475DEACE2A01A54DA7DD /* Foundation.framework */; };
+		229F7653F0E0EFB9E711B20578529E4C /* UIColor+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = B675DF04FE270D9B8FEA8D6802026DA8 /* UIColor+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24060BA465604C43F8F9FFCD8C418B29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39CAC8FC1F811C39B2750ECC75EC80A /* UIKit.framework */; };
-		276CFB69E5476B5C6F3B77DEABEE8971 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F670733ADCD3DAA494B9725AAA61032 /* UIView+ChameleonPrivate.m */; };
+		276CFB69E5476B5C6F3B77DEABEE8971 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2532EC3A3B2AF159474F8D952DD931F9 /* UIView+ChameleonPrivate.m */; };
 		2A2A0AD974E7BCF69419528889101467 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70346000E916BE92A45B972D26F07F1E /* AVFoundation.framework */; };
 		2CA0482208B1CD99E05B3A8570048249 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887A2490545F1E753D4370667D62C23B /* CoreGraphics.framework */; };
 		2F6ABB0F0DBB40BC44D5898E3691ED7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39CAC8FC1F811C39B2750ECC75EC80A /* UIKit.framework */; };
-		30F99EC0805C7E7FC0200E54BB31060A /* Chameleon_.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BBD1DF8A6C2C449192FB637022E015E /* Chameleon_.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35561E97D435F01A2D61ECBACA8F54F5 /* PBJVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C3B177C5ED2D8EE80FDC2A49E9E63A /* PBJVideoPlayerController.m */; };
-		3D162333E14F443B76907616CA49D0A4 /* UILabel+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 028FE86B91ABA1F264C8DA2C19C6A29C /* UILabel+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3E0D43E2F8A25C70395412FF070EF884 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B06759201A475DEACE2A01A54DA7DD /* Foundation.framework */; };
-		412642AA3105D5A11A9EAB40CE29FEB5 /* ChameleonFramework-framework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 516FFAC9E6BEDBBCA03E3E7EA3654E89 /* ChameleonFramework-framework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30F99EC0805C7E7FC0200E54BB31060A /* Chameleon_.h in Headers */ = {isa = PBXBuildFile; fileRef = 57FB070FB74B04B012EF85D46891A34D /* Chameleon_.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3305EF70FFE3CE004BC8CB9E97B16CBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B06759201A475DEACE2A01A54DA7DD /* Foundation.framework */; };
+		339710B18CF20A69A48942B29BE33894 /* LLSimpleCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD873262908D1CD15F4CEC5A1756573 /* LLSimpleCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35561E97D435F01A2D61ECBACA8F54F5 /* PBJVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D8F23BC00C44E4CD6AA24754BF2B15 /* PBJVideoPlayerController.m */; };
+		36A5222E81732CCE813CC893B11ADB20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B06759201A475DEACE2A01A54DA7DD /* Foundation.framework */; };
+		3D162333E14F443B76907616CA49D0A4 /* UILabel+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E27C3F74F0D1336AFC61214616027F5 /* UILabel+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		412642AA3105D5A11A9EAB40CE29FEB5 /* ChameleonFramework-framework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 593885EE18FE2ED9312A6EC9C3297D0E /* ChameleonFramework-framework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41546675A0F2DE52CEB78A4D23A8C82D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39CAC8FC1F811C39B2750ECC75EC80A /* UIKit.framework */; };
 		42EDF6CBA2A94E1AD444B23092AF0A28 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887A2490545F1E753D4370667D62C23B /* CoreGraphics.framework */; };
-		43A0DC23BDD2DFA066D458A8752F5753 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C204E604E2B8EA0FA9407D5AEEE397 /* Chameleon_.m */; };
-		456C8979D5DCA682F1F71266E860E703 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B4024636E853D84B3F83B9BB5DB767 /* UIViewController+Chameleon.m */; };
-		4A67ACD5AAFC31DBE0592636512DAD79 /* ChameleonFramework-framework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E0FE12B33A8E08F96EDCBEEDAABD6A /* ChameleonFramework-framework-dummy.m */; };
-		4ABB1F684C0FC7E7715133BFC34F07A6 /* NSArray+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = A77042BA34B376EE25AA18DEC3165C02 /* NSArray+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4DF4BFAC6F9DDFA491DE1523B41B5860 /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CA48ABB3EB93A1583CD4434D0FBF86 /* ChameleonConstants.m */; };
-		51B8FD238B41AA492E4A1E93806360E3 /* NSArray+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = A77042BA34B376EE25AA18DEC3165C02 /* NSArray+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5638F60A461A393EA29B2B215857CEAB /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = D41BA8E79CCD58FEA2F7FF5C99DE175A /* UINavigationController+Chameleon.m */; };
-		56A1EADF6C8D77A605794C326DE3CD28 /* PBJVideoPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FC352967A3137C900D3BE7158FF8597 /* PBJVideoPlayerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B12FD9F9DD47A3E95482C4EE3F59200 /* UINavigationController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = E39734E27BCEDF22DE27C79C9DB0683A /* UINavigationController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D20B08E5EFEF925AFC73F6C895E6B76 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 799B404431AB55127DEE40F2EE04FA82 /* UIImage+ChameleonPrivate.m */; };
-		5E02B7C6D637A21B8124990A735292B9 /* UIViewController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F46C752D922A6A0F79BEF05A8474B7 /* UIViewController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43A0DC23BDD2DFA066D458A8752F5753 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AEB07644D270D555C46E542EFEE6BC /* Chameleon_.m */; };
+		456C8979D5DCA682F1F71266E860E703 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD14494DB4563DE3BAADCF35C4A11E0 /* UIViewController+Chameleon.m */; };
+		45D47691D9D4EBCA90C4D19DB4E30919 /* LLSimpleCamera+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F57E0D1748E27188E9F7815AA9504E /* LLSimpleCamera+Helper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4759002969C7552E53FEF241A26F4C47 /* LLSimpleCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD873262908D1CD15F4CEC5A1756573 /* LLSimpleCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A67ACD5AAFC31DBE0592636512DAD79 /* ChameleonFramework-framework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 159BE1B2B844140A140DB01462F1937B /* ChameleonFramework-framework-dummy.m */; };
+		4ABB1F684C0FC7E7715133BFC34F07A6 /* NSArray+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DD9CAFDBACA4477283A31538FD57931 /* NSArray+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DF4BFAC6F9DDFA491DE1523B41B5860 /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF1E41D53B817288C81B9F632B79594 /* ChameleonConstants.m */; };
+		51B8FD238B41AA492E4A1E93806360E3 /* NSArray+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DD9CAFDBACA4477283A31538FD57931 /* NSArray+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5638F60A461A393EA29B2B215857CEAB /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4809DC560BC7DB117D0F4D3E2EB6D0AB /* UINavigationController+Chameleon.m */; };
+		56A1EADF6C8D77A605794C326DE3CD28 /* PBJVideoPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 169D9FF885B597809800D498F3E179BD /* PBJVideoPlayerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5917FFCFBB91B5EEE55DDB89B9FDE102 /* LLSimpleCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = C007062CDC787A16ADEC3AB4E6A4D151 /* LLSimpleCamera.m */; };
+		5B12FD9F9DD47A3E95482C4EE3F59200 /* UINavigationController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = DC420B578E2F6FA83E0CC9CF73AF71EF /* UINavigationController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D20B08E5EFEF925AFC73F6C895E6B76 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FAD781F340E18F9F93688DA121086 /* UIImage+ChameleonPrivate.m */; };
+		5E02B7C6D637A21B8124990A735292B9 /* UIViewController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 38029EC6F8884ADDC647CE1174BFAAA0 /* UIViewController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60258EF1EAE715E9396B445C3835BEC6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70346000E916BE92A45B972D26F07F1E /* AVFoundation.framework */; };
-		63BD9FFC02E126B457C061E5080850BF /* ChameleonEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = D29583E320B0955D0E9BE0AFF0D4DDBD /* ChameleonEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		683946AE2C7460D8E6B1F36589003477 /* PBJVideoPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FC352967A3137C900D3BE7158FF8597 /* PBJVideoPlayerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69C60A69AE81FDCC88078BD560F967BC /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E609B0016F0AFE99E324EB92C6E171 /* UIAppearance+Swift.m */; };
-		6AA208EF4D2051C678675BAEEAF422A1 /* PBJVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA27954A25D8A3D3E11E322271CBC788 /* PBJVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E61CE2C445E98F117E1B0DFABA6DCC7 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F670733ADCD3DAA494B9725AAA61032 /* UIView+ChameleonPrivate.m */; };
+		63BD9FFC02E126B457C061E5080850BF /* ChameleonEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = EECCC1B123AF5246E7C5A20C81D30D14 /* ChameleonEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		683946AE2C7460D8E6B1F36589003477 /* PBJVideoPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 169D9FF885B597809800D498F3E179BD /* PBJVideoPlayerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69C60A69AE81FDCC88078BD560F967BC /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA10A3AC0617D73F22157316F259142 /* UIAppearance+Swift.m */; };
+		6AA208EF4D2051C678675BAEEAF422A1 /* PBJVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = B7ED79E0F91650AE43803E19FC5D6FF1 /* PBJVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E61CE2C445E98F117E1B0DFABA6DCC7 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2532EC3A3B2AF159474F8D952DD931F9 /* UIView+ChameleonPrivate.m */; };
 		6FF7F1446B78D0DDF00143809733F8B1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146A449FB44431C0A1F3005982203CC8 /* QuartzCore.framework */; };
-		70C41BA227EC704DEF3B599366C2C52D /* UIAppearance+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D8E9A28F99A40C3CAFA09D1117CFE5C /* UIAppearance+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E337808607F5A5E9906C3B768D88E19 /* UIAppearance+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D8E9A28F99A40C3CAFA09D1117CFE5C /* UIAppearance+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		82A8DD80A6675C95CE4BEDBDE818C053 /* UIView+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E2EB4FA83E0455D0A3C6ED2B0DCE45CA /* UIView+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		848BBDDE97475BCE5C7F59F22CB35684 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 799B404431AB55127DEE40F2EE04FA82 /* UIImage+ChameleonPrivate.m */; };
+		70C41BA227EC704DEF3B599366C2C52D /* UIAppearance+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABA734D908BC58DC50CC5B286FCD7EF /* UIAppearance+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76A990247098663EDC6BD0DB37B27788 /* LLSimpleCamera-framework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46716FCA26D83743695124A877A0E5A1 /* LLSimpleCamera-framework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77BC6E115CBC274E605B6227308414DB /* LLSimpleCamera+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 040CF9C80A812D0C90961AF6BDBD2AC7 /* LLSimpleCamera+Helper.m */; };
+		7988CB263EDC40301F900ADD770BC320 /* LLSimpleCamera-framework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 761CAFA6BAD25172517FCAAD370A81FB /* LLSimpleCamera-framework-dummy.m */; };
+		7E337808607F5A5E9906C3B768D88E19 /* UIAppearance+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ABA734D908BC58DC50CC5B286FCD7EF /* UIAppearance+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82A8DD80A6675C95CE4BEDBDE818C053 /* UIView+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E775D6C1D25E5A415218B8E61888AD /* UIView+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		848BBDDE97475BCE5C7F59F22CB35684 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FAD781F340E18F9F93688DA121086 /* UIImage+ChameleonPrivate.m */; };
 		859D47C3353410497D440536C03D03E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887A2490545F1E753D4370667D62C23B /* CoreGraphics.framework */; };
-		860762AD3290AAAC21D05BD3614A0260 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B06759201A475DEACE2A01A54DA7DD /* Foundation.framework */; };
-		88C6715CC8D862830C502A335AEE15AA /* ChameleonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 16E1A9FBC3087786955987DC00F5F17C /* ChameleonMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8A2EF6658600EB00A95CBD9F0743B28F /* PBJVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C3B177C5ED2D8EE80FDC2A49E9E63A /* PBJVideoPlayerController.m */; };
+		889764F49626E814E04179B7F6A71D98 /* UIImage+FixOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9395C3BAA67201D05BCD0A33947BA3 /* UIImage+FixOrientation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88C6715CC8D862830C502A335AEE15AA /* ChameleonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 5691CF7D42AED3B0F08B7565EDB60783 /* ChameleonMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A2EF6658600EB00A95CBD9F0743B28F /* PBJVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D8F23BC00C44E4CD6AA24754BF2B15 /* PBJVideoPlayerController.m */; };
 		8D4FBCE4F4AF64AAFFA41ECE18F2BF2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B06759201A475DEACE2A01A54DA7DD /* Foundation.framework */; };
-		8F4A86ED09D45E54807441EBC5472A82 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A5FCF9D813E4A01F61E3DB4C66A3E1 /* UIColor+Chameleon.m */; };
-		9556B92C103468A960357F430DE460D7 /* Pods-Beast-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1CC925B9F7C48215A50A8350B80790F /* Pods-Beast-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		989A0C8C47BAB1A8D83866E37D152440 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9005D0C9F9F0608C9EA9A7D2CBCEF01C /* UIColor+ChameleonPrivate.m */; };
-		9D30AF2E0DC10F6975D6C9CC864A9839 /* PBJVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D56EE085EEDAA7A29C02BB9A7FBB6573 /* PBJVideoView.m */; };
-		9DBC894C97B8BE6365BFF0969E0383D4 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A5D06A22BD4B55EA386350C46974F4 /* UIButton+Chameleon.m */; };
+		8F4A86ED09D45E54807441EBC5472A82 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 242CBB342AD6818FE6BF02D167D2E208 /* UIColor+Chameleon.m */; };
+		92443EA4FCF841D408C9438AC0EA55CD /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 572FC68A0CA1D44EB1DB9C4265A6DB92 /* UIImage+FixOrientation.m */; };
+		94069A77E238F363EE6F3EC6E6349DA4 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 572FC68A0CA1D44EB1DB9C4265A6DB92 /* UIImage+FixOrientation.m */; };
+		989A0C8C47BAB1A8D83866E37D152440 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB3012363936ACBEEDEF1A7E88BF10D /* UIColor+ChameleonPrivate.m */; };
+		9B8B2139434BB09D690E83FE64B6BFDA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70346000E916BE92A45B972D26F07F1E /* AVFoundation.framework */; };
+		9D30AF2E0DC10F6975D6C9CC864A9839 /* PBJVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC23CF18FBF74D6549BD6F5D84F6415 /* PBJVideoView.m */; };
+		9DBC894C97B8BE6365BFF0969E0383D4 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEDA8E7E08C5992FC3BEC816210A2D9 /* UIButton+Chameleon.m */; };
+		A02733A393E3CF5FF81CBE0CFDA03755 /* LLSimpleCamera+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 040CF9C80A812D0C90961AF6BDBD2AC7 /* LLSimpleCamera+Helper.m */; };
 		A4BBD42132ED34C2B98BA32249F2DBD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B06759201A475DEACE2A01A54DA7DD /* Foundation.framework */; };
-		AB0123C645A1BE5BAB4E563983C17D37 /* ChameleonEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = D29583E320B0955D0E9BE0AFF0D4DDBD /* ChameleonEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB0123C645A1BE5BAB4E563983C17D37 /* ChameleonEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = EECCC1B123AF5246E7C5A20C81D30D14 /* ChameleonEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEF9D9E8F944C2663EF136BDF027D0DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887A2490545F1E753D4370667D62C23B /* CoreGraphics.framework */; };
-		B03819FE79A5A6C30A76C1D3C41AEE3F /* UIView+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E2EB4FA83E0455D0A3C6ED2B0DCE45CA /* UIView+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B2F8CFFE060FC6D60631EE07D76C7617 /* UIImage+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD1264CAD78FF1DE765302E43E5802C /* UIImage+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B65249557437C3C73A570F6DD4CC7E94 /* UIColor+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB81FA25246192331158143912311F3 /* UIColor+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B03819FE79A5A6C30A76C1D3C41AEE3F /* UIView+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E775D6C1D25E5A415218B8E61888AD /* UIView+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2F8CFFE060FC6D60631EE07D76C7617 /* UIImage+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6C7EC9BB88F5418DF6A67066FA77EB /* UIImage+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B65249557437C3C73A570F6DD4CC7E94 /* UIColor+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = BD9A07AF44642020E2075A2089A1F5D8 /* UIColor+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7454767EA89390CBC0CB15523061E8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39CAC8FC1F811C39B2750ECC75EC80A /* UIKit.framework */; };
-		B8472D941730A233D363393E646A0C83 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = D41BA8E79CCD58FEA2F7FF5C99DE175A /* UINavigationController+Chameleon.m */; };
-		BBACAC8F75DAAEB4FA3F047DFA42D77A /* UIImage+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD1264CAD78FF1DE765302E43E5802C /* UIImage+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BC3624EA1DB568D4D58FB77A72309BF7 /* ChameleonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E3E6851D55308EE30B21692348C88C /* ChameleonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BCA9DBB780DCAF517D6DAE2C0963EC44 /* PBJVideoPlayer-framework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C00223F497E6719FFBEC4720DA697F3 /* PBJVideoPlayer-framework-dummy.m */; };
-		BF13BC558CD6073FD5C0F96095745601 /* ChameleonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 16E1A9FBC3087786955987DC00F5F17C /* ChameleonMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C22605CA7A8B60E53D1305B7374136EE /* PBJVideoPlayer-framework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08240A654DCA3F873B36367287AE853D /* PBJVideoPlayer-framework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C4D3764C41FF8D37C7E051CA5EDFF5D9 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A5FCF9D813E4A01F61E3DB4C66A3E1 /* UIColor+Chameleon.m */; };
-		C773BD2C03EC4C30E6F1DF821B05F428 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = A63ED1BE8B84B36A98CE83C185837A33 /* UILabel+Chameleon.m */; };
-		C87AC32FEEC25AE61CB47B55A233D6FC /* Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EC09CCF3623DB42BA47D8F0816CFB3C /* Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8472D941730A233D363393E646A0C83 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4809DC560BC7DB117D0F4D3E2EB6D0AB /* UINavigationController+Chameleon.m */; };
+		BBACAC8F75DAAEB4FA3F047DFA42D77A /* UIImage+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6C7EC9BB88F5418DF6A67066FA77EB /* UIImage+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC3624EA1DB568D4D58FB77A72309BF7 /* ChameleonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 769D5E615FCB571E4DB107EBFD720F31 /* ChameleonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCA9DBB780DCAF517D6DAE2C0963EC44 /* PBJVideoPlayer-framework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDD94AFDDE2DBB4CC6EE22F7B2744C1 /* PBJVideoPlayer-framework-dummy.m */; };
+		BF13BC558CD6073FD5C0F96095745601 /* ChameleonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 5691CF7D42AED3B0F08B7565EDB60783 /* ChameleonMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C22605CA7A8B60E53D1305B7374136EE /* PBJVideoPlayer-framework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C042E70FED80DFCCB72B0BA75AD169B7 /* PBJVideoPlayer-framework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C353524A497F28DA4B7AF25CB4ACE46E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70346000E916BE92A45B972D26F07F1E /* AVFoundation.framework */; };
+		C4D3764C41FF8D37C7E051CA5EDFF5D9 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 242CBB342AD6818FE6BF02D167D2E208 /* UIColor+Chameleon.m */; };
+		C572D629CEAB9673C05C6E195D8F35D1 /* UIImage+FixOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A9395C3BAA67201D05BCD0A33947BA3 /* UIImage+FixOrientation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C74EF20EEB5F54A09DFE809AEB59D29E /* LLSimpleCamera+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F57E0D1748E27188E9F7815AA9504E /* LLSimpleCamera+Helper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C773BD2C03EC4C30E6F1DF821B05F428 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DE8E83FAD57E959B46010301F3116A /* UILabel+Chameleon.m */; };
+		C87AC32FEEC25AE61CB47B55A233D6FC /* Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 838CBAB3757FF28CF27DEDA1CA8EEBA4 /* Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8E62E7C45CF596F200272E5851EC62F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B06759201A475DEACE2A01A54DA7DD /* Foundation.framework */; };
-		CC42C35FB16D3BBA8FDC3EF914E443B4 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E609B0016F0AFE99E324EB92C6E171 /* UIAppearance+Swift.m */; };
-		CE9453E2A799654254315AC5331D0B11 /* ChameleonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E3E6851D55308EE30B21692348C88C /* ChameleonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2F5053893CBDA6964AD97073A6D8630 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B4024636E853D84B3F83B9BB5DB767 /* UIViewController+Chameleon.m */; };
-		D372FA015DE25D96827731544AE5EB4A /* UIColor+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = AE1197CD26946AE594F09E04B2134116 /* UIColor+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6636E1060B04072BB1A8C8BDF9B4647 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C204E604E2B8EA0FA9407D5AEEE397 /* Chameleon_.m */; };
-		DD0A2CB3C9ECF91CE1239C62083F6F2F /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC3236C67533B16567D0A6655C2BF8F /* NSArray+Chameleon.m */; };
-		E350D5478EBD74163DB852F5EB329845 /* UIViewController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F46C752D922A6A0F79BEF05A8474B7 /* UIViewController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E909E3FC53D086D4A58C0221D7104A64 /* PBJVideoPlayer-library-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 86856488B9E04219DBCD1C568548F3C5 /* PBJVideoPlayer-library-dummy.m */; };
-		EBFC57384DBA056D57BDBA71A897D09B /* UIButton+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 690EEBD92ABCB7B11A73A4E3F094804C /* UIButton+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC88D4687A0538212336C5B6502E8AAB /* Chameleon_.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BBD1DF8A6C2C449192FB637022E015E /* Chameleon_.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ECA54B3F3D4AC3BC6363EB6CC3479392 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC3236C67533B16567D0A6655C2BF8F /* NSArray+Chameleon.m */; };
+		CC42C35FB16D3BBA8FDC3EF914E443B4 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA10A3AC0617D73F22157316F259142 /* UIAppearance+Swift.m */; };
+		CE9453E2A799654254315AC5331D0B11 /* ChameleonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 769D5E615FCB571E4DB107EBFD720F31 /* ChameleonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2F5053893CBDA6964AD97073A6D8630 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD14494DB4563DE3BAADCF35C4A11E0 /* UIViewController+Chameleon.m */; };
+		D372FA015DE25D96827731544AE5EB4A /* UIColor+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = B675DF04FE270D9B8FEA8D6802026DA8 /* UIColor+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6636E1060B04072BB1A8C8BDF9B4647 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AEB07644D270D555C46E542EFEE6BC /* Chameleon_.m */; };
+		DA638BB9224B5C4AF28F442028B44659 /* Pods-BeastTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B298B6C57379260614D10F1EA1FFF94 /* Pods-BeastTests-dummy.m */; };
+		DD0A2CB3C9ECF91CE1239C62083F6F2F /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = EC87570AA9AD46BC1EFB0421AADA8366 /* NSArray+Chameleon.m */; };
+		E350D5478EBD74163DB852F5EB329845 /* UIViewController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 38029EC6F8884ADDC647CE1174BFAAA0 /* UIViewController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E909E3FC53D086D4A58C0221D7104A64 /* PBJVideoPlayer-library-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E43D35E78F98C45174DAA2B01F011ACE /* PBJVideoPlayer-library-dummy.m */; };
+		EBFC57384DBA056D57BDBA71A897D09B /* UIButton+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 9572C40B494C7EBCF518BB81EE6D9D89 /* UIButton+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC88D4687A0538212336C5B6502E8AAB /* Chameleon_.h in Headers */ = {isa = PBXBuildFile; fileRef = 57FB070FB74B04B012EF85D46891A34D /* Chameleon_.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECA54B3F3D4AC3BC6363EB6CC3479392 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = EC87570AA9AD46BC1EFB0421AADA8366 /* NSArray+Chameleon.m */; };
 		F2A2A7F55B336FBCE3B4F919A7827A5F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146A449FB44431C0A1F3005982203CC8 /* QuartzCore.framework */; };
-		F2E6E258A02C21FE18ADA599A99E203C /* PBJVideoPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 18A64546D8D81BF3933FF48C8F0EAA94 /* PBJVideoPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F5475420813E73E26CE5DAA496FE3AD8 /* UIButton+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 690EEBD92ABCB7B11A73A4E3F094804C /* UIButton+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F84CCD103B07D784378F6A3B9B5C79BE /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = A63ED1BE8B84B36A98CE83C185837A33 /* UILabel+Chameleon.m */; };
-		FA42FC6C70849B3FEACA75D44689001B /* UIColor+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB81FA25246192331158143912311F3 /* UIColor+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2E6E258A02C21FE18ADA599A99E203C /* PBJVideoPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2843E0F5B0391AED246826B00B6FF495 /* PBJVideoPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5475420813E73E26CE5DAA496FE3AD8 /* UIButton+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 9572C40B494C7EBCF518BB81EE6D9D89 /* UIButton+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F84CCD103B07D784378F6A3B9B5C79BE /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DE8E83FAD57E959B46010301F3116A /* UILabel+Chameleon.m */; };
+		FA42FC6C70849B3FEACA75D44689001B /* UIColor+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = BD9A07AF44642020E2075A2089A1F5D8 /* UIColor+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE3C223E26F73A55BB3F8A5E16013992 /* Pods-Beast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB98AE57207307F6A91ADBB032CED56 /* Pods-Beast-dummy.m */; };
 		FEEEB76BEF2A8DEE581236EA1FB3FCC3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146A449FB44431C0A1F3005982203CC8 /* QuartzCore.framework */; };
-		FF3EB671FFEC3276E16414DD7E51CAA5 /* PBJVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = BA27954A25D8A3D3E11E322271CBC788 /* PBJVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF3EB671FFEC3276E16414DD7E51CAA5 /* PBJVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = B7ED79E0F91650AE43803E19FC5D6FF1 /* PBJVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFD5970760F972341C8BBB5C6ACA9EF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B06759201A475DEACE2A01A54DA7DD /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		73DE0DC2D4D4AB89166922F5447C1EB4 /* PBXContainerItemProxy */ = {
+		18D4979971610F640F1724CB1146BD74 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DF395F3D3A9534116E1F315DC6C78D50;
-			remoteInfo = "ChameleonFramework-library";
+			remoteGlobalIDString = C7065FFE7146BB7A5D9A5A8FA2EF4753;
+			remoteInfo = "LLSimpleCamera-framework";
 		};
-		7710FC363C44E2C8BC485BF7EA5A3B8D /* PBXContainerItemProxy */ = {
+		18E936D6AAAA58778F4CC577A320C6B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 387149F4E65B9B6EAFC79E9D5F9B0A2C;
 			remoteInfo = "PBJVideoPlayer-library";
 		};
-		E5469CDE5D74947DDB293310AD42CEBA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 41F72165CB5649AA54F91784E04507A4;
-			remoteInfo = "PBJVideoPlayer-framework";
-		};
-		FAD5E13EF91A0C04F1D434581389531C /* PBXContainerItemProxy */ = {
+		81429F4383474C3F4C06D2FBFDC5E040 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 38C9E2F3677CC2AA69A122CB8B8D1689;
 			remoteInfo = "ChameleonFramework-framework";
 		};
+		87C7B5F1A88B516F1CC5C28829437E3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF395F3D3A9534116E1F315DC6C78D50;
+			remoteInfo = "ChameleonFramework-library";
+		};
+		C3DBD222D3288DE51D0B092C6E4BF764 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F93B3C55C24EB123805DACFD1762FC6C;
+			remoteInfo = "LLSimpleCamera-library";
+		};
+		E2FBC886EC07CB842AFE0390DB222160 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41F72165CB5649AA54F91784E04507A4;
+			remoteInfo = "PBJVideoPlayer-framework";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		028FE86B91ABA1F264C8DA2C19C6A29C /* UILabel+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+Chameleon.h"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.h"; sourceTree = "<group>"; };
-		06A7AE3C44D4718FCB14FFC78B49B8F2 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
-		08240A654DCA3F873B36367287AE853D /* PBJVideoPlayer-framework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PBJVideoPlayer-framework-umbrella.h"; sourceTree = "<group>"; };
-		0AD1264CAD78FF1DE765302E43E5802C /* UIImage+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		00C51ACD958A664CCEA24803AC3B3EBA /* ChameleonFramework-framework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-framework-prefix.pch"; sourceTree = "<group>"; };
+		040CF9C80A812D0C90961AF6BDBD2AC7 /* LLSimpleCamera+Helper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "LLSimpleCamera+Helper.m"; path = "LLSimpleCamera/LLSimpleCamera+Helper.m"; sourceTree = "<group>"; };
+		0B552FC79F098FE07B8A4029B001E373 /* LLSimpleCamera-library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LLSimpleCamera-library-prefix.pch"; path = "../LLSimpleCamera-library/LLSimpleCamera-library-prefix.pch"; sourceTree = "<group>"; };
 		0DB98AE57207307F6A91ADBB032CED56 /* Pods-Beast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Beast-dummy.m"; sourceTree = "<group>"; };
-		0DD34ECD6C5C4B2E53AF537075B0B654 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
-		0E3152CE8719815AD4C12906BE9F7681 /* ChameleonFramework-library.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "ChameleonFramework-library.xcconfig"; path = "../ChameleonFramework-library/ChameleonFramework-library.xcconfig"; sourceTree = "<group>"; };
-		0E9E1760561F759AAFC4E4C85B114456 /* PBJVideoPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PBJVideoPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EC09CCF3623DB42BA47D8F0816CFB3C /* Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon.h; path = "Pod/Classes/Objective-C/Chameleon.h"; sourceTree = "<group>"; };
+		1135ADD44EB25FF8C4854DD4CF8DDDAC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13B65A9C8A435E1FE72F2B6D27ADE2F1 /* Pods-Beast-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Beast-frameworks.sh"; sourceTree = "<group>"; };
 		146A449FB44431C0A1F3005982203CC8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		16E1A9FBC3087786955987DC00F5F17C /* ChameleonMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonMacros.h; path = "Pod/Classes/Objective-C/ChameleonMacros.h"; sourceTree = "<group>"; };
-		18A64546D8D81BF3933FF48C8F0EAA94 /* PBJVideoPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVideoPlayer.h; path = Source/PBJVideoPlayer.h; sourceTree = "<group>"; };
-		19AC383D9C7CC198C819F18E98ADA0BB /* ChameleonFramework-framework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ChameleonFramework-framework.xcconfig"; sourceTree = "<group>"; };
-		1BB3966B0E09DA49BD2790BCC84B1F89 /* Pods_Beast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E679130218626E1C1D61321D98220D0 /* PBJVideoPlayer-library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PBJVideoPlayer-library-prefix.pch"; path = "../PBJVideoPlayer-library/PBJVideoPlayer-library-prefix.pch"; sourceTree = "<group>"; };
+		159BE1B2B844140A140DB01462F1937B /* ChameleonFramework-framework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ChameleonFramework-framework-dummy.m"; sourceTree = "<group>"; };
+		16314532FF88420084649D16062B0E0E /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		169D9FF885B597809800D498F3E179BD /* PBJVideoPlayerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVideoPlayerController.h; path = Source/PBJVideoPlayerController.h; sourceTree = "<group>"; };
+		1A9395C3BAA67201D05BCD0A33947BA3 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+FixOrientation.h"; path = "LLSimpleCamera/UIImage+FixOrientation.h"; sourceTree = "<group>"; };
+		1CD14494DB4563DE3BAADCF35C4A11E0 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Chameleon.m"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.m"; sourceTree = "<group>"; };
+		1CF70034775B64D3B2E5C58098501ED1 /* ChameleonFramework-framework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ChameleonFramework-framework.xcconfig"; sourceTree = "<group>"; };
+		204A7283FC777B38A48B4181A15F47E8 /* PBJVideoPlayer-library.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "PBJVideoPlayer-library.xcconfig"; path = "../PBJVideoPlayer-library/PBJVideoPlayer-library.xcconfig"; sourceTree = "<group>"; };
 		20B69839A922ACF590F26314AFC1C072 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		239BF7886CD45E3BE56276280FC5A99D /* ChameleonFramework-library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ChameleonFramework-library-prefix.pch"; path = "../ChameleonFramework-library/ChameleonFramework-library-prefix.pch"; sourceTree = "<group>"; };
+		23AEB07644D270D555C46E542EFEE6BC /* Chameleon_.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Chameleon_.m; path = "Pod/Classes/Objective-C/Chameleon_.m"; sourceTree = "<group>"; };
+		242CBB342AD6818FE6BF02D167D2E208 /* UIColor+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Chameleon.m"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.m"; sourceTree = "<group>"; };
 		244F6271AE96D9B3679FACE48B5356E0 /* Pods-BeastTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BeastTests-frameworks.sh"; sourceTree = "<group>"; };
-		26EBA9EE919AB335843546A928F74449 /* libChameleonFramework-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libChameleonFramework-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		29911897358F60D4DEB3E1FE5435CAFF /* ChameleonFramework-library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ChameleonFramework-library-dummy.m"; path = "../ChameleonFramework-library/ChameleonFramework-library-dummy.m"; sourceTree = "<group>"; };
-		2AFB97F81609EDA3CC5320F8493250BC /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		30C3B177C5ED2D8EE80FDC2A49E9E63A /* PBJVideoPlayerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVideoPlayerController.m; path = Source/PBJVideoPlayerController.m; sourceTree = "<group>"; };
-		3376FF67F1A3F4183EEC7FDC77702956 /* PBJVideoPlayer-framework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PBJVideoPlayer-framework.xcconfig"; sourceTree = "<group>"; };
-		35774FBB37CE8B2913BD9A24358AF156 /* libPods-BeastTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeastTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		390E7E2C02197199813392F73443D57A /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		3BBD1DF8A6C2C449192FB637022E015E /* Chameleon_.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon_.h; path = "Pod/Classes/Objective-C/Chameleon_.h"; sourceTree = "<group>"; };
-		3C00223F497E6719FFBEC4720DA697F3 /* PBJVideoPlayer-framework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PBJVideoPlayer-framework-dummy.m"; sourceTree = "<group>"; };
+		2532EC3A3B2AF159474F8D952DD931F9 /* UIView+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		2843E0F5B0391AED246826B00B6FF495 /* PBJVideoPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVideoPlayer.h; path = Source/PBJVideoPlayer.h; sourceTree = "<group>"; };
+		2AA10A3AC0617D73F22157316F259142 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAppearance+Swift.m"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.m"; sourceTree = "<group>"; };
+		2CC23CF18FBF74D6549BD6F5D84F6415 /* PBJVideoView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVideoView.m; path = Source/PBJVideoView.m; sourceTree = "<group>"; };
+		30C70EDBAF75C068334811AC98CAB74F /* PBJVideoPlayer-library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PBJVideoPlayer-library-prefix.pch"; path = "../PBJVideoPlayer-library/PBJVideoPlayer-library-prefix.pch"; sourceTree = "<group>"; };
+		330805ADCE273D8D440E9B8E216AC51B /* Pods_Beast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36161B17A356F8CB62148D93A669BB52 /* libChameleonFramework-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libChameleonFramework-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38029EC6F8884ADDC647CE1174BFAAA0 /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Chameleon.h"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.h"; sourceTree = "<group>"; };
+		3E27C3F74F0D1336AFC61214616027F5 /* UILabel+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+Chameleon.h"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.h"; sourceTree = "<group>"; };
 		3F9B39C4D1D4742DE3CB524D6931301A /* Pods-Beast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Beast.release.xcconfig"; sourceTree = "<group>"; };
 		4586920FD9D7A85B0FD243238124800D /* Pods-Beast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Beast.debug.xcconfig"; sourceTree = "<group>"; };
-		516FFAC9E6BEDBBCA03E3E7EA3654E89 /* ChameleonFramework-framework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-framework-umbrella.h"; sourceTree = "<group>"; };
-		53B4024636E853D84B3F83B9BB5DB767 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Chameleon.m"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.m"; sourceTree = "<group>"; };
+		46716FCA26D83743695124A877A0E5A1 /* LLSimpleCamera-framework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LLSimpleCamera-framework-umbrella.h"; sourceTree = "<group>"; };
+		4809DC560BC7DB117D0F4D3E2EB6D0AB /* UINavigationController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Chameleon.m"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.m"; sourceTree = "<group>"; };
+		4B6C7EC9BB88F5418DF6A67066FA77EB /* UIImage+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		4E389BEDACC724A3487CF3A57C276E01 /* libPBJVideoPlayer-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPBJVideoPlayer-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53B0C47D37277A6494E2BABF12D35F3E /* LLSimpleCamera-framework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LLSimpleCamera-framework-prefix.pch"; sourceTree = "<group>"; };
 		5492803684888ABEE5B039C69CCBB4F8 /* Pods-BeastTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BeastTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5691CF7D42AED3B0F08B7565EDB60783 /* ChameleonMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonMacros.h; path = "Pod/Classes/Objective-C/ChameleonMacros.h"; sourceTree = "<group>"; };
+		572FC68A0CA1D44EB1DB9C4265A6DB92 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+FixOrientation.m"; path = "LLSimpleCamera/UIImage+FixOrientation.m"; sourceTree = "<group>"; };
+		57FB070FB74B04B012EF85D46891A34D /* Chameleon_.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon_.h; path = "Pod/Classes/Objective-C/Chameleon_.h"; sourceTree = "<group>"; };
+		593885EE18FE2ED9312A6EC9C3297D0E /* ChameleonFramework-framework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-framework-umbrella.h"; sourceTree = "<group>"; };
 		5B298B6C57379260614D10F1EA1FFF94 /* Pods-BeastTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BeastTests-dummy.m"; sourceTree = "<group>"; };
 		5CD166DC83DC57D14EE7F2A7599BFEF4 /* Pods-Beast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Beast.modulemap"; sourceTree = "<group>"; };
-		5D8E9A28F99A40C3CAFA09D1117CFE5C /* UIAppearance+Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAppearance+Swift.h"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.h"; sourceTree = "<group>"; };
-		5F670733ADCD3DAA494B9725AAA61032 /* UIView+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.m"; sourceTree = "<group>"; };
-		690EEBD92ABCB7B11A73A4E3F094804C /* UIButton+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Chameleon.h"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.h"; sourceTree = "<group>"; };
-		69CA48ABB3EB93A1583CD4434D0FBF86 /* ChameleonConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ChameleonConstants.m; path = "Pod/Classes/Objective-C/ChameleonConstants.m"; sourceTree = "<group>"; };
-		6A7499E48517ED337C113D7E96E3BA94 /* ChameleonFramework-framework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "ChameleonFramework-framework.modulemap"; sourceTree = "<group>"; };
+		5CD6308F84388F7D6035A2C728C5D43E /* libLLSimpleCamera-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLLSimpleCamera-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D94B07912FCB2CA08B38B3BDDFA927E /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		6043F0CA7032DB27202340ABB216A69A /* ChameleonFramework-library.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "ChameleonFramework-library.xcconfig"; path = "../ChameleonFramework-library/ChameleonFramework-library.xcconfig"; sourceTree = "<group>"; };
+		67D1EBE6F29FA68B69C466AEBC1E2C5C /* libPods-BeastTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeastTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ABA734D908BC58DC50CC5B286FCD7EF /* UIAppearance+Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAppearance+Swift.h"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.h"; sourceTree = "<group>"; };
+		6D8794A51A36A23BB36AAA0F5336D008 /* PBJVideoPlayer-framework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PBJVideoPlayer-framework.xcconfig"; sourceTree = "<group>"; };
+		6D9C55FE468A11CD032FD6E076B0B05B /* LLSimpleCamera-framework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "LLSimpleCamera-framework.modulemap"; sourceTree = "<group>"; };
+		6DBC1AFDDF197EC336AEAEF9F6395FD5 /* ChameleonFramework-framework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "ChameleonFramework-framework.modulemap"; sourceTree = "<group>"; };
+		6E1C0527094E8F6C0B4986D8A0793A29 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
 		70346000E916BE92A45B972D26F07F1E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		75E3E6851D55308EE30B21692348C88C /* ChameleonConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonConstants.h; path = "Pod/Classes/Objective-C/ChameleonConstants.h"; sourceTree = "<group>"; };
-		7812692E57B0E519E7C9A74BB99BE187 /* PBJVideoPlayer-framework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PBJVideoPlayer-framework-prefix.pch"; sourceTree = "<group>"; };
-		78D795D61DE81CCC5ED2C4736CD3A780 /* PBJVideoPlayer-framework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "PBJVideoPlayer-framework.modulemap"; sourceTree = "<group>"; };
-		796B3858667696F381333721F530730F /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
-		799B404431AB55127DEE40F2EE04FA82 /* UIImage+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.m"; sourceTree = "<group>"; };
-		846AC058BD5E9383C5E32D9FD0C5FA0E /* PBJVideoPlayer-library.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "PBJVideoPlayer-library.xcconfig"; path = "../PBJVideoPlayer-library/PBJVideoPlayer-library.xcconfig"; sourceTree = "<group>"; };
+		742B8A1A7770D81607ACFE9DAF7C2A04 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		74E775D6C1D25E5A415218B8E61888AD /* UIView+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		761CAFA6BAD25172517FCAAD370A81FB /* LLSimpleCamera-framework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LLSimpleCamera-framework-dummy.m"; sourceTree = "<group>"; };
+		769D5E615FCB571E4DB107EBFD720F31 /* ChameleonConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonConstants.h; path = "Pod/Classes/Objective-C/ChameleonConstants.h"; sourceTree = "<group>"; };
+		78F57E0D1748E27188E9F7815AA9504E /* LLSimpleCamera+Helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LLSimpleCamera+Helper.h"; path = "LLSimpleCamera/LLSimpleCamera+Helper.h"; sourceTree = "<group>"; };
+		7CB3012363936ACBEEDEF1A7E88BF10D /* UIColor+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		7DB6639A6FAFC440F04B00A81D573AC6 /* PBJVideoPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PBJVideoPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		800CCF489BAF5B8383F022C86486C7E5 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		838CBAB3757FF28CF27DEDA1CA8EEBA4 /* Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon.h; path = "Pod/Classes/Objective-C/Chameleon.h"; sourceTree = "<group>"; };
+		83DE8E83FAD57E959B46010301F3116A /* UILabel+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Chameleon.m"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.m"; sourceTree = "<group>"; };
 		8528A9D518509E6D806ADBD48B0CF8E9 /* Pods-BeastTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BeastTests-resources.sh"; sourceTree = "<group>"; };
-		86856488B9E04219DBCD1C568548F3C5 /* PBJVideoPlayer-library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PBJVideoPlayer-library-dummy.m"; path = "../PBJVideoPlayer-library/PBJVideoPlayer-library-dummy.m"; sourceTree = "<group>"; };
 		887A2490545F1E753D4370667D62C23B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		8A7BCF4E54C2B5358763EE9C3C59D39A /* LLSimpleCamera-framework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "LLSimpleCamera-framework.xcconfig"; sourceTree = "<group>"; };
 		8AD64D83850B48C8171A76AB1AA4E1D0 /* Pods-Beast-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Beast-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9005D0C9F9F0608C9EA9A7D2CBCEF01C /* UIColor+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		8CF1E41D53B817288C81B9F632B79594 /* ChameleonConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ChameleonConstants.m; path = "Pod/Classes/Objective-C/ChameleonConstants.m"; sourceTree = "<group>"; };
+		8DF98FAF8B3DC6B1E19FFF73938563F5 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9691EE96B66C38CA79E63981D1054374 /* ChameleonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChameleonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CEA34CDAC357B489B1CB01E45C18E8F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FC352967A3137C900D3BE7158FF8597 /* PBJVideoPlayerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVideoPlayerController.h; path = Source/PBJVideoPlayerController.h; sourceTree = "<group>"; };
-		A1648E1ECC7356227168FBD03B234B95 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A63ED1BE8B84B36A98CE83C185837A33 /* UILabel+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Chameleon.m"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.m"; sourceTree = "<group>"; };
-		A6C204E604E2B8EA0FA9407D5AEEE397 /* Chameleon_.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Chameleon_.m; path = "Pod/Classes/Objective-C/Chameleon_.m"; sourceTree = "<group>"; };
-		A77042BA34B376EE25AA18DEC3165C02 /* NSArray+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Chameleon.h"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.h"; sourceTree = "<group>"; };
+		9572C40B494C7EBCF518BB81EE6D9D89 /* UIButton+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Chameleon.h"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.h"; sourceTree = "<group>"; };
+		98A7BDEDF35D2A4A471517E19E0ABDB7 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
+		9DD9CAFDBACA4477283A31538FD57931 /* NSArray+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Chameleon.h"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.h"; sourceTree = "<group>"; };
+		A2ECA12A91B9EA47AA985776F16F0C7B /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		AAD873262908D1CD15F4CEC5A1756573 /* LLSimpleCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LLSimpleCamera.h; path = LLSimpleCamera/LLSimpleCamera.h; sourceTree = "<group>"; };
 		ADE87C55772322F3DE1F3B4012AEFA30 /* Pods-BeastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BeastTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AE1197CD26946AE594F09E04B2134116 /* UIColor+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Chameleon.h"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.h"; sourceTree = "<group>"; };
-		B1F46C752D922A6A0F79BEF05A8474B7 /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Chameleon.h"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.h"; sourceTree = "<group>"; };
+		B0BBF3FAF3DAA679AFE631C148BF8F7A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D8F23BC00C44E4CD6AA24754BF2B15 /* PBJVideoPlayerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVideoPlayerController.m; path = Source/PBJVideoPlayerController.m; sourceTree = "<group>"; };
+		B675DF04FE270D9B8FEA8D6802026DA8 /* UIColor+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Chameleon.h"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.h"; sourceTree = "<group>"; };
+		B7ED79E0F91650AE43803E19FC5D6FF1 /* PBJVideoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVideoView.h; path = Source/PBJVideoView.h; sourceTree = "<group>"; };
 		B8B06759201A475DEACE2A01A54DA7DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		B9E0FE12B33A8E08F96EDCBEEDAABD6A /* ChameleonFramework-framework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ChameleonFramework-framework-dummy.m"; sourceTree = "<group>"; };
-		BA27954A25D8A3D3E11E322271CBC788 /* PBJVideoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVideoView.h; path = Source/PBJVideoView.h; sourceTree = "<group>"; };
-		C0A5D06A22BD4B55EA386350C46974F4 /* UIButton+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Chameleon.m"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.m"; sourceTree = "<group>"; };
+		BBDB9EF0A1439418D39A7402639E0CC0 /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseStorage.framework; path = Frameworks/FirebaseStorage.framework; sourceTree = "<group>"; };
+		BBDD94AFDDE2DBB4CC6EE22F7B2744C1 /* PBJVideoPlayer-framework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PBJVideoPlayer-framework-dummy.m"; sourceTree = "<group>"; };
+		BD9A07AF44642020E2075A2089A1F5D8 /* UIColor+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		C007062CDC787A16ADEC3AB4E6A4D151 /* LLSimpleCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LLSimpleCamera.m; path = LLSimpleCamera/LLSimpleCamera.m; sourceTree = "<group>"; };
+		C042E70FED80DFCCB72B0BA75AD169B7 /* PBJVideoPlayer-framework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PBJVideoPlayer-framework-umbrella.h"; sourceTree = "<group>"; };
+		C1AACF3DFB6D81378741CD10CC6D3FDE /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
 		C39CAC8FC1F811C39B2750ECC75EC80A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C8E609B0016F0AFE99E324EB92C6E171 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAppearance+Swift.m"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.m"; sourceTree = "<group>"; };
-		CEB81FA25246192331158143912311F3 /* UIColor+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.h"; sourceTree = "<group>"; };
-		D29583E320B0955D0E9BE0AFF0D4DDBD /* ChameleonEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonEnums.h; path = "Pod/Classes/Objective-C/ChameleonEnums.h"; sourceTree = "<group>"; };
-		D41BA8E79CCD58FEA2F7FF5C99DE175A /* UINavigationController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Chameleon.m"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.m"; sourceTree = "<group>"; };
-		D55FFDE8E4DA33B439311B8019D0C75B /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		D56EE085EEDAA7A29C02BB9A7FBB6573 /* PBJVideoView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVideoView.m; path = Source/PBJVideoView.m; sourceTree = "<group>"; };
+		C557CAFA485E53A30B876F403974F744 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		CD452280851A51D0ED7289EADEC1E564 /* ChameleonFramework-library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ChameleonFramework-library-prefix.pch"; path = "../ChameleonFramework-library/ChameleonFramework-library-prefix.pch"; sourceTree = "<group>"; };
+		DC420B578E2F6FA83E0CC9CF73AF71EF /* UINavigationController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Chameleon.h"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.h"; sourceTree = "<group>"; };
+		DCF5C8C4C71182544EF959296797585D /* ChameleonFramework-library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ChameleonFramework-library-dummy.m"; path = "../ChameleonFramework-library/ChameleonFramework-library-dummy.m"; sourceTree = "<group>"; };
+		DDC544E5C2534258EEB4656E34A9BE58 /* LLSimpleCamera-library.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "LLSimpleCamera-library.xcconfig"; path = "../LLSimpleCamera-library/LLSimpleCamera-library.xcconfig"; sourceTree = "<group>"; };
+		E0ABA9B9D8E749E178D71C6AFF3E694A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1CC925B9F7C48215A50A8350B80790F /* Pods-Beast-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Beast-umbrella.h"; sourceTree = "<group>"; };
-		E265FBEB83D7A13413017C526B009262 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		E2EB4FA83E0455D0A3C6ED2B0DCE45CA /* UIView+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.h"; sourceTree = "<group>"; };
-		E39734E27BCEDF22DE27C79C9DB0683A /* UINavigationController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Chameleon.h"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.h"; sourceTree = "<group>"; };
-		E687E1D3F4FDD9A2E742151F1B04392E /* libPBJVideoPlayer-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPBJVideoPlayer-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2A45005D20E1FCB8B2FB2CE5155C4A8 /* PBJVideoPlayer-framework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "PBJVideoPlayer-framework.modulemap"; sourceTree = "<group>"; };
+		E43D35E78F98C45174DAA2B01F011ACE /* PBJVideoPlayer-library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PBJVideoPlayer-library-dummy.m"; path = "../PBJVideoPlayer-library/PBJVideoPlayer-library-dummy.m"; sourceTree = "<group>"; };
+		E56867DE46117A28C57D729855322580 /* PBJVideoPlayer-framework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PBJVideoPlayer-framework-prefix.pch"; sourceTree = "<group>"; };
 		E779A6FC3DC5D48EE42AE1A36E33DFC1 /* Pods-BeastTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BeastTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		F2A5FCF9D813E4A01F61E3DB4C66A3E1 /* UIColor+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Chameleon.m"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.m"; sourceTree = "<group>"; };
-		F80A222069066755DA8600120779C4BD /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		E8EB1F8109B87B5D38BE941E3A0FEC93 /* LLSimpleCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LLSimpleCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBEDA8E7E08C5992FC3BEC816210A2D9 /* UIButton+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Chameleon.m"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.m"; sourceTree = "<group>"; };
+		EC87570AA9AD46BC1EFB0421AADA8366 /* NSArray+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Chameleon.m"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.m"; sourceTree = "<group>"; };
+		EECCC1B123AF5246E7C5A20C81D30D14 /* ChameleonEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonEnums.h; path = "Pod/Classes/Objective-C/ChameleonEnums.h"; sourceTree = "<group>"; };
+		F372F12E0D9F202E1900E03E5C8B711F /* LLSimpleCamera-library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "LLSimpleCamera-library-dummy.m"; path = "../LLSimpleCamera-library/LLSimpleCamera-library-dummy.m"; sourceTree = "<group>"; };
 		FA3F551F0B24A96D5424247A3637658B /* Pods-BeastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BeastTests.release.xcconfig"; sourceTree = "<group>"; };
-		FBC3236C67533B16567D0A6655C2BF8F /* NSArray+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Chameleon.m"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.m"; sourceTree = "<group>"; };
-		FC2F81FEE5E81AE56DE24E582B54DC2A /* ChameleonFramework-framework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-framework-prefix.pch"; sourceTree = "<group>"; };
+		FC3FAD781F340E18F9F93688DA121086 /* UIImage+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.m"; sourceTree = "<group>"; };
 		FD3977CCA0B753F1FF9F7BB135A99D80 /* Pods-Beast-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Beast-resources.sh"; sourceTree = "<group>"; };
 		FE8EFEE4F56FABBCE8995AA08ECB2426 /* Pods-Beast-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Beast-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		17856701A15E6979B4671B7BF5640734 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36A5222E81732CCE813CC893B11ADB20 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CB687B9A3D3A7B9F75670D402F1A103 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,14 +307,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		682908C2369001A95CB73652BF097F3B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				860762AD3290AAAC21D05BD3614A0260 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		73FB1B210FBEB496B4AC78BFB4048C0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,6 +315,14 @@
 				8D4FBCE4F4AF64AAFFA41ECE18F2BF2C /* Foundation.framework in Frameworks */,
 				6FF7F1446B78D0DDF00143809733F8B1 /* QuartzCore.framework in Frameworks */,
 				B7454767EA89390CBC0CB15523061E8B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EA2379649EEA05E964F61D8D947DC4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFD5970760F972341C8BBB5C6ACA9EF5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,63 +338,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEB35B0AA5101DBA48789C34C25958ED /* Frameworks */ = {
+		CD26AAC0693ABF08762866482F9A9D10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E0D43E2F8A25C70395412FF070EF884 /* Foundation.framework in Frameworks */,
+				C353524A497F28DA4B7AF25CB4ACE46E /* AVFoundation.framework in Frameworks */,
+				3305EF70FFE3CE004BC8CB9E97B16CBC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB92FBAAC979A38F36F691BDBC8E0384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B8B2139434BB09D690E83FE64B6BFDA /* AVFoundation.framework in Frameworks */,
+				21C6001EF618B7FFBF20D665F242516A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		006B17E5178736B48AF7F453F5A17FE6 /* GoogleInterchangeUtilities */ = {
+		059375CB60E0E0CCB4E94CAC34419362 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B04FBC452A5A94FF374DB6BA2446CB61 /* Frameworks */,
-			);
-			path = GoogleInterchangeUtilities;
-			sourceTree = "<group>";
-		};
-		0235F72227B262BC4AD9D7E3A768926A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				390E7E2C02197199813392F73443D57A /* FirebaseAnalytics.framework */,
+				C557CAFA485E53A30B876F403974F744 /* GoogleInterchangeUtilities.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		04D29EDF68C7A7B2C2977270264F54A2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F80A222069066755DA8600120779C4BD /* GoogleUtilities.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		082F3DCD6EBEDA83D68FAED40D9362A8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D55FFDE8E4DA33B439311B8019D0C75B /* GoogleSymbolUtilities.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		086E6B71020BEE08029189AFA53582D7 /* GoogleUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				04D29EDF68C7A7B2C2977270264F54A2 /* Frameworks */,
-			);
-			path = GoogleUtilities;
-			sourceTree = "<group>";
-		};
-		0A990B059D26DD1A287AD16AF9CB17BE /* Analytics */ = {
-			isa = PBXGroup;
-			children = (
-				796B3858667696F381333721F530730F /* Firebase.h */,
-			);
-			name = Analytics;
 			sourceTree = "<group>";
 		};
 		0AA912E6901EDB4006AB8E08701EE92E /* iOS */ = {
@@ -349,6 +379,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		132F520FE38D35768425B027D83B0717 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				905B07E575ED857A799F24BD838F0A91 /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
 		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,42 +395,87 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		20EA24EC7FEBDF7E09DB13BB6AC00795 /* ChameleonFramework */ = {
+		322949B142AC18E09DCD1ED4239896E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DA7775091F660D2DE49AC342FE2862F0 /* Default */,
-				C53079B3A5C4FECAE59BCB0A178C8265 /* Support Files */,
-			);
-			path = ChameleonFramework;
-			sourceTree = "<group>";
-		};
-		452A60126D9313D750D6187BA6B9483D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E265FBEB83D7A13413017C526B009262 /* FirebaseInstanceID.framework */,
+				5D94B07912FCB2CA08B38B3BDDFA927E /* GoogleUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		49C695D946D0E9FB2AA3A4AD9404908E /* PBJVideoPlayer */ = {
+		325D779CEFEE914E182CFD3238F29378 /* GoogleNetworkingUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				18A64546D8D81BF3933FF48C8F0EAA94 /* PBJVideoPlayer.h */,
-				9FC352967A3137C900D3BE7158FF8597 /* PBJVideoPlayerController.h */,
-				30C3B177C5ED2D8EE80FDC2A49E9E63A /* PBJVideoPlayerController.m */,
-				BA27954A25D8A3D3E11E322271CBC788 /* PBJVideoView.h */,
-				D56EE085EEDAA7A29C02BB9A7FBB6573 /* PBJVideoView.m */,
-				AC5B60E0AC7DB28C16728FEA667D72D0 /* Support Files */,
+				B0B7273E787DCB74FE36E74F1C2D5D2A /* Frameworks */,
 			);
-			path = PBJVideoPlayer;
+			path = GoogleNetworkingUtilities;
 			sourceTree = "<group>";
 		};
-		5675E67E499C118EA80BDA0A3E5CB65F /* Frameworks */ = {
+		4F2E5609437CE07D5ED30A3EAAD2D051 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0DD34ECD6C5C4B2E53AF537075B0B654 /* FirebaseDatabase.framework */,
+				B0BBF3FAF3DAA679AFE631C148BF8F7A /* Info.plist */,
+				E2A45005D20E1FCB8B2FB2CE5155C4A8 /* PBJVideoPlayer-framework.modulemap */,
+				6D8794A51A36A23BB36AAA0F5336D008 /* PBJVideoPlayer-framework.xcconfig */,
+				BBDD94AFDDE2DBB4CC6EE22F7B2744C1 /* PBJVideoPlayer-framework-dummy.m */,
+				E56867DE46117A28C57D729855322580 /* PBJVideoPlayer-framework-prefix.pch */,
+				C042E70FED80DFCCB72B0BA75AD169B7 /* PBJVideoPlayer-framework-umbrella.h */,
+				204A7283FC777B38A48B4181A15F47E8 /* PBJVideoPlayer-library.xcconfig */,
+				E43D35E78F98C45174DAA2B01F011ACE /* PBJVideoPlayer-library-dummy.m */,
+				30C70EDBAF75C068334811AC98CAB74F /* PBJVideoPlayer-library-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PBJVideoPlayer-framework";
+			sourceTree = "<group>";
+		};
+		5B1C6DCB3E5C411A071D5F561E72D2C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2ECA12A91B9EA47AA985776F16F0C7B /* FirebaseInstanceID.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		631BB7F10BD0A7402B2DDF2D604DF0D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5DFE868B72A0C928DF1981DD2A061FC /* ChameleonFramework */,
+				ADA2E3527AFF40D5C324D50003B571D9 /* Firebase */,
+				98C7FA24410A8E56C26B743F9FDD1F6B /* FirebaseAnalytics */,
+				A5106B2F278C7A4E716055967F63AF56 /* FirebaseDatabase */,
+				83674E7E169977E2768274BEFBB1B33D /* FirebaseInstanceID */,
+				8763962505A621CB32B3F9B5FD25E540 /* FirebaseStorage */,
+				D988D09CD49AC3FD4DA48964EF885DA8 /* GoogleInterchangeUtilities */,
+				325D779CEFEE914E182CFD3238F29378 /* GoogleNetworkingUtilities */,
+				132F520FE38D35768425B027D83B0717 /* GoogleSymbolUtilities */,
+				E73C045BCA99183354CE14003E08201D /* GoogleUtilities */,
+				EFDC6A24BEDDEB4D444D932C185FE9C9 /* LLSimpleCamera */,
+				AFE830D76460282BEB04C1073775A80B /* PBJVideoPlayer */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		637E5C74AB8A463DBF153E80A844E5DD /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				C1AACF3DFB6D81378741CD10CC6D3FDE /* Firebase.h */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		6E583D0DF85D1F843E1C09BB3DE0CCA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DF98FAF8B3DC6B1E19FFF73938563F5 /* ChameleonFramework.framework */,
+				36161B17A356F8CB62148D93A669BB52 /* libChameleonFramework-library.a */,
+				5CD6308F84388F7D6035A2C728C5D43E /* libLLSimpleCamera-library.a */,
+				4E389BEDACC724A3487CF3A57C276E01 /* libPBJVideoPlayer-library.a */,
+				67D1EBE6F29FA68B69C466AEBC1E2C5C /* libPods-BeastTests.a */,
+				E8EB1F8109B87B5D38BE941E3A0FEC93 /* LLSimpleCamera.framework */,
+				7DB6639A6FAFC440F04B00A81D573AC6 /* PBJVideoPlayer.framework */,
+				330805ADCE273D8D440E9B8E216AC51B /* Pods_Beast.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		704AC55F258E878BC632C30D1D042397 /* Pods-BeastTests */ = {
@@ -415,26 +498,51 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
-				8DEBBEFE63282BCA89D3FA6F6271105B /* Pods */,
-				DE98CA8B66AAED523877232C7DAD8B9A /* Products */,
+				631BB7F10BD0A7402B2DDF2D604DF0D7 /* Pods */,
+				6E583D0DF85D1F843E1C09BB3DE0CCA8 /* Products */,
 				9E33166822F7B24800BB576A58793BED /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8DEBBEFE63282BCA89D3FA6F6271105B /* Pods */ = {
+		83674E7E169977E2768274BEFBB1B33D /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				20EA24EC7FEBDF7E09DB13BB6AC00795 /* ChameleonFramework */,
-				D2AB8271369441F72A6A55BB8E44AEC1 /* Firebase */,
-				CE774568879365D6FF2EF747024904D8 /* FirebaseAnalytics */,
-				A72C8EB17AD81F3FDF4F922FA56C5602 /* FirebaseDatabase */,
-				A5A596EB2FEE6C6F28A3FAE663115CF4 /* FirebaseInstanceID */,
-				006B17E5178736B48AF7F453F5A17FE6 /* GoogleInterchangeUtilities */,
-				FBE7F842D579D7DCB5C06D6D566C2EA7 /* GoogleSymbolUtilities */,
-				086E6B71020BEE08029189AFA53582D7 /* GoogleUtilities */,
-				49C695D946D0E9FB2AA3A4AD9404908E /* PBJVideoPlayer */,
+				98A7BDEDF35D2A4A471517E19E0ABDB7 /* FIRInstanceID.h */,
+				5B1C6DCB3E5C411A071D5F561E72D2C9 /* Frameworks */,
 			);
-			name = Pods;
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		8763962505A621CB32B3F9B5FD25E540 /* FirebaseStorage */ = {
+			isa = PBXGroup;
+			children = (
+				CC01B2D37DAA368FB1CF51B5F4D696B5 /* Frameworks */,
+			);
+			path = FirebaseStorage;
+			sourceTree = "<group>";
+		};
+		905B07E575ED857A799F24BD838F0A91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				742B8A1A7770D81607ACFE9DAF7C2A04 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9751DA67243119D2E3A89F0C0FFC8D11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16314532FF88420084649D16062B0E0E /* FirebaseDatabase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		98C7FA24410A8E56C26B743F9FDD1F6B /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				C491D80F51DF980FE09406D83E1815C7 /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
 			sourceTree = "<group>";
 		};
 		9E33166822F7B24800BB576A58793BED /* Targets Support Files */ = {
@@ -446,126 +554,164 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A5A596EB2FEE6C6F28A3FAE663115CF4 /* FirebaseInstanceID */ = {
+		A5106B2F278C7A4E716055967F63AF56 /* FirebaseDatabase */ = {
 			isa = PBXGroup;
 			children = (
-				06A7AE3C44D4718FCB14FFC78B49B8F2 /* FIRInstanceID.h */,
-				452A60126D9313D750D6187BA6B9483D /* Frameworks */,
-			);
-			path = FirebaseInstanceID;
-			sourceTree = "<group>";
-		};
-		A72C8EB17AD81F3FDF4F922FA56C5602 /* FirebaseDatabase */ = {
-			isa = PBXGroup;
-			children = (
-				5675E67E499C118EA80BDA0A3E5CB65F /* Frameworks */,
+				9751DA67243119D2E3A89F0C0FFC8D11 /* Frameworks */,
 			);
 			path = FirebaseDatabase;
 			sourceTree = "<group>";
 		};
-		AC5B60E0AC7DB28C16728FEA667D72D0 /* Support Files */ = {
+		ADA2E3527AFF40D5C324D50003B571D9 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				A1648E1ECC7356227168FBD03B234B95 /* Info.plist */,
-				78D795D61DE81CCC5ED2C4736CD3A780 /* PBJVideoPlayer-framework.modulemap */,
-				3376FF67F1A3F4183EEC7FDC77702956 /* PBJVideoPlayer-framework.xcconfig */,
-				3C00223F497E6719FFBEC4720DA697F3 /* PBJVideoPlayer-framework-dummy.m */,
-				7812692E57B0E519E7C9A74BB99BE187 /* PBJVideoPlayer-framework-prefix.pch */,
-				08240A654DCA3F873B36367287AE853D /* PBJVideoPlayer-framework-umbrella.h */,
-				846AC058BD5E9383C5E32D9FD0C5FA0E /* PBJVideoPlayer-library.xcconfig */,
-				86856488B9E04219DBCD1C568548F3C5 /* PBJVideoPlayer-library-dummy.m */,
-				1E679130218626E1C1D61321D98220D0 /* PBJVideoPlayer-library-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PBJVideoPlayer-framework";
-			sourceTree = "<group>";
-		};
-		B04FBC452A5A94FF374DB6BA2446CB61 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2AFB97F81609EDA3CC5320F8493250BC /* GoogleInterchangeUtilities.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C53079B3A5C4FECAE59BCB0A178C8265 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6A7499E48517ED337C113D7E96E3BA94 /* ChameleonFramework-framework.modulemap */,
-				19AC383D9C7CC198C819F18E98ADA0BB /* ChameleonFramework-framework.xcconfig */,
-				B9E0FE12B33A8E08F96EDCBEEDAABD6A /* ChameleonFramework-framework-dummy.m */,
-				FC2F81FEE5E81AE56DE24E582B54DC2A /* ChameleonFramework-framework-prefix.pch */,
-				516FFAC9E6BEDBBCA03E3E7EA3654E89 /* ChameleonFramework-framework-umbrella.h */,
-				0E3152CE8719815AD4C12906BE9F7681 /* ChameleonFramework-library.xcconfig */,
-				29911897358F60D4DEB3E1FE5435CAFF /* ChameleonFramework-library-dummy.m */,
-				239BF7886CD45E3BE56276280FC5A99D /* ChameleonFramework-library-prefix.pch */,
-				9CEA34CDAC357B489B1CB01E45C18E8F /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ChameleonFramework-framework";
-			sourceTree = "<group>";
-		};
-		CE774568879365D6FF2EF747024904D8 /* FirebaseAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				0235F72227B262BC4AD9D7E3A768926A /* Frameworks */,
-			);
-			path = FirebaseAnalytics;
-			sourceTree = "<group>";
-		};
-		D2AB8271369441F72A6A55BB8E44AEC1 /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				0A990B059D26DD1A287AD16AF9CB17BE /* Analytics */,
+				637E5C74AB8A463DBF153E80A844E5DD /* Analytics */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
 		};
-		DA7775091F660D2DE49AC342FE2862F0 /* Default */ = {
+		AFE830D76460282BEB04C1073775A80B /* PBJVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				0EC09CCF3623DB42BA47D8F0816CFB3C /* Chameleon.h */,
-				3BBD1DF8A6C2C449192FB637022E015E /* Chameleon_.h */,
-				A6C204E604E2B8EA0FA9407D5AEEE397 /* Chameleon_.m */,
-				75E3E6851D55308EE30B21692348C88C /* ChameleonConstants.h */,
-				69CA48ABB3EB93A1583CD4434D0FBF86 /* ChameleonConstants.m */,
-				D29583E320B0955D0E9BE0AFF0D4DDBD /* ChameleonEnums.h */,
-				16E1A9FBC3087786955987DC00F5F17C /* ChameleonMacros.h */,
-				A77042BA34B376EE25AA18DEC3165C02 /* NSArray+Chameleon.h */,
-				FBC3236C67533B16567D0A6655C2BF8F /* NSArray+Chameleon.m */,
-				5D8E9A28F99A40C3CAFA09D1117CFE5C /* UIAppearance+Swift.h */,
-				C8E609B0016F0AFE99E324EB92C6E171 /* UIAppearance+Swift.m */,
-				690EEBD92ABCB7B11A73A4E3F094804C /* UIButton+Chameleon.h */,
-				C0A5D06A22BD4B55EA386350C46974F4 /* UIButton+Chameleon.m */,
-				AE1197CD26946AE594F09E04B2134116 /* UIColor+Chameleon.h */,
-				F2A5FCF9D813E4A01F61E3DB4C66A3E1 /* UIColor+Chameleon.m */,
-				CEB81FA25246192331158143912311F3 /* UIColor+ChameleonPrivate.h */,
-				9005D0C9F9F0608C9EA9A7D2CBCEF01C /* UIColor+ChameleonPrivate.m */,
-				0AD1264CAD78FF1DE765302E43E5802C /* UIImage+ChameleonPrivate.h */,
-				799B404431AB55127DEE40F2EE04FA82 /* UIImage+ChameleonPrivate.m */,
-				028FE86B91ABA1F264C8DA2C19C6A29C /* UILabel+Chameleon.h */,
-				A63ED1BE8B84B36A98CE83C185837A33 /* UILabel+Chameleon.m */,
-				E39734E27BCEDF22DE27C79C9DB0683A /* UINavigationController+Chameleon.h */,
-				D41BA8E79CCD58FEA2F7FF5C99DE175A /* UINavigationController+Chameleon.m */,
-				E2EB4FA83E0455D0A3C6ED2B0DCE45CA /* UIView+ChameleonPrivate.h */,
-				5F670733ADCD3DAA494B9725AAA61032 /* UIView+ChameleonPrivate.m */,
-				B1F46C752D922A6A0F79BEF05A8474B7 /* UIViewController+Chameleon.h */,
-				53B4024636E853D84B3F83B9BB5DB767 /* UIViewController+Chameleon.m */,
+				2843E0F5B0391AED246826B00B6FF495 /* PBJVideoPlayer.h */,
+				169D9FF885B597809800D498F3E179BD /* PBJVideoPlayerController.h */,
+				B5D8F23BC00C44E4CD6AA24754BF2B15 /* PBJVideoPlayerController.m */,
+				B7ED79E0F91650AE43803E19FC5D6FF1 /* PBJVideoView.h */,
+				2CC23CF18FBF74D6549BD6F5D84F6415 /* PBJVideoView.m */,
+				4F2E5609437CE07D5ED30A3EAAD2D051 /* Support Files */,
+			);
+			path = PBJVideoPlayer;
+			sourceTree = "<group>";
+		};
+		B0B7273E787DCB74FE36E74F1C2D5D2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E1C0527094E8F6C0B4986D8A0793A29 /* GoogleNetworkingUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C491D80F51DF980FE09406D83E1815C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				800CCF489BAF5B8383F022C86486C7E5 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C75CFD8237868EBAA28A12C8D375CEB7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1135ADD44EB25FF8C4854DD4CF8DDDAC /* Info.plist */,
+				6D9C55FE468A11CD032FD6E076B0B05B /* LLSimpleCamera-framework.modulemap */,
+				8A7BCF4E54C2B5358763EE9C3C59D39A /* LLSimpleCamera-framework.xcconfig */,
+				761CAFA6BAD25172517FCAAD370A81FB /* LLSimpleCamera-framework-dummy.m */,
+				53B0C47D37277A6494E2BABF12D35F3E /* LLSimpleCamera-framework-prefix.pch */,
+				46716FCA26D83743695124A877A0E5A1 /* LLSimpleCamera-framework-umbrella.h */,
+				DDC544E5C2534258EEB4656E34A9BE58 /* LLSimpleCamera-library.xcconfig */,
+				F372F12E0D9F202E1900E03E5C8B711F /* LLSimpleCamera-library-dummy.m */,
+				0B552FC79F098FE07B8A4029B001E373 /* LLSimpleCamera-library-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LLSimpleCamera-framework";
+			sourceTree = "<group>";
+		};
+		CC01B2D37DAA368FB1CF51B5F4D696B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBDB9EF0A1439418D39A7402639E0CC0 /* FirebaseStorage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5DFE868B72A0C928DF1981DD2A061FC /* ChameleonFramework */ = {
+			isa = PBXGroup;
+			children = (
+				E8CD54669F8D55B8B6D922EBD47ACD22 /* Default */,
+				F5109ED90A1272E7D7EE87A5CB268C1A /* Support Files */,
+			);
+			path = ChameleonFramework;
+			sourceTree = "<group>";
+		};
+		D988D09CD49AC3FD4DA48964EF885DA8 /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				059375CB60E0E0CCB4E94CAC34419362 /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		E73C045BCA99183354CE14003E08201D /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				322949B142AC18E09DCD1ED4239896E2 /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		E8CD54669F8D55B8B6D922EBD47ACD22 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				838CBAB3757FF28CF27DEDA1CA8EEBA4 /* Chameleon.h */,
+				57FB070FB74B04B012EF85D46891A34D /* Chameleon_.h */,
+				23AEB07644D270D555C46E542EFEE6BC /* Chameleon_.m */,
+				769D5E615FCB571E4DB107EBFD720F31 /* ChameleonConstants.h */,
+				8CF1E41D53B817288C81B9F632B79594 /* ChameleonConstants.m */,
+				EECCC1B123AF5246E7C5A20C81D30D14 /* ChameleonEnums.h */,
+				5691CF7D42AED3B0F08B7565EDB60783 /* ChameleonMacros.h */,
+				9DD9CAFDBACA4477283A31538FD57931 /* NSArray+Chameleon.h */,
+				EC87570AA9AD46BC1EFB0421AADA8366 /* NSArray+Chameleon.m */,
+				6ABA734D908BC58DC50CC5B286FCD7EF /* UIAppearance+Swift.h */,
+				2AA10A3AC0617D73F22157316F259142 /* UIAppearance+Swift.m */,
+				9572C40B494C7EBCF518BB81EE6D9D89 /* UIButton+Chameleon.h */,
+				EBEDA8E7E08C5992FC3BEC816210A2D9 /* UIButton+Chameleon.m */,
+				B675DF04FE270D9B8FEA8D6802026DA8 /* UIColor+Chameleon.h */,
+				242CBB342AD6818FE6BF02D167D2E208 /* UIColor+Chameleon.m */,
+				BD9A07AF44642020E2075A2089A1F5D8 /* UIColor+ChameleonPrivate.h */,
+				7CB3012363936ACBEEDEF1A7E88BF10D /* UIColor+ChameleonPrivate.m */,
+				4B6C7EC9BB88F5418DF6A67066FA77EB /* UIImage+ChameleonPrivate.h */,
+				FC3FAD781F340E18F9F93688DA121086 /* UIImage+ChameleonPrivate.m */,
+				3E27C3F74F0D1336AFC61214616027F5 /* UILabel+Chameleon.h */,
+				83DE8E83FAD57E959B46010301F3116A /* UILabel+Chameleon.m */,
+				DC420B578E2F6FA83E0CC9CF73AF71EF /* UINavigationController+Chameleon.h */,
+				4809DC560BC7DB117D0F4D3E2EB6D0AB /* UINavigationController+Chameleon.m */,
+				74E775D6C1D25E5A415218B8E61888AD /* UIView+ChameleonPrivate.h */,
+				2532EC3A3B2AF159474F8D952DD931F9 /* UIView+ChameleonPrivate.m */,
+				38029EC6F8884ADDC647CE1174BFAAA0 /* UIViewController+Chameleon.h */,
+				1CD14494DB4563DE3BAADCF35C4A11E0 /* UIViewController+Chameleon.m */,
 			);
 			name = Default;
 			sourceTree = "<group>";
 		};
-		DE98CA8B66AAED523877232C7DAD8B9A /* Products */ = {
+		EFDC6A24BEDDEB4D444D932C185FE9C9 /* LLSimpleCamera */ = {
 			isa = PBXGroup;
 			children = (
-				9691EE96B66C38CA79E63981D1054374 /* ChameleonFramework.framework */,
-				26EBA9EE919AB335843546A928F74449 /* libChameleonFramework-library.a */,
-				E687E1D3F4FDD9A2E742151F1B04392E /* libPBJVideoPlayer-library.a */,
-				35774FBB37CE8B2913BD9A24358AF156 /* libPods-BeastTests.a */,
-				0E9E1760561F759AAFC4E4C85B114456 /* PBJVideoPlayer.framework */,
-				1BB3966B0E09DA49BD2790BCC84B1F89 /* Pods_Beast.framework */,
+				AAD873262908D1CD15F4CEC5A1756573 /* LLSimpleCamera.h */,
+				C007062CDC787A16ADEC3AB4E6A4D151 /* LLSimpleCamera.m */,
+				78F57E0D1748E27188E9F7815AA9504E /* LLSimpleCamera+Helper.h */,
+				040CF9C80A812D0C90961AF6BDBD2AC7 /* LLSimpleCamera+Helper.m */,
+				1A9395C3BAA67201D05BCD0A33947BA3 /* UIImage+FixOrientation.h */,
+				572FC68A0CA1D44EB1DB9C4265A6DB92 /* UIImage+FixOrientation.m */,
+				C75CFD8237868EBAA28A12C8D375CEB7 /* Support Files */,
 			);
-			name = Products;
+			path = LLSimpleCamera;
+			sourceTree = "<group>";
+		};
+		F5109ED90A1272E7D7EE87A5CB268C1A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DBC1AFDDF197EC336AEAEF9F6395FD5 /* ChameleonFramework-framework.modulemap */,
+				1CF70034775B64D3B2E5C58098501ED1 /* ChameleonFramework-framework.xcconfig */,
+				159BE1B2B844140A140DB01462F1937B /* ChameleonFramework-framework-dummy.m */,
+				00C51ACD958A664CCEA24803AC3B3EBA /* ChameleonFramework-framework-prefix.pch */,
+				593885EE18FE2ED9312A6EC9C3297D0E /* ChameleonFramework-framework-umbrella.h */,
+				6043F0CA7032DB27202340ABB216A69A /* ChameleonFramework-library.xcconfig */,
+				DCF5C8C4C71182544EF959296797585D /* ChameleonFramework-library-dummy.m */,
+				CD452280851A51D0ED7289EADEC1E564 /* ChameleonFramework-library-prefix.pch */,
+				E0ABA9B9D8E749E178D71C6AFF3E694A /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ChameleonFramework-framework";
 			sourceTree = "<group>";
 		};
 		FA970AD60091A39A37BB0D8D29A8CEC1 /* Pods-Beast */ = {
@@ -584,14 +730,6 @@
 			);
 			name = "Pods-Beast";
 			path = "Target Support Files/Pods-Beast";
-			sourceTree = "<group>";
-		};
-		FBE7F842D579D7DCB5C06D6D566C2EA7 /* GoogleSymbolUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				082F3DCD6EBEDA83D68FAED40D9362A8 /* Frameworks */,
-			);
-			path = GoogleSymbolUtilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -619,6 +757,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		25A910657CA5F694D8353E3BC3774481 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D47691D9D4EBCA90C4D19DB4E30919 /* LLSimpleCamera+Helper.h in Headers */,
+				76A990247098663EDC6BD0DB37B27788 /* LLSimpleCamera-framework-umbrella.h in Headers */,
+				4759002969C7552E53FEF241A26F4C47 /* LLSimpleCamera.h in Headers */,
+				C572D629CEAB9673C05C6E195D8F35D1 /* UIImage+FixOrientation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5763CD76D150799E6A03660A30F84E2C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,11 +779,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FBEADF092C7C86EF66160D9CDC237A9 /* Headers */ = {
+		B9FC6C8E9F3CED8BB7BA8E5E4ACFB3A6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9556B92C103468A960357F430DE460D7 /* Pods-Beast-umbrella.h in Headers */,
+				C74EF20EEB5F54A09DFE809AEB59D29E /* LLSimpleCamera+Helper.h in Headers */,
+				339710B18CF20A69A48942B29BE33894 /* LLSimpleCamera.h in Headers */,
+				889764F49626E814E04179B7F6A71D98 /* UIImage+FixOrientation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD9D2C53F2BFB18DEB4713625720E9AC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				151B58361AC04F1238E28491F6EF6F1E /* Pods-Beast-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,7 +847,7 @@
 			);
 			name = "PBJVideoPlayer-library";
 			productName = "PBJVideoPlayer-library";
-			productReference = E687E1D3F4FDD9A2E742151F1B04392E /* libPBJVideoPlayer-library.a */;
+			productReference = 4E389BEDACC724A3487CF3A57C276E01 /* libPBJVideoPlayer-library.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		38C9E2F3677CC2AA69A122CB8B8D1689 /* ChameleonFramework-framework */ = {
@@ -705,7 +864,7 @@
 			);
 			name = "ChameleonFramework-framework";
 			productName = "ChameleonFramework-framework";
-			productReference = 9691EE96B66C38CA79E63981D1054374 /* ChameleonFramework.framework */;
+			productReference = 8DF98FAF8B3DC6B1E19FFF73938563F5 /* ChameleonFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		41F72165CB5649AA54F91784E04507A4 /* PBJVideoPlayer-framework */ = {
@@ -722,45 +881,64 @@
 			);
 			name = "PBJVideoPlayer-framework";
 			productName = "PBJVideoPlayer-framework";
-			productReference = 0E9E1760561F759AAFC4E4C85B114456 /* PBJVideoPlayer.framework */;
+			productReference = 7DB6639A6FAFC440F04B00A81D573AC6 /* PBJVideoPlayer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7886EA234DFEF8FE05FAAE2DCC15FC03 /* Pods-Beast */ = {
+		574C6A919BA346E5A002E070E21057F5 /* Pods-BeastTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5A18E44E9BC6CA23EA278F1BA8B66C42 /* Build configuration list for PBXNativeTarget "Pods-Beast" */;
+			buildConfigurationList = 215CF6849F9C3E4C7DA6E7F7CA569763 /* Build configuration list for PBXNativeTarget "Pods-BeastTests" */;
 			buildPhases = (
-				5BA76A5BA58EDDFC10D5FBD617CFD925 /* Sources */,
-				FEB35B0AA5101DBA48789C34C25958ED /* Frameworks */,
-				5FBEADF092C7C86EF66160D9CDC237A9 /* Headers */,
+				05C0CB9C81F6F307FB8655C44F9F678F /* Sources */,
+				8EA2379649EEA05E964F61D8D947DC4E /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0D55974A5D55284B4C970BFDCE188003 /* PBXTargetDependency */,
-				3F7369818CFC78C9265FFE42D321C4C0 /* PBXTargetDependency */,
-			);
-			name = "Pods-Beast";
-			productName = "Pods-Beast";
-			productReference = 1BB3966B0E09DA49BD2790BCC84B1F89 /* Pods_Beast.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D7C5C067E53D323B0456853C9AC6751A /* Pods-BeastTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7E9B5C60A83DC2662F5FC38F64ED180F /* Build configuration list for PBXNativeTarget "Pods-BeastTests" */;
-			buildPhases = (
-				D5E38DA9E33DDC3582739362751CDF02 /* Sources */,
-				682908C2369001A95CB73652BF097F3B /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4A6F8BD4ADC375016105E16B9B3A6BBC /* PBXTargetDependency */,
-				7C3D2CE8A5A19BD5222BC10FEE723206 /* PBXTargetDependency */,
+				1693C4741E3B859D024C28B12AE3D518 /* PBXTargetDependency */,
+				6CCEF004CA2BC2BDDA8EA6553A162514 /* PBXTargetDependency */,
+				2E7D9A314FE456508AD9928DEC761E51 /* PBXTargetDependency */,
 			);
 			name = "Pods-BeastTests";
 			productName = "Pods-BeastTests";
-			productReference = 35774FBB37CE8B2913BD9A24358AF156 /* libPods-BeastTests.a */;
+			productReference = 67D1EBE6F29FA68B69C466AEBC1E2C5C /* libPods-BeastTests.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		6F0C136FF2B38A3ACECFE1CC2EDF30FF /* Pods-Beast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C17E51EA0162DA5C40F04C950A0B4F8 /* Build configuration list for PBXNativeTarget "Pods-Beast" */;
+			buildPhases = (
+				B2F3D31ABCF00469DB622561D81F1846 /* Sources */,
+				17856701A15E6979B4671B7BF5640734 /* Frameworks */,
+				BD9D2C53F2BFB18DEB4713625720E9AC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAA8A7493B5B39B88049DF302D2D4E0B /* PBXTargetDependency */,
+				FC9A3ECA5C00334C00C9F3DB1CB9F7AB /* PBXTargetDependency */,
+				5C3EC40495C057836C0447EC85CB80E6 /* PBXTargetDependency */,
+			);
+			name = "Pods-Beast";
+			productName = "Pods-Beast";
+			productReference = 330805ADCE273D8D440E9B8E216AC51B /* Pods_Beast.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C7065FFE7146BB7A5D9A5A8FA2EF4753 /* LLSimpleCamera-framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FA9B26BA4A910DE3A623FC210EF277F /* Build configuration list for PBXNativeTarget "LLSimpleCamera-framework" */;
+			buildPhases = (
+				9BB886CA4B1EE42DA51BC99FEA07AB38 /* Sources */,
+				CD26AAC0693ABF08762866482F9A9D10 /* Frameworks */,
+				25A910657CA5F694D8353E3BC3774481 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LLSimpleCamera-framework";
+			productName = "LLSimpleCamera-framework";
+			productReference = E8EB1F8109B87B5D38BE941E3A0FEC93 /* LLSimpleCamera.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		DF395F3D3A9534116E1F315DC6C78D50 /* ChameleonFramework-library */ = {
 			isa = PBXNativeTarget;
@@ -776,7 +954,24 @@
 			);
 			name = "ChameleonFramework-library";
 			productName = "ChameleonFramework-library";
-			productReference = 26EBA9EE919AB335843546A928F74449 /* libChameleonFramework-library.a */;
+			productReference = 36161B17A356F8CB62148D93A669BB52 /* libChameleonFramework-library.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F93B3C55C24EB123805DACFD1762FC6C /* LLSimpleCamera-library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B454C073DF9B5ECFB2DA064F55A891B /* Build configuration list for PBXNativeTarget "LLSimpleCamera-library" */;
+			buildPhases = (
+				8A7E8457489AD91CD9B5A68A0E9524CA /* Sources */,
+				FB92FBAAC979A38F36F691BDBC8E0384 /* Frameworks */,
+				B9FC6C8E9F3CED8BB7BA8E5E4ACFB3A6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LLSimpleCamera-library";
+			productName = "LLSimpleCamera-library";
+			productReference = 5CD6308F84388F7D6035A2C728C5D43E /* libLLSimpleCamera-library.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -796,26 +991,28 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = DE98CA8B66AAED523877232C7DAD8B9A /* Products */;
+			productRefGroup = 6E583D0DF85D1F843E1C09BB3DE0CCA8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				38C9E2F3677CC2AA69A122CB8B8D1689 /* ChameleonFramework-framework */,
 				DF395F3D3A9534116E1F315DC6C78D50 /* ChameleonFramework-library */,
+				C7065FFE7146BB7A5D9A5A8FA2EF4753 /* LLSimpleCamera-framework */,
+				F93B3C55C24EB123805DACFD1762FC6C /* LLSimpleCamera-library */,
 				41F72165CB5649AA54F91784E04507A4 /* PBJVideoPlayer-framework */,
 				387149F4E65B9B6EAFC79E9D5F9B0A2C /* PBJVideoPlayer-library */,
-				7886EA234DFEF8FE05FAAE2DCC15FC03 /* Pods-Beast */,
-				D7C5C067E53D323B0456853C9AC6751A /* Pods-BeastTests */,
+				6F0C136FF2B38A3ACECFE1CC2EDF30FF /* Pods-Beast */,
+				574C6A919BA346E5A002E070E21057F5 /* Pods-BeastTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5BA76A5BA58EDDFC10D5FBD617CFD925 /* Sources */ = {
+		05C0CB9C81F6F307FB8655C44F9F678F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13C864AD4C374FB02588BE96095F267E /* Pods-Beast-dummy.m in Sources */,
+				DA638BB9224B5C4AF28F442028B44659 /* Pods-BeastTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,6 +1046,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8A7E8457489AD91CD9B5A68A0E9524CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A02733A393E3CF5FF81CBE0CFDA03755 /* LLSimpleCamera+Helper.m in Sources */,
+				1EC50916D2AD2308FBAA0400E9D5FB16 /* LLSimpleCamera-library-dummy.m in Sources */,
+				5917FFCFBB91B5EEE55DDB89B9FDE102 /* LLSimpleCamera.m in Sources */,
+				92443EA4FCF841D408C9438AC0EA55CD /* UIImage+FixOrientation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BB886CA4B1EE42DA51BC99FEA07AB38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77BC6E115CBC274E605B6227308414DB /* LLSimpleCamera+Helper.m in Sources */,
+				7988CB263EDC40301F900ADD770BC320 /* LLSimpleCamera-framework-dummy.m in Sources */,
+				0BE067E5C6BE3CFB725A9C02D36E8136 /* LLSimpleCamera.m in Sources */,
+				94069A77E238F363EE6F3EC6E6349DA4 /* UIImage+FixOrientation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2F3D31ABCF00469DB622561D81F1846 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE3C223E26F73A55BB3F8A5E16013992 /* Pods-Beast-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4543327A5A36DB81A3C6C7C1E611003 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -869,14 +1096,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5E38DA9E33DDC3582739362751CDF02 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				054A64D61AC1497FC7C5D956B08D16B3 /* Pods-BeastTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F23466D21FB999C0993D8DBD9C2C4859 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -890,55 +1109,79 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0D55974A5D55284B4C970BFDCE188003 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ChameleonFramework-framework";
-			target = 38C9E2F3677CC2AA69A122CB8B8D1689 /* ChameleonFramework-framework */;
-			targetProxy = FAD5E13EF91A0C04F1D434581389531C /* PBXContainerItemProxy */;
-		};
-		3F7369818CFC78C9265FFE42D321C4C0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "PBJVideoPlayer-framework";
-			target = 41F72165CB5649AA54F91784E04507A4 /* PBJVideoPlayer-framework */;
-			targetProxy = E5469CDE5D74947DDB293310AD42CEBA /* PBXContainerItemProxy */;
-		};
-		4A6F8BD4ADC375016105E16B9B3A6BBC /* PBXTargetDependency */ = {
+		1693C4741E3B859D024C28B12AE3D518 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "ChameleonFramework-library";
 			target = DF395F3D3A9534116E1F315DC6C78D50 /* ChameleonFramework-library */;
-			targetProxy = 73DE0DC2D4D4AB89166922F5447C1EB4 /* PBXContainerItemProxy */;
+			targetProxy = 87C7B5F1A88B516F1CC5C28829437E3F /* PBXContainerItemProxy */;
 		};
-		7C3D2CE8A5A19BD5222BC10FEE723206 /* PBXTargetDependency */ = {
+		2E7D9A314FE456508AD9928DEC761E51 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "PBJVideoPlayer-library";
 			target = 387149F4E65B9B6EAFC79E9D5F9B0A2C /* PBJVideoPlayer-library */;
-			targetProxy = 7710FC363C44E2C8BC485BF7EA5A3B8D /* PBXContainerItemProxy */;
+			targetProxy = 18E936D6AAAA58778F4CC577A320C6B9 /* PBXContainerItemProxy */;
+		};
+		5C3EC40495C057836C0447EC85CB80E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PBJVideoPlayer-framework";
+			target = 41F72165CB5649AA54F91784E04507A4 /* PBJVideoPlayer-framework */;
+			targetProxy = E2FBC886EC07CB842AFE0390DB222160 /* PBXContainerItemProxy */;
+		};
+		6CCEF004CA2BC2BDDA8EA6553A162514 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LLSimpleCamera-library";
+			target = F93B3C55C24EB123805DACFD1762FC6C /* LLSimpleCamera-library */;
+			targetProxy = C3DBD222D3288DE51D0B092C6E4BF764 /* PBXContainerItemProxy */;
+		};
+		BAA8A7493B5B39B88049DF302D2D4E0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ChameleonFramework-framework";
+			target = 38C9E2F3677CC2AA69A122CB8B8D1689 /* ChameleonFramework-framework */;
+			targetProxy = 81429F4383474C3F4C06D2FBFDC5E040 /* PBXContainerItemProxy */;
+		};
+		FC9A3ECA5C00334C00C9F3DB1CB9F7AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "LLSimpleCamera-framework";
+			target = C7065FFE7146BB7A5D9A5A8FA2EF4753 /* LLSimpleCamera-framework */;
+			targetProxy = 18D4979971610F640F1724CB1146BD74 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2EF0F7F59C37E2567D06587E48E060B9 /* Debug */ = {
+		10F8E878D8FFFC99A96B1A840AAC3A2C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 846AC058BD5E9383C5E32D9FD0C5FA0E /* PBJVideoPlayer-library.xcconfig */;
+			baseConfigurationReference = 4586920FD9D7A85B0FD243238124800D /* Pods-Beast.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PBJVideoPlayer-library/PBJVideoPlayer-library-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_FILE = "Target Support Files/Pods-Beast/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Beast/Pods-Beast.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Beast;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		35160457948AFBABC118CAFC3C5F1AB3 /* Debug */ = {
+		1F6F2BBDF527AF9297C8B774AC11A92E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ADE87C55772322F3DE1F3B4012AEFA30 /* Pods-BeastTests.debug.xcconfig */;
 			buildSettings = {
@@ -959,9 +1202,30 @@
 			};
 			name = Debug;
 		};
+		2EF0F7F59C37E2567D06587E48E060B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 204A7283FC777B38A48B4181A15F47E8 /* PBJVideoPlayer-library.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PBJVideoPlayer-library/PBJVideoPlayer-library-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		44587BA95AD92DE94B757FC64F33415B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E3152CE8719815AD4C12906BE9F7681 /* ChameleonFramework-library.xcconfig */;
+			baseConfigurationReference = 6043F0CA7032DB27202340ABB216A69A /* ChameleonFramework-library.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -980,9 +1244,30 @@
 			};
 			name = Debug;
 		};
+		533E25EE22C7FBA025CAC961D1344527 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDC544E5C2534258EEB4656E34A9BE58 /* LLSimpleCamera-library.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LLSimpleCamera-library/LLSimpleCamera-library-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		5EADAFCA2F69F0B93A53EE18B8CB2B6C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19AC383D9C7CC198C819F18E98ADA0BB /* ChameleonFramework-framework.xcconfig */;
+			baseConfigurationReference = 1CF70034775B64D3B2E5C58098501ED1 /* ChameleonFramework-framework.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1049,7 +1334,7 @@
 		};
 		8019AF6F17E76127C8172F63C168D8C8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E3152CE8719815AD4C12906BE9F7681 /* ChameleonFramework-library.xcconfig */;
+			baseConfigurationReference = 6043F0CA7032DB27202340ABB216A69A /* ChameleonFramework-library.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1068,9 +1353,59 @@
 			};
 			name = Release;
 		};
+		80335D220526445CD12B0950D251C6A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A7BCF4E54C2B5358763EE9C3C59D39A /* LLSimpleCamera-framework.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LLSimpleCamera-framework/LLSimpleCamera-framework-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LLSimpleCamera-framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LLSimpleCamera-framework/LLSimpleCamera-framework.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LLSimpleCamera;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		84E30AC005B0231ABB3B5F866C742E42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA3F551F0B24A96D5424247A3637658B /* Pods-BeastTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		8950AA1DACEFB1647AB30D676E5ACA2E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19AC383D9C7CC198C819F18E98ADA0BB /* ChameleonFramework-framework.xcconfig */;
+			baseConfigurationReference = 1CF70034775B64D3B2E5C58098501ED1 /* ChameleonFramework-framework.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1097,42 +1432,59 @@
 			};
 			name = Debug;
 		};
-		BB3D7E34326EC1937930508FE1822BC3 /* Debug */ = {
+		8FDD2CFB2A6D00BE8F919F60E1D8EAE4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4586920FD9D7A85B0FD243238124800D /* Pods-Beast.debug.xcconfig */;
+			baseConfigurationReference = DDC544E5C2534258EEB4656E34A9BE58 /* LLSimpleCamera-library.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LLSimpleCamera-library/LLSimpleCamera-library-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A05F2C06667472DE842D09612ABC299C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A7BCF4E54C2B5358763EE9C3C59D39A /* LLSimpleCamera-framework.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Beast/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/LLSimpleCamera-framework/LLSimpleCamera-framework-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LLSimpleCamera-framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Beast/Pods-Beast.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Beast;
+				MODULEMAP_FILE = "Target Support Files/LLSimpleCamera-framework/LLSimpleCamera-framework.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = LLSimpleCamera;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		C33EAD230577456FBC49DCC040BD1FD8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3376FF67F1A3F4183EEC7FDC77702956 /* PBJVideoPlayer-framework.xcconfig */;
+			baseConfigurationReference = 6D8794A51A36A23BB36AAA0F5336D008 /* PBJVideoPlayer-framework.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1159,30 +1511,9 @@
 			};
 			name = Release;
 		};
-		DD75A639E8D7C387A880E01ECD031618 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA3F551F0B24A96D5424247A3637658B /* Pods-BeastTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		EB86BD9B79C31C352546C9D7C69C70D4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 846AC058BD5E9383C5E32D9FD0C5FA0E /* PBJVideoPlayer-library.xcconfig */;
+			baseConfigurationReference = 204A7283FC777B38A48B4181A15F47E8 /* PBJVideoPlayer-library.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1203,7 +1534,7 @@
 		};
 		ED18ACDD96900EACEC3169A0D2C81995 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3376FF67F1A3F4183EEC7FDC77702956 /* PBJVideoPlayer-framework.xcconfig */;
+			baseConfigurationReference = 6D8794A51A36A23BB36AAA0F5336D008 /* PBJVideoPlayer-framework.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1272,7 +1603,7 @@
 			};
 			name = Debug;
 		};
-		F8F41BB9CE5A4AB132567187F48B5CA6 /* Release */ = {
+		FB874CB563187225E165382C98AA8B24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F9B39C4D1D4742DE3CB524D6931301A /* Pods-Beast.release.xcconfig */;
 			buildSettings = {
@@ -1308,6 +1639,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0B454C073DF9B5ECFB2DA064F55A891B /* Build configuration list for PBXNativeTarget "LLSimpleCamera-library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				533E25EE22C7FBA025CAC961D1344527 /* Debug */,
+				8FDD2CFB2A6D00BE8F919F60E1D8EAE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C17E51EA0162DA5C40F04C950A0B4F8 /* Build configuration list for PBXNativeTarget "Pods-Beast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10F8E878D8FFFC99A96B1A840AAC3A2C /* Debug */,
+				FB874CB563187225E165382C98AA8B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		215CF6849F9C3E4C7DA6E7F7CA569763 /* Build configuration list for PBXNativeTarget "Pods-BeastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F6F2BBDF527AF9297C8B774AC11A92E /* Debug */,
+				84E30AC005B0231ABB3B5F866C742E42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1326,11 +1684,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A18E44E9BC6CA23EA278F1BA8B66C42 /* Build configuration list for PBXNativeTarget "Pods-Beast" */ = {
+		4FA9B26BA4A910DE3A623FC210EF277F /* Build configuration list for PBXNativeTarget "LLSimpleCamera-framework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB3D7E34326EC1937930508FE1822BC3 /* Debug */,
-				F8F41BB9CE5A4AB132567187F48B5CA6 /* Release */,
+				80335D220526445CD12B0950D251C6A9 /* Debug */,
+				A05F2C06667472DE842D09612ABC299C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1340,15 +1698,6 @@
 			buildConfigurations = (
 				8950AA1DACEFB1647AB30D676E5ACA2E /* Debug */,
 				5EADAFCA2F69F0B93A53EE18B8CB2B6C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7E9B5C60A83DC2662F5FC38F64ED180F /* Build configuration list for PBXNativeTarget "Pods-BeastTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				35160457948AFBABC118CAFC3C5F1AB3 /* Debug */,
-				DD75A639E8D7C387A880E01ECD031618 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
