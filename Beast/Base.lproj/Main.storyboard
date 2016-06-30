@@ -86,7 +86,7 @@
                                             <outlet property="lvlLabel" destination="Xum-Uz-I8U" id="dqK-Td-Qnv"/>
                                             <outlet property="workoutLabel" destination="JpR-tq-d6G" id="UIu-7I-r6q"/>
                                             <outlet property="workoutPhoto" destination="rL7-kK-o7j" id="KK6-6f-tuy"/>
-                                            <segue destination="8F6-pU-UHl" kind="modal" identifier="blastSegue" id="4MM-Tj-748"/>
+                                            <segue destination="8F6-pU-UHl" kind="modal" identifier="VideoSegue" id="4MM-Tj-748"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -125,7 +125,7 @@
                     <connections>
                         <outlet property="tableView" destination="Fqr-WP-79c" id="YJl-3a-YOW"/>
                         <outlet property="workoutButton" destination="QbC-iK-YUA" id="r4w-dB-lhj"/>
-                        <segue destination="fbt-G0-s9x" kind="modal" identifier="MirrorSegue" id="47T-ld-6dB"/>
+                        <segue destination="V7a-Q6-P3a" kind="custom" identifier="MirrorSegue" customClass="SlideRightSegue" id="47T-ld-6dB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMg-vT-9OT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -145,10 +145,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hPj-2V-ffk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xem-ed-Ubi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="644" y="223"/>
+            <point key="canvasLocation" x="1176" y="223"/>
         </scene>
         <!--Workout Video View Controller-->
         <scene sceneID="dXe-BF-zK5">
@@ -183,6 +184,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Nf-1z-7uk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-198" y="-178"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bP9-Yy-qQQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V7a-Q6-P3a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OM5-3x-m3T">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fbt-G0-s9x" kind="relationship" relationship="rootViewController" id="tPe-4S-m22"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EcB-fn-ZHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="644" y="223"/>
         </scene>
     </scenes>
     <resources>

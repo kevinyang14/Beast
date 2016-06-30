@@ -25,7 +25,7 @@
     NSString *fileName = [NSString stringWithFormat:@"%@.m4v", vidNum];
     NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     NSURL *URL = [documentsURL URLByAppendingPathComponent:fileName];
-    NSLog(@"URL = %@", [URL path]);
+//    NSLog(@"URL = %@", [URL path]);
     return URL;
 }
 
@@ -36,7 +36,7 @@
     FIRStorage *storage = [FIRStorage storage];
     FIRStorageReference *storageRef = [storage reference];
     FIRStorageReference *firebaseRef = [storageRef child:videoURL];
-    NSLog(@"firebaseRef = %@", firebaseRef);
+//    NSLog(@"firebaseRef = %@", firebaseRef);
     return firebaseRef;
 }
 

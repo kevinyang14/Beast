@@ -16,8 +16,13 @@
 		0A880BE61D1FD6EA00155296 /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A880BE11D1FD6EA00155296 /* UIImage+Crop.m */; };
 		0A880BE71D1FD6EA00155296 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A880BE31D1FD6EA00155296 /* UIImage+Resize.m */; };
 		0A880BE81D1FD6EA00155296 /* ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A880BE51D1FD6EA00155296 /* ViewUtils.m */; };
+		0A880BED1D20DFC400155296 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A880BEC1D20DFC400155296 /* AVFoundation.framework */; };
+		0A880BEF1D20DFF100155296 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A880BEE1D20DFF100155296 /* Spotify.framework */; };
+		0A880BF11D20F87300155296 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A880BF01D20F87300155296 /* SystemConfiguration.framework */; };
+		0A880BF71D24E3EE00155296 /* SlideLeftSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A880BF61D24E3EE00155296 /* SlideLeftSegue.m */; };
+		0A880BFB1D24E4E600155296 /* SlideRightSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A880BFA1D24E4E600155296 /* SlideRightSegue.m */; };
+		0A880BFF1D24ED6000155296 /* BeastColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A880BFE1D24ED6000155296 /* BeastColors.m */; };
 		0A8E06971D1D2EC700AAFAC7 /* MirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E06961D1D2EC700AAFAC7 /* MirrorViewController.m */; };
-		0A8E06991D1D378F00AAFAC7 /* Custom Slide Segues in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E06981D1D378F00AAFAC7 /* Custom Slide Segues */; };
 		0A8E069B1D1D8C0900AAFAC7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8E069A1D1D8C0900AAFAC7 /* QuartzCore.framework */; };
 		0AA1B6F01CB6D83D00A594E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1B6EF1CB6D83D00A594E1 /* main.m */; };
 		0AA1B6F31CB6D83D00A594E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1B6F21CB6D83D00A594E1 /* AppDelegate.m */; };
@@ -60,9 +65,17 @@
 		0A880BE31D1FD6EA00155296 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		0A880BE41D1FD6EA00155296 /* ViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtils.h; sourceTree = "<group>"; };
 		0A880BE51D1FD6EA00155296 /* ViewUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUtils.m; sourceTree = "<group>"; };
+		0A880BEC1D20DFC400155296 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0A880BEE1D20DFF100155296 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = "<group>"; };
+		0A880BF01D20F87300155296 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0A880BF51D24E3EE00155296 /* SlideLeftSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideLeftSegue.h; sourceTree = "<group>"; };
+		0A880BF61D24E3EE00155296 /* SlideLeftSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideLeftSegue.m; sourceTree = "<group>"; };
+		0A880BF91D24E4E600155296 /* SlideRightSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideRightSegue.h; sourceTree = "<group>"; };
+		0A880BFA1D24E4E600155296 /* SlideRightSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideRightSegue.m; sourceTree = "<group>"; };
+		0A880BFD1D24ED6000155296 /* BeastColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeastColors.h; sourceTree = "<group>"; };
+		0A880BFE1D24ED6000155296 /* BeastColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeastColors.m; sourceTree = "<group>"; };
 		0A8E06951D1D2EC700AAFAC7 /* MirrorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MirrorViewController.h; sourceTree = "<group>"; };
 		0A8E06961D1D2EC700AAFAC7 /* MirrorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MirrorViewController.m; sourceTree = "<group>"; };
-		0A8E06981D1D378F00AAFAC7 /* Custom Slide Segues */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Custom Slide Segues"; sourceTree = "<group>"; };
 		0A8E069A1D1D8C0900AAFAC7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0AA1B6EA1CB6D83D00A594E1 /* Beast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA1B6EE1CB6D83D00A594E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,8 +111,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A880BF11D20F87300155296 /* SystemConfiguration.framework in Frameworks */,
+				0A880BED1D20DFC400155296 /* AVFoundation.framework in Frameworks */,
 				0A8E069B1D1D8C0900AAFAC7 /* QuartzCore.framework in Frameworks */,
 				0A8219991CDABC1500F34441 /* AudioToolbox.framework in Frameworks */,
+				0A880BEF1D20DFF100155296 /* Spotify.framework in Frameworks */,
 				DB0E5080B17C697F7FC32A9F /* Pods_Beast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,7 +131,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A880BE91D1FD75500155296 /* ViewUtils */ = {
+		0A880BE91D1FD75500155296 /* CameraUtilities */ = {
 			isa = PBXGroup;
 			children = (
 				0A880BDD1D1FD6CB00155296 /* ImageViewController.h */,
@@ -127,7 +143,33 @@
 				0A880BE41D1FD6EA00155296 /* ViewUtils.h */,
 				0A880BE51D1FD6EA00155296 /* ViewUtils.m */,
 			);
-			name = ViewUtils;
+			name = CameraUtilities;
+			sourceTree = "<group>";
+		};
+		0A880BF81D24E3FB00155296 /* CustomSegues */ = {
+			isa = PBXGroup;
+			children = (
+				0A880BF51D24E3EE00155296 /* SlideLeftSegue.h */,
+				0A880BF61D24E3EE00155296 /* SlideLeftSegue.m */,
+				0A880BF91D24E4E600155296 /* SlideRightSegue.h */,
+				0A880BFA1D24E4E600155296 /* SlideRightSegue.m */,
+			);
+			name = CustomSegues;
+			sourceTree = "<group>";
+		};
+		0A880BFC1D24ECAC00155296 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				0A880BFD1D24ED6000155296 /* BeastColors.h */,
+				0A880BFE1D24ED6000155296 /* BeastColors.m */,
+				0A5AE2781D08D35E001A23BC /* BeastWorkout.h */,
+				0A5AE2791D08D35E001A23BC /* BeastWorkout.m */,
+				0ADA768E1CCB2BEA00E39F39 /* BeastCell.h */,
+				0ADA768F1CCB2BEA00E39F39 /* BeastCell.m */,
+				0A5AE27B1D1B9088001A23BC /* FirebaseRefs.h */,
+				0A5AE27C1D1B9088001A23BC /* FirebaseRefs.m */,
+			);
+			name = CustomClasses;
 			sourceTree = "<group>";
 		};
 		0AA1B6E11CB6D83C00A594E1 = {
@@ -156,10 +198,7 @@
 				0AEED6081CD58C8C003DCDE7 /* Resources */,
 				0AA1B6F11CB6D83D00A594E1 /* AppDelegate.h */,
 				0AA1B6F21CB6D83D00A594E1 /* AppDelegate.m */,
-				0A5AE2781D08D35E001A23BC /* BeastWorkout.h */,
-				0A5AE2791D08D35E001A23BC /* BeastWorkout.m */,
-				0A5AE27B1D1B9088001A23BC /* FirebaseRefs.h */,
-				0A5AE27C1D1B9088001A23BC /* FirebaseRefs.m */,
+				0A880BFC1D24ECAC00155296 /* CustomClasses */,
 				0ADA768B1CCB27A100E39F39 /* BeastViewController.h */,
 				0ADA768C1CCB27A100E39F39 /* BeastViewController.m */,
 				0AB420B61CD4AD7D008B66BD /* WorkoutVideoViewController.h */,
@@ -167,12 +206,11 @@
 				0A8E06951D1D2EC700AAFAC7 /* MirrorViewController.h */,
 				0A8E06961D1D2EC700AAFAC7 /* MirrorViewController.m */,
 				0AA1B6F71CB6D83D00A594E1 /* Main.storyboard */,
-				0ADA768E1CCB2BEA00E39F39 /* BeastCell.h */,
-				0ADA768F1CCB2BEA00E39F39 /* BeastCell.m */,
-				0A8E06981D1D378F00AAFAC7 /* Custom Slide Segues */,
-				0A880BE91D1FD75500155296 /* ViewUtils */,
+				0A880BF81D24E3FB00155296 /* CustomSegues */,
+				0A880BE91D1FD75500155296 /* CameraUtilities */,
 				0AA1B6FA1CB6D83D00A594E1 /* Images.xcassets */,
 				0AA1B6FC1CB6D83D00A594E1 /* LaunchScreen.xib */,
+				0A880BEE1D20DFF100155296 /* Spotify.framework */,
 				0AA1B6ED1CB6D83D00A594E1 /* Supporting Files */,
 			);
 			path = Beast;
@@ -229,6 +267,8 @@
 		97872D4F93C9EB96765FD48E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A880BF01D20F87300155296 /* SystemConfiguration.framework */,
+				0A880BEC1D20DFC400155296 /* AVFoundation.framework */,
 				0A8E069A1D1D8C0900AAFAC7 /* QuartzCore.framework */,
 				0A8219981CDABC1500F34441 /* AudioToolbox.framework */,
 				2ABAFE56B93B825A2E848E8A /* Pods.framework */,
@@ -328,7 +368,6 @@
 				0AA1B6F91CB6D83D00A594E1 /* Main.storyboard in Resources */,
 				0AA1B6FE1CB6D83D00A594E1 /* LaunchScreen.xib in Resources */,
 				0AEED6061CD58C86003DCDE7 /* Lato-Regular.ttf in Resources */,
-				0A8E06991D1D378F00AAFAC7 /* Custom Slide Segues in Resources */,
 				0AEED6071CD58C86003DCDE7 /* MyriadPro-BoldIt.otf in Resources */,
 				0AA1B6FB1CB6D83D00A594E1 /* Images.xcassets in Resources */,
 				0AEED6051CD58C86003DCDE7 /* Lato-Light.ttf in Resources */,
@@ -446,6 +485,7 @@
 			files = (
 				0AA1B6F31CB6D83D00A594E1 /* AppDelegate.m in Sources */,
 				0A5AE27D1D1B9088001A23BC /* FirebaseRefs.m in Sources */,
+				0A880BFB1D24E4E600155296 /* SlideRightSegue.m in Sources */,
 				0AB420B81CD4AD7D008B66BD /* WorkoutVideoViewController.m in Sources */,
 				0A8E06971D1D2EC700AAFAC7 /* MirrorViewController.m in Sources */,
 				0A5AE27A1D08D35E001A23BC /* BeastWorkout.m in Sources */,
@@ -454,6 +494,8 @@
 				0A880BDF1D1FD6CB00155296 /* ImageViewController.m in Sources */,
 				0A880BE61D1FD6EA00155296 /* UIImage+Crop.m in Sources */,
 				0A880BE71D1FD6EA00155296 /* UIImage+Resize.m in Sources */,
+				0A880BF71D24E3EE00155296 /* SlideLeftSegue.m in Sources */,
+				0A880BFF1D24ED6000155296 /* BeastColors.m in Sources */,
 				0ADA76901CCB2BEA00E39F39 /* BeastCell.m in Sources */,
 				0AA1B6F01CB6D83D00A594E1 /* main.m in Sources */,
 			);
@@ -585,6 +627,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Beast",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/Headers",
@@ -613,6 +659,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Beast",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/Headers",

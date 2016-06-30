@@ -12,7 +12,7 @@
 #import "FirebaseRefs.h"
 #import "WorkoutVideoViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import <ChameleonFramework/Chameleon.h>
+#import "BeastColors.h"
 @import Firebase;
 
 @interface BeastViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -29,11 +29,11 @@
     [super viewDidLoad];
     [self setupFirebase];
     [self setupUI];
-    [self setupLongPressGestureRecognizer];
-//    [self setupSwipeGestureRecognizer];
+    [self setupSwipeGestureRecognizer];
 //    [self uploadAllWorkouts];
     [self downloadWorkouts];
 }
+
 
 #pragma mark - Firebase Methods
 
@@ -41,7 +41,6 @@
     self.databaseRef = [FirebaseRefs databaseRef];
     self.storageRef = [FirebaseRefs storageRef];
 }
-
 
 // Download workout info from Firebase Database
 - (void)downloadWorkouts{
@@ -102,14 +101,8 @@
             //Error!
             NSLog(@"error %@", error);
         } else {
-            // Local file URL for "images/island.jpg" is returned
-            NSLog(@"fileURL: %@", [URL path]);
-//            BOOL isDownloaded = [self isExerciseDownloaded:videoNumber];
-//            if(isDownloaded){
-//                NSLog(@"DOWNLOADED!");
-//            }else{
-//                NSLog(@"NOT DOWNLOADED!");
-//            }
+            //Success!
+            //NSLog(@"fileURL: %@", [URL path]);
         }
     }];
 }
@@ -214,7 +207,7 @@
     
     //Change highlight color
     UIView *customColorView = [[UIView alloc] init];
-    customColorView.backgroundColor = [self darkBlue];
+    customColorView.backgroundColor = [BeastColors darkBlue];
     cell.selectedBackgroundView =  customColorView;
 
     return cell;
@@ -231,7 +224,7 @@
 - (void)setupUI
 {
     [self setupNavbar];
-    self.view.backgroundColor = [self darkBlack];
+    self.view.backgroundColor = [BeastColors darkBlack];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.separatorColor = [UIColor clearColor];
 }
@@ -248,12 +241,12 @@
 
 - (void)setupNavbar{
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.barTintColor =  [self darkBlack];
+    self.navigationController.navigationBar.barTintColor =  [BeastColors darkBlack];
     self.navigationController.navigationBar.translucent = NO;
     self.navigationItem.title = @"BEAST";
     NSDictionary *fontAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                     [UIFont fontWithName:@"MyriadPro-BoldIt" size:26], NSFontAttributeName,
-                                    [self lightBlue], NSForegroundColorAttributeName, nil];
+                                    [BeastColors lightBlue], NSForegroundColorAttributeName, nil];
     [self.navigationController.navigationBar setTitleTextAttributes:fontAttributes];
 }
 
@@ -262,27 +255,23 @@
     return UIStatusBarStyleLightContent;
 }
 
-
-#pragma mark - App Colors
-
-- (UIColor *) lightBlue {return HexColor(@"#76F6E5");}
-
-- (UIColor *) darkBlue {return HexColor(@"#0E5461");}
-
-- (UIColor *) lightOrange {return HexColor(@"#F99A02");}
-
-- (UIColor *) darkOrange {return HexColor(@"#3F2617");}
-
-- (UIColor *) darkBlack{ return HexColor(@"#181C20");}
-
-- (UIColor *) beastBlack{ return [[UIColor alloc] initWithRed:36.0/255.0 green:36.0/255.0 blue:36.0/255.0 alpha:1];}
-
-- (UIColor *) beastOrange{ return [[UIColor alloc] initWithRed:243.0/255.0 green:144.0/255.0 blue:83.0/255.0 alpha:1];}
+//
+//#pragma mark - App Colors
+//
+//- (UIColor *) lightBlue {return HexColor(@"#76F6E5");}
+//
+//- (UIColor *) darkBlue {return HexColor(@"#0E5461");}
+//
+//- (UIColor *) lightOrange {return HexColor(@"#F99A02");}
+//
+//- (UIColor *) darkOrange {return HexColor(@"#3F2617");}
+//
+//- (UIColor *) darkBlack{ return HexColor(@"#181C20");}
+//
+//- (UIColor *) separatorGray{ return HexColor(@"#FFFFFF");}
 
 
 #pragma mark - Cell Population Methods
-
-//---------------ORDERED METHODS-----------//
 
 - (NSString *)imageAtIndex:(int)number{
     int index = number%4;
@@ -294,31 +283,6 @@
     NSArray *imageNames = @[@"🐯", @"🐼", @"🐳", @"🦁", @"🦄", @"🐢"];
     return [imageNames objectAtIndex:index];
 }
-
-
-//--------------RANDOM METHODS--------------//
-
-- (NSString *)getRandomWorkoutName{
-    NSArray *workoutNames = @[@"Superman Strong", @"Batman Ripped", @"Wonder Woman", @"Hulk Buff"];
-    return workoutNames[arc4random()%workoutNames.count];
-}
-
-- (NSString *)getRandomBeastEmoji{
-    NSArray *beastEmojis = @[@"🐯", @"🐼", @"🐷", @"🦁", @"🐳", @"🦄", @"🐢", @"🐲"];
-    return beastEmojis[arc4random()%beastEmojis.count];
-}
-
-- (NSString *)getRandomImageName{
-    NSArray *imageNames = @[@"batman.png", @"superman.png", @"hulk.png", @"wonderwoman.png"];
-    return imageNames[arc4random()%imageNames.count];
-}
-
-- (NSString *)getRandomViewCount{
-    int numViews = arc4random()%200000;
-    return [NSString stringWithFormat:@"%d followers", numViews];
-}
-
-
 
 #pragma mark - Helper Methods
 
@@ -339,42 +303,26 @@
     }
 }
 
-/*
+
 #pragma mark - Swipe Methods
 
 - (void)setupSwipeGestureRecognizer{
     UISwipeGestureRecognizer* swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-    swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionUp;
+    swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.tableView addGestureRecognizer:swipeGestureRecognizer];
 }
 
 - (void)handleSwipeFrom:(UIGestureRecognizer*)recognizer {
     NSLog(@"Swipe to Mirror!");
-//    [self performSegueWithIdentifier:@"MoveLeftCustomSegue" sender:self];
     [self performSegueWithIdentifier:@"MirrorSegue" sender:self];
 
 }
-*/
-
-#pragma mark - Long Press Methods
-
-- (void)setupLongPressGestureRecognizer{
-    UILongPressGestureRecognizer* longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleRecognizer:)];
-    [self.tableView addGestureRecognizer:longPressGestureRecognizer];
-}
-
-- (void)handleRecognizer:(UIGestureRecognizer*)recognizer {
-    NSLog(@"Swipe to Mirror!");
-    //    [self performSegueWithIdentifier:@"MoveLeftCustomSegue" sender:self];
-    [self performSegueWithIdentifier:@"MirrorSegue" sender:self];
-}
-
 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"blastSegue"]) {
+    if ([[segue identifier] isEqualToString:@"VideoSegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         WorkoutVideoViewController* vc = [segue destinationViewController];
         BeastWorkout *workout = [self.workoutsArray objectAtIndex:indexPath.row];

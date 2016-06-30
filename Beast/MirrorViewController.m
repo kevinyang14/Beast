@@ -11,6 +11,7 @@
 #import "LLSimpleCamera.h"
 #import "ImageViewController.h"
 #import "ViewUtils.h"
+#import "BeastColors.h"
 
 @interface MirrorViewController ()
 @property (strong, nonatomic) LLSimpleCamera *camera;
@@ -38,24 +39,13 @@
 {
     [super viewWillLayoutSubviews];
     
-//    self.camera.view.frame = self.view.contentBounds;
-    
     self.snapButton.center = self.view.contentCenter;
-    self.snapButton.bottom = self.view.height - 15.0f;
-    
-//    self.flashButton.center = self.view.contentCenter;
-//    self.flashButton.top = 5.0f;
-//    
-//    self.switchButton.top = 5.0f;
-//    self.switchButton.right = self.view.width - 5.0f;
-//    
-//    self.segmentedControl.left = 12.0f;
-//    self.segmentedControl.bottom = self.view.height - 35.0f;
+    self.snapButton.bottom = self.view.height - 35.0;
 }
 
 - (void)setupMirror{
-    self.view.backgroundColor = [UIColor blackColor];
-//    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    self.view.backgroundColor = [BeastColors darkBlack];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
     CGRect screenRect = [[UIScreen mainScreen] bounds];
 
     // camera with video recording capability
@@ -102,19 +92,6 @@
 #pragma mark - Swipe Methods
 
 - (void)setupSwipeGestureRecognizer{
-    UISwipeGestureRecognizer* swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleRecognizer:)];
-    swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionDown;
-    [self.view addGestureRecognizer:swipeGestureRecognizer];
-}
-
-- (void)handleRecognizer:(UIGestureRecognizer*)recognizer {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-/*
-#pragma mark - Swipe Methods
-
-- (void)setupSwipeGestureRecognizer{
     UISwipeGestureRecognizer* swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
     swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:swipeGestureRecognizer];
@@ -125,13 +102,12 @@
     transition.duration = 0.3;
     transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     transition.type = kCATransitionPush;
-    transition.subtype = kCATransitionFromRight;
+    transition.subtype = kCATransitionFromLeft;
     [self.view.window.layer addAnimation:transition forKey:nil];
     
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 
-*/
 
 /*
 #pragma mark - Navigation
