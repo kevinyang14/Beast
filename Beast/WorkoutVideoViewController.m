@@ -109,8 +109,8 @@
         self.videoCount++;
         [self playVideo];
         [self incrementProgressBar];
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     }
-    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
 #pragma mark delegate methods
