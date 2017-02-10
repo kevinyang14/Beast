@@ -85,11 +85,17 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ChameleonFramework-framework/ChameleonFramework.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher-framework/GTMSessionFetcher.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac-framework/GoogleToolboxForMac.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LLSimpleCamera-framework/LLSimpleCamera.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PBJVideoPlayer-framework/PBJVideoPlayer.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD-framework/SVProgressHUD.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ChameleonFramework-framework/ChameleonFramework.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher-framework/GTMSessionFetcher.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac-framework/GoogleToolboxForMac.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LLSimpleCamera-framework/LLSimpleCamera.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PBJVideoPlayer-framework/PBJVideoPlayer.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD-framework/SVProgressHUD.framework"
 fi

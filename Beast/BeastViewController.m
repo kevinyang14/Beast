@@ -11,6 +11,7 @@
 #import "BeastWorkout.h"
 #import "FirebaseRefs.h"
 #import "WorkoutVideoViewController.h"
+#import "AvatarCell.h"
 #import <QuartzCore/QuartzCore.h>
 #import "BeastColors.h"
 @import Firebase;
@@ -29,9 +30,11 @@
     [super viewDidLoad];
     [self setupFirebase];
     [self setupUI];
-    [self setupSwipeGestureRecognizer];
+    [self setupSwipeLeftGestureRecognizer];
+    [self setupSwipeRightGestureRecognizer];
 //    [self uploadAllWorkouts];
     [self downloadWorkouts];
+    self.workoutButton.hidden = YES;
 }
 
 
@@ -166,7 +169,7 @@
     NSInteger randomIndex = arc4random()%[self.workoutsArray count];
     NSIndexPath* selectedCellIndexPath= [NSIndexPath indexPathForRow:randomIndex inSection:0];
     [self.tableView selectRowAtIndexPath:selectedCellIndexPath animated:false scrollPosition:UITableViewScrollPositionMiddle];
-    [self performSegueWithIdentifier:@"blastSegue" sender:sender];
+    [self performSegueWithIdentifier:@"VideoSegue" sender:sender];
 }
 
 #pragma mark - Table View Data Source
@@ -178,38 +181,52 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.workoutsArray count];
+    return [self.workoutsArray count] + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"BeastCell";
-    BeastCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    //BeastWorkout Object
-    BeastWorkout *workout = [self.workoutsArray objectAtIndex:indexPath.row];
-    
-    //Create BeastCell
-    cell.workoutLabel.text = workout.name;
-    cell.lvlLabel.text = workout.lvl;
-    cell.descriptionLabel.text = [workout description];
-    NSString *imageName = [self imageAtIndex:(int)indexPath.row];
-    cell.workoutPhoto.image = [UIImage imageNamed:imageName];
-    
-    [self setupCellStyle:cell];
-    
-    //Grey out video, if not downloaded
-    if (![self isWorkoutDownloaded:workout.exerciseArray]) {
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+
+    if (indexPath.row==0){
+        NSLog(@"Avatar");
+        static NSString *CellIdentifier = @"AvatarCell";
+        AvatarCell *avatarCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        //avatarCell.separatorInset = UIEdgeInsetsMake(0.f, cell.bounds.size.width, 0.f, 0.f);
+        cell = avatarCell;
     }else{
-        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+        NSLog(@"Workouts");
+        static NSString *CellIdentifier = @"BeastCell";
+        BeastCell *beastCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        
+        //BeastWorkout Object
+        BeastWorkout *workout = [self.workoutsArray objectAtIndex:indexPath.row-1];
+        
+        //Create BeastCell
+        beastCell.workoutLabel.text = workout.name;
+        beastCell.lvlLabel.text = workout.lvl;
+        beastCell.descriptionLabel.text = [workout description];
+        NSString *imageName = [self imageAtIndex:(int)indexPath.row];
+        beastCell.workoutPhoto.image = [UIImage imageNamed:imageName];
+        
+        [self setupCellStyle:beastCell];
+        
+        //Grey out video, if not downloaded
+        if (![self isWorkoutDownloaded:workout.exerciseArray]) {
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }else{
+            cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+        }
+        
+        
+        //Change highlight color
+        UIView *customColorView = [[UIView alloc] init];
+        customColorView.backgroundColor = [BeastColors darkBlue];
+        beastCell.selectedBackgroundView =  customColorView;
+        cell = beastCell;
     }
     
-    //Change highlight color
-    UIView *customColorView = [[UIView alloc] init];
-    customColorView.backgroundColor = [BeastColors darkBlue];
-    cell.selectedBackgroundView =  customColorView;
-
     return cell;
 }
 
@@ -219,6 +236,19 @@
     cell.workoutPhoto.layer.masksToBounds = YES;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat height;
+    if(indexPath.row == 0){
+        height = 279;
+    }else{
+        height = ((indexPath.row-1) + 76);
+    }
+    return height;
+}
+
+
+
 #pragma mark - UI Magic
 
 - (void)setupUI
@@ -227,6 +257,7 @@
     self.view.backgroundColor = [BeastColors darkBlack];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.separatorColor = [UIColor clearColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)selectDefaultWorkout{
@@ -306,16 +337,27 @@
 
 #pragma mark - Swipe Methods
 
-- (void)setupSwipeGestureRecognizer{
-    UISwipeGestureRecognizer* swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+- (void)setupSwipeLeftGestureRecognizer{
+    UISwipeGestureRecognizer* swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftSwipeFrom:)];
     swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.tableView addGestureRecognizer:swipeGestureRecognizer];
 }
 
-- (void)handleSwipeFrom:(UIGestureRecognizer*)recognizer {
+- (void)handleLeftSwipeFrom:(UIGestureRecognizer*)recognizer {
     NSLog(@"Swipe to Mirror!");
     [self performSegueWithIdentifier:@"MirrorSegue" sender:self];
+}
 
+- (void)setupSwipeRightGestureRecognizer{
+    UISwipeGestureRecognizer* swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleRightSwipeFrom:)];
+    swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.tableView addGestureRecognizer:swipeGestureRecognizer];
+}
+
+- (void)handleRightSwipeFrom:(UIGestureRecognizer*)recognizer {
+    NSLog(@"Swipe to Gym!");
+    [self performSegueWithIdentifier:@"GymSegue" sender:self];
+    
 }
 
 #pragma mark - Navigation

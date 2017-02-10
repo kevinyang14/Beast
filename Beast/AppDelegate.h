@@ -11,6 +11,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
++(void)alertWithTitle:(NSString *)title andMessage:(NSString *)msg;
 
 
 @end

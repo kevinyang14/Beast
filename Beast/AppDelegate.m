@@ -49,6 +49,15 @@
 }
 
 
++(void)alertWithTitle:(NSString *)title andMessage:(NSString *)msg
+{
+    [[[UIAlertView alloc] initWithTitle:title
+                                message:msg
+                               delegate:nil
+                      cancelButtonTitle:nil
+                      otherButtonTitles:@"OK", nil] show];
+}
+
 
 // Handle auth callback
 -(BOOL)application:(UIApplication *)application
