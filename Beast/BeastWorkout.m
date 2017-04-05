@@ -33,7 +33,10 @@
 }
 
 - (NSString *)description{
-    return [NSString stringWithFormat:@"%@m • %@ • %@ ", _time, _equipment, _bodyParts];
+//    return [NSString stringWithFormat:@"%@m • %@ • %@ ", _time, _equipment, _bodyParts];
+    
+    return [NSString stringWithFormat:@"• %@ mins", _time];
+
 }
 
 - (void)printValues{

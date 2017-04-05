@@ -14,6 +14,10 @@
 
 + (UIColor *) lightBlue;
 
++ (UIColor *) highlightBlue;
+
++ (UIColor *) reddishPink;
+
 + (UIColor *) darkBlue;
 
 + (UIColor *) lightOrange;

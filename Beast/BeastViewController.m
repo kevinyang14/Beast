@@ -11,7 +11,6 @@
 #import "BeastWorkout.h"
 #import "FirebaseRefs.h"
 #import "WorkoutVideoViewController.h"
-#import "AvatarCell.h"
 #import <QuartzCore/QuartzCore.h>
 #import "BeastColors.h"
 @import Firebase;
@@ -24,6 +23,9 @@
 @property (strong, nonatomic) FIRStorageReference *storageRef;
 @end
 
+const float kCellHeight = 120.0f;
+
+
 @implementation BeastViewController
 
 - (void)viewDidLoad {
@@ -31,10 +33,10 @@
     [self setupFirebase];
     [self setupUI];
     [self setupSwipeLeftGestureRecognizer];
-    [self setupSwipeRightGestureRecognizer];
-//    [self uploadAllWorkouts];
     [self downloadWorkouts];
-    self.workoutButton.hidden = YES;
+//    [self setupSwipeRightGestureRecognizer];
+//    [self uploadAllWorkouts];
+//    self.workoutButton.hidden = YES;
 }
 
 
@@ -181,69 +183,66 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.workoutsArray count] + 1;
+    return [self.workoutsArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     UITableViewCell *cell = [[UITableViewCell alloc] init];
-
-    if (indexPath.row==0){
-        NSLog(@"Avatar");
-        static NSString *CellIdentifier = @"AvatarCell";
-        AvatarCell *avatarCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-        //avatarCell.separatorInset = UIEdgeInsetsMake(0.f, cell.bounds.size.width, 0.f, 0.f);
-        cell = avatarCell;
+    static NSString *beastCellID = @"BeastCell";
+    
+    BeastCell *beastCell = [tableView dequeueReusableCellWithIdentifier:beastCellID forIndexPath:indexPath];
+    
+    //BeastWorkout Object
+    BeastWorkout *workout = [self.workoutsArray objectAtIndex:indexPath.row];
+    
+    //Create BeastCell
+    beastCell.workoutLabel.text = workout.name;
+//    beastCell.lvlLabel.text = workout.lvl;
+    beastCell.lvlLabel.hidden = YES;
+    beastCell.descriptionLabel.text = [workout description];
+    NSString *imageName = [self imageAtIndex:(int)indexPath.row];
+    beastCell.workoutPhoto.image = [UIImage imageNamed:imageName];
+    
+    [self setupCellStyle:beastCell];
+    
+    //Grey out video, if not downloaded
+    if (![self isWorkoutDownloaded:workout.exerciseArray]) {
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }else{
-        NSLog(@"Workouts");
-        static NSString *CellIdentifier = @"BeastCell";
-        BeastCell *beastCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-        
-        //BeastWorkout Object
-        BeastWorkout *workout = [self.workoutsArray objectAtIndex:indexPath.row-1];
-        
-        //Create BeastCell
-        beastCell.workoutLabel.text = workout.name;
-        beastCell.lvlLabel.text = workout.lvl;
-        beastCell.descriptionLabel.text = [workout description];
-        NSString *imageName = [self imageAtIndex:(int)indexPath.row];
-        beastCell.workoutPhoto.image = [UIImage imageNamed:imageName];
-        
-        [self setupCellStyle:beastCell];
-        
-        //Grey out video, if not downloaded
-        if (![self isWorkoutDownloaded:workout.exerciseArray]) {
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        }else{
-            cell.selectionStyle = UITableViewCellSelectionStyleDefault;
-        }
-        
-        
-        //Change highlight color
-        UIView *customColorView = [[UIView alloc] init];
-        customColorView.backgroundColor = [BeastColors darkBlue];
-        beastCell.selectedBackgroundView =  customColorView;
-        cell = beastCell;
+        cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     }
     
+    //Change cell highlight color
+    UIView *customColorView = [[UIView alloc] init];
+    customColorView.backgroundColor = [BeastColors highlightBlue];
+    beastCell.selectedBackgroundView =  customColorView;
+    cell = beastCell;
     return cell;
 }
 
+
 - (void)setupCellStyle:(BeastCell *)cell{
     cell.backgroundColor = [UIColor clearColor];
-    cell.workoutPhoto.layer.cornerRadius = 25.0;
+    cell.workoutPhoto.layer.cornerRadius = 28.0;
     cell.workoutPhoto.layer.masksToBounds = YES;
+    
+    //extend cell separators to full width
+    cell.preservesSuperviewLayoutMargins = false;
+    cell.separatorInset = UIEdgeInsetsZero;
+    cell.layoutMargins = UIEdgeInsetsZero;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat height;
-    if(indexPath.row == 0){
-        height = 279;
-    }else{
-        height = ((indexPath.row-1) + 76);
-    }
+//    if(indexPath.row == 0){
+//        height = 120;
+//    }else{
+//        height = ((indexPath.row-1) + 76);
+//    }
+    height = 85;
     return height;
 }
 
@@ -253,11 +252,14 @@
 
 - (void)setupUI
 {
+    //remove cell separator after last cell
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self setupNavbar];
-    self.view.backgroundColor = [BeastColors darkBlack];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.tableView.backgroundColor = [UIColor clearColor];
-    self.tableView.separatorColor = [UIColor clearColor];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.workoutButton.layer.cornerRadius = 32.0;
+
+   // self.tableView.separatorColor = [UIColor clearColor];
 }
 
 - (void)selectDefaultWorkout{
@@ -272,12 +274,11 @@
 
 - (void)setupNavbar{
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.barTintColor =  [BeastColors darkBlack];
+    self.navigationController.navigationBar.barTintColor =  [BeastColors lightBlue];
     self.navigationController.navigationBar.translucent = NO;
-    self.navigationItem.title = @"BEAST";
+    self.navigationItem.title = @"🐯";
     NSDictionary *fontAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    [UIFont fontWithName:@"MyriadPro-BoldIt" size:26], NSFontAttributeName,
-                                    [BeastColors lightBlue], NSForegroundColorAttributeName, nil];
+                                    [UIFont fontWithName:@"MyriadPro" size:35], nil];
     [self.navigationController.navigationBar setTitleTextAttributes:fontAttributes];
 }
 
@@ -286,11 +287,11 @@
     return UIStatusBarStyleLightContent;
 }
 
-//
-//#pragma mark - App Colors
-//
-//- (UIColor *) lightBlue {return HexColor(@"#76F6E5");}
-//
+
+#pragma mark - App Colors
+
+- (UIColor *) lightBlue {return HexColor(@"#00C6FE");}
+
 //- (UIColor *) darkBlue {return HexColor(@"#0E5461");}
 //
 //- (UIColor *) lightOrange {return HexColor(@"#F99A02");}
@@ -345,20 +346,20 @@
 
 - (void)handleLeftSwipeFrom:(UIGestureRecognizer*)recognizer {
     NSLog(@"Swipe to Mirror!");
-    [self performSegueWithIdentifier:@"MirrorSegue" sender:self];
-}
-
-- (void)setupSwipeRightGestureRecognizer{
-    UISwipeGestureRecognizer* swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleRightSwipeFrom:)];
-    swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.tableView addGestureRecognizer:swipeGestureRecognizer];
-}
-
-- (void)handleRightSwipeFrom:(UIGestureRecognizer*)recognizer {
-    NSLog(@"Swipe to Gym!");
     [self performSegueWithIdentifier:@"GymSegue" sender:self];
-    
 }
+
+//- (void)setupSwipeRightGestureRecognizer{
+//    UISwipeGestureRecognizer* swipeGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleRightSwipeFrom:)];
+//    swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+//    [self.tableView addGestureRecognizer:swipeGestureRecognizer];
+//}
+//
+//- (void)handleRightSwipeFrom:(UIGestureRecognizer*)recognizer {
+//    NSLog(@"Swipe to Gym!");
+//    [self performSegueWithIdentifier:@"GymSegue" sender:self];
+//    
+//}
 
 #pragma mark - Navigation
 
@@ -371,6 +372,52 @@
         vc.exerciseArray = workout.exerciseArray;
     }
 }
+
+
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//
+//    UITableViewCell *cell = [[UITableViewCell alloc] init];
+//
+//    if (indexPath.row==0){
+//        NSLog(@"Avatar");
+//        static NSString *CellIdentifier = @"AvatarCell";
+//        AvatarCell *avatarCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+//        cell = avatarCell;
+//    }else{
+//        NSLog(@"Workouts");
+//        static NSString *CellIdentifier = @"BeastCell";
+//        BeastCell *beastCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+//
+//        //BeastWorkout Object
+//        BeastWorkout *workout = [self.workoutsArray objectAtIndex:indexPath.row];
+//
+//        //Create BeastCell
+//        beastCell.workoutLabel.text = workout.name;
+//        beastCell.lvlLabel.text = workout.lvl;
+//        beastCell.descriptionLabel.text = [workout description];
+//        NSString *imageName = [self imageAtIndex:(int)indexPath.row];
+//        beastCell.workoutPhoto.image = [UIImage imageNamed:imageName];
+//
+//        [self setupCellStyle:beastCell];
+//
+//        //Grey out video, if not downloaded
+//        if (![self isWorkoutDownloaded:workout.exerciseArray]) {
+//            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        }else{
+//            cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+//        }
+//
+//
+//        //Change highlight color
+//        UIView *customColorView = [[UIView alloc] init];
+//        customColorView.backgroundColor = [BeastColors darkBlue];
+//        beastCell.selectedBackgroundView =  customColorView;
+//        cell = beastCell;
+//    }
+//
+//    return cell;
+//}
 
 
 @end

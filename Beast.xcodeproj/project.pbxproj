@@ -42,7 +42,8 @@
 		F01B022F1E35A18200C0EC73 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01B022E1E35A18200C0EC73 /* SignUpViewController.m */; };
 		F03734361E36BFFF00BFA1E7 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03734351E36BFFF00BFA1E7 /* WelcomeViewController.m */; };
 		F03734391E36C6DC00BFA1E7 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03734381E36C6DC00BFA1E7 /* SignInViewController.m */; };
-		F09709C61E30316A0036BFE8 /* AvatarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F09709C51E30316A0036BFE8 /* AvatarCell.m */; };
+		F09403D11E726D2200AAD217 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F09403D01E726D2200AAD217 /* FriendCell.m */; };
+		F09403D21E726D2200AAD217 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F09403D01E726D2200AAD217 /* FriendCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,8 +118,8 @@
 		F03734351E36BFFF00BFA1E7 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		F03734371E36C6DC00BFA1E7 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		F03734381E36C6DC00BFA1E7 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
-		F09709C41E30316A0036BFE8 /* AvatarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarCell.h; sourceTree = "<group>"; };
-		F09709C51E30316A0036BFE8 /* AvatarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarCell.m; sourceTree = "<group>"; };
+		F09403CF1E726D2200AAD217 /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
+		F09403D01E726D2200AAD217 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,8 +180,6 @@
 				0A880BFE1D24ED6000155296 /* BeastColors.m */,
 				0A5AE2781D08D35E001A23BC /* BeastWorkout.h */,
 				0A5AE2791D08D35E001A23BC /* BeastWorkout.m */,
-				0ADA768E1CCB2BEA00E39F39 /* BeastCell.h */,
-				0ADA768F1CCB2BEA00E39F39 /* BeastCell.m */,
 				0A5AE27B1D1B9088001A23BC /* FirebaseRefs.h */,
 				0A5AE27C1D1B9088001A23BC /* FirebaseRefs.m */,
 			);
@@ -215,19 +214,21 @@
 				F03734331E36BFCF00BFA1E7 /* SignUp Flow */,
 				0AA1B6F11CB6D83D00A594E1 /* AppDelegate.h */,
 				0AA1B6F21CB6D83D00A594E1 /* AppDelegate.m */,
+				0ADA768E1CCB2BEA00E39F39 /* BeastCell.h */,
+				0ADA768F1CCB2BEA00E39F39 /* BeastCell.m */,
+				F09403CF1E726D2200AAD217 /* FriendCell.h */,
+				F09403D01E726D2200AAD217 /* FriendCell.m */,
+				0AA1B6F71CB6D83D00A594E1 /* Main.storyboard */,
 				0ADA768B1CCB27A100E39F39 /* BeastViewController.h */,
 				0ADA768C1CCB27A100E39F39 /* BeastViewController.m */,
-				0A8E06951D1D2EC700AAFAC7 /* MirrorViewController.h */,
-				0A8E06961D1D2EC700AAFAC7 /* MirrorViewController.m */,
 				0A880C001D28C90100155296 /* GymViewController.h */,
 				0A880C011D28C90100155296 /* GymViewController.m */,
-				0AA1B6F71CB6D83D00A594E1 /* Main.storyboard */,
-				F09709C41E30316A0036BFE8 /* AvatarCell.h */,
-				F09709C51E30316A0036BFE8 /* AvatarCell.m */,
 				0AB420B61CD4AD7D008B66BD /* WorkoutVideoViewController.h */,
 				0AB420B71CD4AD7D008B66BD /* WorkoutVideoViewController.m */,
 				0A880BF81D24E3FB00155296 /* CustomSegues */,
 				0A880BE91D1FD75500155296 /* CameraUtilities */,
+				0A8E06951D1D2EC700AAFAC7 /* MirrorViewController.h */,
+				0A8E06961D1D2EC700AAFAC7 /* MirrorViewController.m */,
 				0AA1B6FA1CB6D83D00A594E1 /* Images.xcassets */,
 				0AA1B6FC1CB6D83D00A594E1 /* LaunchScreen.xib */,
 				0A880BEE1D20DFF100155296 /* Spotify.framework */,
@@ -361,7 +362,7 @@
 		0AA1B6E21CB6D83C00A594E1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Beast;
 				TargetAttributes = {
 					0AA1B6E91CB6D83D00A594E1 = {
@@ -520,10 +521,10 @@
 				0AA1B6F31CB6D83D00A594E1 /* AppDelegate.m in Sources */,
 				0A5AE27D1D1B9088001A23BC /* FirebaseRefs.m in Sources */,
 				0A880BFB1D24E4E600155296 /* SlideRightSegue.m in Sources */,
-				F09709C61E30316A0036BFE8 /* AvatarCell.m in Sources */,
 				F03734361E36BFFF00BFA1E7 /* WelcomeViewController.m in Sources */,
 				0AB420B81CD4AD7D008B66BD /* WorkoutVideoViewController.m in Sources */,
 				0A8E06971D1D2EC700AAFAC7 /* MirrorViewController.m in Sources */,
+				F09403D11E726D2200AAD217 /* FriendCell.m in Sources */,
 				0A5AE27A1D08D35E001A23BC /* BeastWorkout.m in Sources */,
 				0ADA768D1CCB27A100E39F39 /* BeastViewController.m in Sources */,
 				0A880BE81D1FD6EA00155296 /* ViewUtils.m in Sources */,
@@ -544,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AA1B70A1CB6D83D00A594E1 /* BeastTests.m in Sources */,
+				F09403D21E726D2200AAD217 /* FriendCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,8 +592,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -634,8 +638,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

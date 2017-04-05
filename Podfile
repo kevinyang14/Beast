@@ -9,6 +9,7 @@ target 'Beast' do
  pod 'PBJVideoPlayer'
  pod 'ChameleonFramework'
  pod 'LLSimpleCamera'
+ pod 'ASHorizontalScrollViewForObjectiveC', '~> 1.3'
 end
 
 
@@ -22,5 +23,6 @@ target 'BeastTests' do
     pod 'PBJVideoPlayer'
     pod 'ChameleonFramework'
     pod 'LLSimpleCamera'
+    pod 'ASHorizontalScrollViewForObjectiveC', '~> 1.3'
 end
 

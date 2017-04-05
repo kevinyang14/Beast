@@ -12,7 +12,11 @@
 
 #pragma mark - App Colors
 
-+ (UIColor *) lightBlue {return HexColor(@"#76F6E5");}
++ (UIColor *) lightBlue {return HexColor(@"#00C6FE");}
+
++ (UIColor *) highlightBlue {return HexColor(@"#E4FBFF");}
+
++ (UIColor *) reddishPink {return HexColor(@"#EE6F8E");}
 
 + (UIColor *) darkBlue {return HexColor(@"#0E5461");}
 
