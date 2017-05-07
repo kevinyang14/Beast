@@ -4,16 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ASHorizontalScrollViewForObjectiveC-framework.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ASHorizontalScrollViewForObjectiveC-library.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>ChameleonFramework-framework.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -87,17 +77,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>00EEA9E19C95B8819FD24C4CFBA50234</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>039A848AD4F7BB2CA42DA53B99F036C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0403C7FBF0847FCD74C14BB211DC9B15</key>
+		<key>05A680CACA5D09D1FCC0448A406C9C88</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>05A680CACA5D09D1FCC0448A406C9C88</key>
+		<key>093C3C0D66447B6B9065F58B25963089</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0F5971E7EBE34CAE0411A75C08F02C9E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,7 +117,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3CC1C9221AB4026D8F1763E57FF47316</key>
+		<key>3465E870E257592CA66F7E2A5C93AF57</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,37 +132,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>74B51A149DC5B30594944F4AE8395958</key>
+		<key>88F192DB203C5158CB372651A7C6B71A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>74DF9606C7BF791492A853DCDCF06FD0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AC9152B8DB28B0DEC9BC0E44AB6BD025</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B958AEF438FDD67D8D9635DA12C4EE40</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D3CF6F0959FDBD790EA42BC3CB58095A</key>
+		<key>9CF524592221E4AF8DA3F9C863C32A3F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D723F1BD800F6A1EA136562F734EF3F0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E2870D05C54C39A273E7EC94074B8FC5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A56A0511D07E031004BBA7E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A56A0501D07E031004BBA7E /* GoogleService-Info.plist */; };
-		0A56A0521D07E275004BBA7E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A56A0501D07E031004BBA7E /* GoogleService-Info.plist */; };
 		0A5AE27A1D08D35E001A23BC /* BeastWorkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5AE2791D08D35E001A23BC /* BeastWorkout.m */; };
 		0A5AE27D1D1B9088001A23BC /* FirebaseRefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5AE27C1D1B9088001A23BC /* FirebaseRefs.m */; };
 		0A8219991CDABC1500F34441 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8219981CDABC1500F34441 /* AudioToolbox.framework */; };
@@ -39,6 +37,8 @@
 		0AEED6071CD58C86003DCDE7 /* MyriadPro-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEED6041CD58C86003DCDE7 /* MyriadPro-BoldIt.otf */; };
 		7647D8F4B415488C264A1054 /* libPods-BeastTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3082BE7E8B8CE5F9BC08CF99 /* libPods-BeastTests.a */; };
 		DB0E5080B17C697F7FC32A9F /* Pods_Beast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21419A6830616D952731A38B /* Pods_Beast.framework */; };
+		F01A52861EA59E2200D16D0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F01A52851EA59E2200D16D0F /* GoogleService-Info.plist */; };
+		F01A52871EA59E2200D16D0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F01A52851EA59E2200D16D0F /* GoogleService-Info.plist */; };
 		F01B022F1E35A18200C0EC73 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01B022E1E35A18200C0EC73 /* SignUpViewController.m */; };
 		F03734361E36BFFF00BFA1E7 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03734351E36BFFF00BFA1E7 /* WelcomeViewController.m */; };
 		F03734391E36C6DC00BFA1E7 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03734381E36C6DC00BFA1E7 /* SignInViewController.m */; };
@@ -57,7 +57,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A56A0501D07E031004BBA7E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0A5AE2781D08D35E001A23BC /* BeastWorkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeastWorkout.h; sourceTree = "<group>"; };
 		0A5AE2791D08D35E001A23BC /* BeastWorkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeastWorkout.m; sourceTree = "<group>"; };
 		0A5AE27B1D1B9088001A23BC /* FirebaseRefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseRefs.h; sourceTree = "<group>"; };
@@ -112,6 +111,8 @@
 		3BF2BE9630EE44D2E6CC675F /* Pods-Beast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beast/Pods-Beast.debug.xcconfig"; sourceTree = "<group>"; };
 		4A9718D382A97895E5DD3F32 /* Pods-BeastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeastTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeastTests/Pods-BeastTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6D2A6573F0E894B80CB1ADA /* Pods-Beast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beast/Pods-Beast.release.xcconfig"; sourceTree = "<group>"; };
+		F01A52841EA5587900D16D0F /* Beast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Beast.entitlements; sourceTree = "<group>"; };
+		F01A52851EA59E2200D16D0F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F01B022D1E35A18200C0EC73 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		F01B022E1E35A18200C0EC73 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		F03734341E36BFFF00BFA1E7 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
@@ -209,6 +210,7 @@
 		0AA1B6EC1CB6D83D00A594E1 /* Beast */ = {
 			isa = PBXGroup;
 			children = (
+				F01A52841EA5587900D16D0F /* Beast.entitlements */,
 				0AEED6081CD58C8C003DCDE7 /* Resources */,
 				0A880BFC1D24ECAC00155296 /* CustomClasses */,
 				F03734331E36BFCF00BFA1E7 /* SignUp Flow */,
@@ -240,7 +242,7 @@
 		0AA1B6ED1CB6D83D00A594E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0A56A0501D07E031004BBA7E /* GoogleService-Info.plist */,
+				F01A52851EA59E2200D16D0F /* GoogleService-Info.plist */,
 				0AA1B6EE1CB6D83D00A594E1 /* Info.plist */,
 				0AA1B6EF1CB6D83D00A594E1 /* main.m */,
 			);
@@ -367,7 +369,12 @@
 				TargetAttributes = {
 					0AA1B6E91CB6D83D00A594E1 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = RXF26HQWHT;
+						DevelopmentTeam = GEJU2YYBCW;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					0AA1B7021CB6D83D00A594E1 = {
 						CreatedOnToolsVersion = 6.4;
@@ -405,7 +412,7 @@
 				0AEED6071CD58C86003DCDE7 /* MyriadPro-BoldIt.otf in Resources */,
 				0AA1B6FB1CB6D83D00A594E1 /* Images.xcassets in Resources */,
 				0AEED6051CD58C86003DCDE7 /* Lato-Light.ttf in Resources */,
-				0A56A0511D07E031004BBA7E /* GoogleService-Info.plist in Resources */,
+				F01A52861EA59E2200D16D0F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A56A0521D07E275004BBA7E /* GoogleService-Info.plist in Resources */,
+				F01A52871EA59E2200D16D0F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,8 +676,10 @@
 			baseConfigurationReference = 3BF2BE9630EE44D2E6CC675F /* Pods-Beast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Beast/Beast.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = GEJU2YYBCW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Beast",
@@ -690,7 +699,7 @@
 				);
 				INFOPLIST_FILE = Beast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.BeastApp.Beast;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BeastTechnologies.Beast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -701,8 +710,10 @@
 			baseConfigurationReference = A6D2A6573F0E894B80CB1ADA /* Pods-Beast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Beast/Beast.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = GEJU2YYBCW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Beast",
@@ -722,7 +733,7 @@
 				);
 				INFOPLIST_FILE = Beast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.BeastApp.Beast;
+				PRODUCT_BUNDLE_IDENTIFIER = com.BeastTechnologies.Beast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

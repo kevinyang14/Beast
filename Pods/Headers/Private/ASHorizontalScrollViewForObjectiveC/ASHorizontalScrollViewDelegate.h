@@ -1,1 +1,0 @@
-../../../ASHorizontalScrollViewForObjectiveC/Sources/ASHorizontalScrollView/ASHorizontalScrollViewDelegate.h

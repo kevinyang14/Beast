@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>939128672654-jhfv7ibnm3hnqdqlr28ou73bluub4fo8.apps.googleusercontent.com</string>
+	<string>939128672654-jkh1mvcl1r58m45k1rhmq02ejir35pa6.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.939128672654-jhfv7ibnm3hnqdqlr28ou73bluub4fo8</string>
+	<string>com.googleusercontent.apps.939128672654-jkh1mvcl1r58m45k1rhmq02ejir35pa6</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBu6o6l1mozsLIKLM_oauqthHlk8Z2KpzA</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.Beast.Beast</string>
+	<string>com.BeastTechnologies.Beast</string>
 	<key>PROJECT_ID</key>
 	<string>beast-5e34d</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:939128672654:ios:33779e85f0175824</string>
+	<string>1:939128672654:ios:b0d8466182a4053a</string>
 	<key>DATABASE_URL</key>
 	<string>https://beast-5e34d.firebaseio.com</string>
 </dict>
