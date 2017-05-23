@@ -35,13 +35,14 @@
 		0AEED6051CD58C86003DCDE7 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEED6021CD58C86003DCDE7 /* Lato-Light.ttf */; };
 		0AEED6061CD58C86003DCDE7 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEED6031CD58C86003DCDE7 /* Lato-Regular.ttf */; };
 		0AEED6071CD58C86003DCDE7 /* MyriadPro-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEED6041CD58C86003DCDE7 /* MyriadPro-BoldIt.otf */; };
-		7647D8F4B415488C264A1054 /* libPods-BeastTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3082BE7E8B8CE5F9BC08CF99 /* libPods-BeastTests.a */; };
+		B51CC6904A22DC8DAB717A9F /* libPods-BeastTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7329800BC72B3A71BE0C04DC /* libPods-BeastTests.a */; };
 		DB0E5080B17C697F7FC32A9F /* Pods_Beast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21419A6830616D952731A38B /* Pods_Beast.framework */; };
 		F01A52861EA59E2200D16D0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F01A52851EA59E2200D16D0F /* GoogleService-Info.plist */; };
 		F01A52871EA59E2200D16D0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F01A52851EA59E2200D16D0F /* GoogleService-Info.plist */; };
 		F01B022F1E35A18200C0EC73 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F01B022E1E35A18200C0EC73 /* SignUpViewController.m */; };
 		F03734361E36BFFF00BFA1E7 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03734351E36BFFF00BFA1E7 /* WelcomeViewController.m */; };
 		F03734391E36C6DC00BFA1E7 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F03734381E36C6DC00BFA1E7 /* SignInViewController.m */; };
+		F066D1FD1EC040D30042FAA6 /* BeastFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = F066D1FC1EC040D30042FAA6 /* BeastFilterController.m */; };
 		F09403D11E726D2200AAD217 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F09403D01E726D2200AAD217 /* FriendCell.m */; };
 		F09403D21E726D2200AAD217 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F09403D01E726D2200AAD217 /* FriendCell.m */; };
 /* End PBXBuildFile section */
@@ -107,9 +108,9 @@
 		1455833F491916DF93D2102D /* Pods-BeastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeastTests/Pods-BeastTests.debug.xcconfig"; sourceTree = "<group>"; };
 		21419A6830616D952731A38B /* Pods_Beast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ABAFE56B93B825A2E848E8A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3082BE7E8B8CE5F9BC08CF99 /* libPods-BeastTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeastTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BF2BE9630EE44D2E6CC675F /* Pods-Beast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beast/Pods-Beast.debug.xcconfig"; sourceTree = "<group>"; };
 		4A9718D382A97895E5DD3F32 /* Pods-BeastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeastTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeastTests/Pods-BeastTests.release.xcconfig"; sourceTree = "<group>"; };
+		7329800BC72B3A71BE0C04DC /* libPods-BeastTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeastTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D2A6573F0E894B80CB1ADA /* Pods-Beast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beast/Pods-Beast.release.xcconfig"; sourceTree = "<group>"; };
 		F01A52841EA5587900D16D0F /* Beast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Beast.entitlements; sourceTree = "<group>"; };
 		F01A52851EA59E2200D16D0F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -119,6 +120,8 @@
 		F03734351E36BFFF00BFA1E7 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		F03734371E36C6DC00BFA1E7 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		F03734381E36C6DC00BFA1E7 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		F066D1FB1EC040D30042FAA6 /* BeastFilterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeastFilterController.h; sourceTree = "<group>"; };
+		F066D1FC1EC040D30042FAA6 /* BeastFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeastFilterController.m; sourceTree = "<group>"; };
 		F09403CF1E726D2200AAD217 /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
 		F09403D01E726D2200AAD217 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7647D8F4B415488C264A1054 /* libPods-BeastTests.a in Frameworks */,
+				B51CC6904A22DC8DAB717A9F /* libPods-BeastTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +224,8 @@
 				F09403CF1E726D2200AAD217 /* FriendCell.h */,
 				F09403D01E726D2200AAD217 /* FriendCell.m */,
 				0AA1B6F71CB6D83D00A594E1 /* Main.storyboard */,
+				F066D1FB1EC040D30042FAA6 /* BeastFilterController.h */,
+				F066D1FC1EC040D30042FAA6 /* BeastFilterController.m */,
 				0ADA768B1CCB27A100E39F39 /* BeastViewController.h */,
 				0ADA768C1CCB27A100E39F39 /* BeastViewController.m */,
 				0A880C001D28C90100155296 /* GymViewController.h */,
@@ -296,7 +301,7 @@
 				0A8219981CDABC1500F34441 /* AudioToolbox.framework */,
 				2ABAFE56B93B825A2E848E8A /* Pods.framework */,
 				21419A6830616D952731A38B /* Pods_Beast.framework */,
-				3082BE7E8B8CE5F9BC08CF99 /* libPods-BeastTests.a */,
+				7329800BC72B3A71BE0C04DC /* libPods-BeastTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -537,6 +542,7 @@
 				0A880BE81D1FD6EA00155296 /* ViewUtils.m in Sources */,
 				0A880BDF1D1FD6CB00155296 /* ImageViewController.m in Sources */,
 				0A880BE61D1FD6EA00155296 /* UIImage+Crop.m in Sources */,
+				F066D1FD1EC040D30042FAA6 /* BeastFilterController.m in Sources */,
 				0A880C021D28C90100155296 /* GymViewController.m in Sources */,
 				0A880BE71D1FD6EA00155296 /* UIImage+Resize.m in Sources */,
 				0A880BF71D24E3EE00155296 /* SlideLeftSegue.m in Sources */,

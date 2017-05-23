@@ -74,16 +74,18 @@
 //}
 
 - (void)playVideo{
+    NSLog(@"videoCount %d vs. exerciseArray %lu \n\n", self.videoCount, (unsigned long)[self.exerciseArray count]);
+
     NSNumber *exerciseNum = [self.exerciseArray objectAtIndex:self.videoCount] ;
     NSURL *url = [FirebaseRefs videoLocalURL:exerciseNum];
     NSString *urlPath = [url absoluteString];
     self.videoPlayerController.videoPath = urlPath;
     NSDictionary *fileDictionary = [[NSFileManager defaultManager] attributesOfItemAtPath:urlPath error: NULL];
-    NSNumber *size = [fileDictionary objectForKey:NSFileSize];
-    NSLog(@"file size %@", size);
-    [self printAllFiles];
-    
     [self.videoPlayerController playFromBeginning];
+    
+    // NSNumber *size = [fileDictionary objectForKey:NSFileSize];
+    //NSLog(@"file size %@", size);
+    //[self printAllFiles];
 }
 
 - (void)printAllFiles{
@@ -105,12 +107,19 @@
 
 - (void)playNextVideo{
     //play next video, if there are videos left to play
-    if(self.videoCount < [self.exerciseArray count]) {
+
+    if(self.videoCount < [self.exerciseArray count]-1) {
+        NSLog(@"\n\n-----------IF------------");
         self.videoCount++;
         [self playVideo];
         [self incrementProgressBar];
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    }else{
+        NSLog(@"\n\n-----------ELSE------------");
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
     }
+    
+    
 }
 
 #pragma mark delegate methods
@@ -148,10 +157,10 @@
     float pastVideoNum = (float)self.videoCount;
     float presentVideoNum = (float)self.videoCount+1.0;
     float totalVideoNum = (float)[self.exerciseArray count];
-    NSLog(@"pastVideoNum %f \n presentVideoNum: %f \n totalVideoNum %f \n ", pastVideoNum, presentVideoNum, totalVideoNum);
+    //NSLog(@"pastVideoNum %f \n presentVideoNum: %f \n totalVideoNum %f \n ", pastVideoNum, presentVideoNum, totalVideoNum);
     float startValue = 1.0 - (float)(pastVideoNum/totalVideoNum);
     float endValue = 1.0 - (float)(presentVideoNum/totalVideoNum);
-    NSLog(@"startValue %f, endValue %f", startValue, endValue);
+    //NSLog(@"startValue %f, endValue %f", startValue, endValue);
     CABasicAnimation *strokeAnimation = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
     strokeAnimation.delegate = self;
     strokeAnimation.duration = 1.0;
@@ -196,6 +205,7 @@
 - (void)setupTapGestureRecognizer{
     UITapGestureRecognizer* tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
     [self.view addGestureRecognizer:tapGestureRecognizer];
+
 }
 
 - (void)handleTapFrom:(UIGestureRecognizer*)recognizer {

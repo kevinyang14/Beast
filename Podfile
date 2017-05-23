@@ -14,7 +14,7 @@ end
 
 
 target 'BeastTests' do
-    # use_frameworks!
+   # use_frameworks!
     pod 'Firebase/Core'
     pod 'Firebase/Database'
     pod 'Firebase/Storage'

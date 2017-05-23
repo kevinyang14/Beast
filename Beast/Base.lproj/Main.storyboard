@@ -147,6 +147,63 @@
             </objects>
             <point key="canvasLocation" x="6" y="-200"/>
         </scene>
+        <!--Beast Filter Controller-->
+        <scene sceneID="813-7a-Pvw">
+            <objects>
+                <viewController id="lNL-fm-TYq" customClass="BeastFilterController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QMh-0F-dBK"/>
+                        <viewControllerLayoutGuide type="bottom" id="c5V-04-ytL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8uz-6G-mrP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIG-wd-ozb">
+                                <rect key="frame" x="75" y="530" width="225" height="71"/>
+                                <color key="backgroundColor" red="0.32731547238574876" green="0.68429465104512643" blue="0.78863253266678246" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="Gx7-am-O10"/>
+                                    <constraint firstAttribute="height" constant="71" id="T8V-Rr-15V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="workout">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0t-KQ-Xfm">
+                                <rect key="frame" x="26" y="134" width="322" height="331"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="lNL-fm-TYq" id="nwq-ld-HkG"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="pzI-4s-3wA">
+                                <rect key="frame" x="168" y="420" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="pageChange:" destination="lNL-fm-TYq" eventType="valueChanged" id="pt0-qh-kh7"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c5V-04-ytL" firstAttribute="top" secondItem="vIG-wd-ozb" secondAttribute="bottom" constant="66" id="7pP-VY-YcY"/>
+                            <constraint firstItem="vIG-wd-ozb" firstAttribute="leading" secondItem="8uz-6G-mrP" secondAttribute="leadingMargin" constant="59" id="c4N-vm-x2U"/>
+                            <constraint firstItem="vIG-wd-ozb" firstAttribute="centerX" secondItem="8uz-6G-mrP" secondAttribute="centerX" id="jxH-yx-ph3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="pzI-4s-3wA" id="esO-rc-5pY"/>
+                        <outlet property="scrollView" destination="u0t-KQ-Xfm" id="Uh5-Uk-fu6"/>
+                        <outlet property="workoutButton" destination="vIG-wd-ozb" id="Odc-zM-wlY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vh2-mX-jQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.5" y="987.5"/>
+        </scene>
         <!--Mirror View Controller-->
         <scene sceneID="0wd-Z1-oBs">
             <objects>
@@ -201,7 +258,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEAST" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sux-LP-AsD">
-                                <rect key="frame" x="96" y="20" width="185" height="159"/>
+                                <rect key="frame" x="95.5" y="20" width="185" height="159"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="159" id="VWM-WW-BWy"/>
                                 </constraints>
@@ -226,7 +283,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAc-tl-4wI">
-                                <rect key="frame" x="98" y="617" width="183" height="30"/>
+                                <rect key="frame" x="97.5" y="617" width="183" height="30"/>
                                 <state key="normal" title="Already a member? Sign in">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -253,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3a-Wk-JWI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1681" y="-294"/>
+            <point key="canvasLocation" x="-1625" y="-201"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="00I-Fs-SCo">
@@ -505,30 +562,12 @@
             </objects>
             <point key="canvasLocation" x="958" y="-978"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="75x-fW-ZR8">
-            <objects>
-                <viewController id="myF-qq-q54" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XWf-Kn-Vzq"/>
-                        <viewControllerLayoutGuide type="bottom" id="et4-sA-ysO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jeQ-i8-fDd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lbA-zt-3Nz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="786" y="884"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="bP9-Yy-qQQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V7a-Q6-P3a" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OM5-3x-m3T">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OM5-3x-m3T">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
