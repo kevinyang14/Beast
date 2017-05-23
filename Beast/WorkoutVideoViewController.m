@@ -75,8 +75,7 @@
 
 - (void)playVideo{
     NSLog(@"videoCount %d vs. exerciseArray %lu \n\n", self.videoCount, (unsigned long)[self.exerciseArray count]);
-
-    NSNumber *exerciseNum = [self.exerciseArray objectAtIndex:self.videoCount] ;
+    NSNumber *exerciseNum = [self.exerciseArray objectAtIndex:self.videoCount];
     NSURL *url = [FirebaseRefs videoLocalURL:exerciseNum];
     NSString *urlPath = [url absoluteString];
     self.videoPlayerController.videoPath = urlPath;
@@ -111,6 +110,7 @@
     if(self.videoCount < [self.exerciseArray count]-1) {
         NSLog(@"\n\n-----------IF------------");
         self.videoCount++;
+        [self.videoPlayerController stop];
         [self playVideo];
         [self incrementProgressBar];
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
