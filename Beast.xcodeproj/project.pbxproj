@@ -45,6 +45,7 @@
 		F066D1FD1EC040D30042FAA6 /* BeastFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = F066D1FC1EC040D30042FAA6 /* BeastFilterController.m */; };
 		F09403D11E726D2200AAD217 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F09403D01E726D2200AAD217 /* FriendCell.m */; };
 		F09403D21E726D2200AAD217 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F09403D01E726D2200AAD217 /* FriendCell.m */; };
+		F0D653351ED572D8009401F2 /* BeastCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D653341ED572D8009401F2 /* BeastCollectionCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,8 @@
 		F066D1FC1EC040D30042FAA6 /* BeastFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeastFilterController.m; sourceTree = "<group>"; };
 		F09403CF1E726D2200AAD217 /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
 		F09403D01E726D2200AAD217 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
+		F0D653331ED572D8009401F2 /* BeastCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeastCollectionCell.h; sourceTree = "<group>"; };
+		F0D653341ED572D8009401F2 /* BeastCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeastCollectionCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +224,8 @@
 				0AA1B6F21CB6D83D00A594E1 /* AppDelegate.m */,
 				0ADA768E1CCB2BEA00E39F39 /* BeastCell.h */,
 				0ADA768F1CCB2BEA00E39F39 /* BeastCell.m */,
+				F0D653331ED572D8009401F2 /* BeastCollectionCell.h */,
+				F0D653341ED572D8009401F2 /* BeastCollectionCell.m */,
 				F09403CF1E726D2200AAD217 /* FriendCell.h */,
 				F09403D01E726D2200AAD217 /* FriendCell.m */,
 				0AA1B6F71CB6D83D00A594E1 /* Main.storyboard */,
@@ -542,6 +547,7 @@
 				0A880BE81D1FD6EA00155296 /* ViewUtils.m in Sources */,
 				0A880BDF1D1FD6CB00155296 /* ImageViewController.m in Sources */,
 				0A880BE61D1FD6EA00155296 /* UIImage+Crop.m in Sources */,
+				F0D653351ED572D8009401F2 /* BeastCollectionCell.m in Sources */,
 				F066D1FD1EC040D30042FAA6 /* BeastFilterController.m in Sources */,
 				0A880C021D28C90100155296 /* GymViewController.m in Sources */,
 				0A880BE71D1FD6EA00155296 /* UIImage+Resize.m in Sources */,

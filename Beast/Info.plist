@@ -40,6 +40,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Used for Mirror</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Used for Mirror</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>MyriadPro-BoldIt.otf</string>

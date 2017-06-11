@@ -9,44 +9,140 @@
 #import "BeastFilterController.h"
 #import "BeastColors.h"
 #import <ChameleonFramework/Chameleon.h>
+#import "BeastWorkout.h"
+#import "FirebaseRefs.h"
+#import "WorkoutVideoViewController.h"
+#import "BeastCollectionCell.h"
+@import Firebase;
 
-@interface BeastFilterController () <UIScrollViewDelegate>
+@interface BeastFilterController () <UICollectionViewDataSource, UICollectionViewDelegate>
+//@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIButton *workoutButton;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) NSMutableArray *workoutsArray;
+@property (strong, nonatomic) FIRDatabaseReference *databaseRef;
+@property (strong, nonatomic) FIRStorageReference *storageRef;
+@property (strong, nonatomic) NSMutableArray *filterEmojiArray;
+@property (strong, nonatomic) NSMutableArray *filterWordsArray;
+@property (strong, nonatomic) NSDictionary *emojiTofilterDictionary;
+@property (strong, nonatomic) NSMutableDictionary *filterToBooleanDictionary;
+@property (weak, nonatomic) IBOutlet UILabel *filterTitle;
 @end
 
 @implementation BeastFilterController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupFirebase];
+    [self initializeValues];
+    [self downloadWorkouts];
+    [self setupUI];
     [self createFilterBar];
     [self createWorkoutButton];
-    [self createPageView];
-    // Do any additional setup after loading the view.
+   // [self createPageView];
 }
 
-- (void)createPageView{
-    NSArray * colorsArray = @[[BeastColors darkBlue], [BeastColors reddishPink], [BeastColors lightOrange]];
-    CGRect frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
-    for (int i = 0; i < [colorsArray count]; i++){
-        frame.origin.x = self.scrollView.frame.size.width * (float)i;
-        frame.size = self.scrollView.frame.size;
-        UIView *view = [[UIView alloc] initWithFrame:frame];
-        view.backgroundColor = colorsArray[i];
-        [self.scrollView addSubview:view];
-    }
+- (void)setupUI{
+    self.collectionView.layer.cornerRadius = 20.0;
+    self.collectionView.layer.masksToBounds = YES;
+    self.filterTitle.text = @"begin";
+}
+
+
+- (void)initializeValues{
+    NSArray *array1 = @[@"⭐️", @"😊", @"☠", @"🔥", @"🦄", @"🏀", @"🌊", @"🎈"];
+    self.filterEmojiArray = [array1 mutableCopy];
     
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * (float)colorsArray.count, self.scrollView.frame.size.height);
-    self.pageControl.numberOfPages = colorsArray.count;
-    self.scrollView.layer.cornerRadius = 14.0;
-    self.scrollView.layer.masksToBounds = YES;
+    self.emojiTofilterDictionary = @{
+                             @"⭐️" : @"recommended",
+                             @"😊" : @"beginner",
+                             @"☠" : @"legendary",
+                             @"🔥" : @"fat-burning",
+                             @"🦄" : @"unicorn",
+                             @"🏀" : @"sport",
+                             @"🌊" : @"swimming",
+                             @"🎈" : @"fun"
+                             };
+    NSDictionary *filterToBoolean =@{
+                                   @"recommended" : @NO,
+                                   @"beginner" :  @NO,
+                                   @"legendary" : @NO,
+                                   @"cardio": @NO,
+                                   @"unicorn" : @NO,
+                                   @"sport" : @NO,
+                                   @"swimming": @NO,
+                                   @"fun": @NO
+                                   };
+
+    
+    self.filterToBooleanDictionary = [filterToBoolean mutableCopy];
+    
+    [self buildFilterTitle];
 }
 
-- (void)createWorkoutButton{
-    self.workoutButton.backgroundColor = [BeastColors lightBlue];
-    self.workoutButton.layer.cornerRadius = 35.0;
-    self.workoutButton.clipsToBounds = YES;
+#pragma mark - Dynamic Title Methods
+
+- (NSString *)buildFilterTitle{
+    NSString *title = @"begin ";
+    NSLog(@"\n\nDICTIONARY%@\n\n", self.filterToBooleanDictionary);
+ 
+    for (NSString *key in [self.filterToBooleanDictionary allKeys] ) {
+        NSLog(@"\n\nKEY %@\n\n", key);
+        NSNumber *isFilter = [self.filterToBooleanDictionary objectForKey:key];
+        NSLog(@"\n\nOBJECT %@\n\n", isFilter);
+        if([isFilter boolValue]){
+            NSLog(@"YES");
+            NSString *keyPlusSpace = [NSString stringWithFormat:@"%@ ", key];
+            title = [title stringByAppendingString:keyPlusSpace];
+        }else{
+            NSLog(@"NO");
+        }
+    }
+    NSLog(@"%@", title);
+    return title;
+}
+
+
+#pragma mark FilterBar Methods
+
+- (void) addFilter:(NSString *)filter{
+    NSNumber *filterBool = [NSNumber numberWithBool:YES];
+    [self.filterToBooleanDictionary setObject:filterBool forKey:filter];
+}
+
+- (void) removeFilter:(NSString *)filter{
+    NSNumber *filterBool = [NSNumber numberWithBool:NO];
+    [self.filterToBooleanDictionary setObject:filterBool forKey:filter];
+}
+
+- (void) filterButtonPressed:(UIButton *)button {
+    NSString *emojiKey = button.titleLabel.text;
+    NSString *filter = [self.emojiTofilterDictionary objectForKey:emojiKey];
+    
+    UIColor *selectedColor = [[UIColor whiteColor] colorWithAlphaComponent:0.4];
+    
+    if(button.selected){
+        NSLog(@"\nselected");
+        button.backgroundColor = [BeastColors lightBlue];
+        [button setSelected:NO];
+        [self removeFilter:filter];
+
+    }else{
+        NSLog(@"\nis not selected");
+        button.backgroundColor = selectedColor;
+        [button setSelected:YES];
+        [self addFilter:filter];
+
+    }
+    self.filterTitle.text = [self buildFilterTitle];
+}
+
+
+- (UIColor *)randomBackgroundColor:(int) index{
+    NSArray * colorsArray = @[[BeastColors lightBlue], [BeastColors lightOrange]];
+    int oddOrEven = index % 2;
+    return colorsArray[oddOrEven];
 }
 
 - (void)createFilterBar
@@ -54,14 +150,14 @@
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
     
     int x = 0;
-    NSArray *emojis = @[@"⭐️", @"😊", @"☠", @"🔥", @"🦄", @"🏀", @"🌊", @"🎈"];
-    for (int i = 0; i < [emojis count]; i++) {
+    
+    for (int i = 0; i < [self.filterEmojiArray count]; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button addTarget:self
-                   action:@selector(buttonPress:)
+                   action:@selector(filterButtonPressed:)
          forControlEvents:UIControlEventTouchUpInside];
         button.userInteractionEnabled = YES;
-        NSString *emoji = [emojis objectAtIndex:i];
+        NSString *emoji = [self.filterEmojiArray objectAtIndex:i];
         [button setTitle:emoji forState:UIControlStateNormal];
         [button.titleLabel setFont: [UIFont boldSystemFontOfSize:25.0]];
         [button.titleLabel setTextAlignment: NSTextAlignmentCenter];
@@ -70,43 +166,242 @@
         button.frame = CGRectMake(x, 24, 60, 60);
         button.layer.cornerRadius = button.frame.size.height/2;
         button.clipsToBounds = YES;
-
+        
         [scrollView addSubview:button];
         x += button.frame.size.width + 10;
     }
     scrollView.contentSize = CGSizeMake(x, scrollView.frame.size.height);
     scrollView.showsHorizontalScrollIndicator =  NO;
-
     scrollView.backgroundColor = [BeastColors lightBlue];
     [self.view addSubview:scrollView];
 }
 
-- (void) buttonPress:(UIButton *)button {
+#pragma mark <UICollectionViewDataSource>
 
-    NSLog(@"\n\nBUTTON IS PRESSED %@", button.titleLabel.text);
-    UIColor *selectedColor = [[UIColor whiteColor] colorWithAlphaComponent:0.4];
+- (void)selectDefaultWorkout{
+    NSIndexPath* selectedCellIndexPath= [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.collectionView selectItemAtIndexPath:selectedCellIndexPath animated:false scrollPosition:UICollectionViewScrollPositionLeft];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [self.workoutsArray count];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    BeastCollectionCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"workoutCell" forIndexPath:indexPath];
+    cell.backgroundColor = [self randomBackgroundColor:indexPath.row];
+    NSString *imageName = [NSString stringWithFormat:@"cover%ld.jpg", indexPath.row+1];
+    cell.imageView.image = [UIImage imageNamed:imageName];
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout*)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return self.collectionView.frame.size;
+}
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    // If you need to use the touched cell, you can retrieve it like so
+    // UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
     
-    if(button.selected){
-        NSLog(@"\nselected");
-        button.backgroundColor = [BeastColors lightBlue];
-        [button setSelected:NO];
-    }else{
-        NSLog(@"\nis not selected");
-        button.backgroundColor = selectedColor;
-        [button setSelected:YES];
+    NSLog(@"\n\ntouched cell at indexPath %ld\n\n", (long)indexPath.row);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
+    self.pageControl.currentPage = indexPath.row;
+}
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"WorkoutVideoSegue"]) {
+        UICollectionViewCell *cell = (UICollectionViewCell *)sender;
+        NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+        WorkoutVideoViewController* vc = [segue destinationViewController];
+        BeastWorkout *workout = [self.workoutsArray objectAtIndex:indexPath.row];
+        vc.exerciseArray = workout.exerciseArray;
     }
 }
 
+
+#pragma mark PageControl Methods
+
 - (IBAction)pageChange:(UIPageControl *)sender {
-    CGFloat x = self.pageControl.currentPage * self.scrollView.frame.size.width;
-    [self.scrollView setContentOffset:CGPointMake(x, 0) animated:YES];
+    //CGFloat x = self.pageControl.currentPage * self.scrollView.frame.size.width;
+    //[self.scrollView setContentOffset:CGPointMake(x, 0) animated:YES];
 }
 
--(void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView  {
-    NSLog(@"SCROLLING");
-    NSInteger pageNumber = roundf(scrollView.contentOffset.x / (scrollView.frame.size.width));
-    self.pageControl.currentPage = pageNumber;
+
+#pragma mark WorkoutButton Methods
+
+- (void)createWorkoutButton{
+    self.workoutButton.backgroundColor = [BeastColors lightBlue];
+    self.workoutButton.layer.cornerRadius = 35.0;
+    self.workoutButton.clipsToBounds = YES;
 }
+
+- (IBAction)justWorkoutButton:(id)sender {
+    NSInteger randomIndex = arc4random()%[self.workoutsArray count];
+    NSIndexPath* selectedCellIndexPath= [NSIndexPath indexPathForRow:randomIndex inSection:0];
+    [self.collectionView selectItemAtIndexPath:selectedCellIndexPath
+                                      animated:false
+                                scrollPosition:UICollectionViewScrollPositionNone];
+    BeastCollectionCell *cell = (BeastCollectionCell *)[self.collectionView cellForItemAtIndexPath:selectedCellIndexPath];
+    [self performSegueWithIdentifier:@"WorkoutVideoSegue" sender:cell];
+}
+
+#pragma mark - Firebase Methods
+
+- (void)setupFirebase{
+    self.databaseRef = [FirebaseRefs databaseRef];
+    self.storageRef = [FirebaseRefs storageRef];
+}
+
+// Download workout info from Firebase Database
+- (void)downloadWorkouts{
+    [self.databaseRef observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        NSLog(@"\n\n\n");
+        NSLog(@"Firebase Backend:");
+        NSLog(@"%@", snapshot.value);
+        NSDictionary *firebaseDictionary = snapshot.value;
+        NSDictionary *workoutsDictionary = [firebaseDictionary objectForKey:@"workouts"];
+        for (NSString* key in [workoutsDictionary allKeys])
+        {
+            NSDictionary *workoutDictionary = [workoutsDictionary objectForKey:key];
+            BeastWorkout *beastWorkout = [self beastWorkoutFromDict:workoutDictionary];
+            [self.workoutsArray addObject:beastWorkout];
+        }
+        [self downloadAllVideoWorkouts];
+        [self.collectionView reloadData];
+        [self selectDefaultWorkout];
+        self.pageControl.numberOfPages = [self.workoutsArray count];
+        NSLog(@"\n\n\n workoutArrayCount %lu \n\n\n", (unsigned long)[self.workoutsArray count]);
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+}
+
+- (BeastWorkout *)beastWorkoutFromDict:(NSDictionary *)workoutDictionary{
+    NSString *name = [workoutDictionary objectForKey:@"name"];
+    NSString *lvl = [workoutDictionary objectForKey:@"lvl"];
+    NSNumber *time = [workoutDictionary objectForKey:@"time"];
+    NSString *equipment = [workoutDictionary objectForKey:@"equipment"];
+    NSString *bodyParts = [workoutDictionary objectForKey:@"body parts"];
+    NSArray *exerciseArray = [workoutDictionary objectForKey:@"exerciseArray"];
+    BeastWorkout *beastWorkout = [[BeastWorkout alloc] initWithName:name lvl:lvl equipment:equipment bodyParts:bodyParts exerciseArray:exerciseArray andTime:time];
+    [beastWorkout printValues];
+    return beastWorkout;
+}
+
+
+- (void)downloadAllVideoWorkouts{
+    for (BeastWorkout *workout in self.workoutsArray) {
+        [self downloadVideoWorkout:workout];
+    }
+}
+
+- (void)downloadVideoWorkout:(BeastWorkout *)workout{
+    NSArray *exerciseArray = workout.exerciseArray;
+    for (NSNumber *exerciseNum in exerciseArray) {
+        if([self isExerciseDownloaded:exerciseNum] == NO) [self downloadExercise:exerciseNum];
+    }
+}
+
+- (void)downloadExercise:(NSNumber *)videoNumber{
+    // Get firebaseRef & localURL
+    FIRStorageReference *firebaseRef = [FirebaseRefs videoFirebaseRef:videoNumber];
+    NSURL *localURL = [FirebaseRefs videoLocalURL:videoNumber];
+    NSLog(@"downloading video %@", videoNumber);
+    // Download to the local filesystem
+    [firebaseRef writeToFile:localURL completion:^(NSURL *URL, NSError *error){
+        if (error != nil) {
+            //Error!
+            NSLog(@"error %@", error);
+        } else {
+            //Success!
+            //NSLog(@"fileURL: %@", [URL path]);
+        }
+    }];
+}
+
+- (BOOL)isWorkoutDownloaded:(NSArray *)exerciseArray{
+    for (NSNumber *exerciseNum in exerciseArray) {
+        if([self isExerciseDownloaded:exerciseNum] == NO) return NO;
+    }
+    return YES;
+}
+
+- (BOOL)isExerciseDownloaded:(NSNumber *)videoNum{
+    NSURL *fileURL = [FirebaseRefs videoLocalURL:videoNum];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:[fileURL path]]) return YES;
+    return NO;
+}
+
+
+#pragma mark - Helper Methods
+
+- (NSMutableArray *)workoutsArray{
+    if(!_workoutsArray){
+        _workoutsArray = [[NSMutableArray alloc] init];
+    }
+    return _workoutsArray;
+}
+
+- (NSMutableArray *)filterEmojiArray{
+    if(!_filterEmojiArray){
+        _filterEmojiArray = [[NSMutableArray alloc] init];
+    }
+    return _filterEmojiArray;
+}
+
+- (NSMutableArray *)filterWordsArray{
+    if(!_filterWordsArray){
+        _filterWordsArray = [[NSMutableArray alloc] init];
+    }
+    return _filterWordsArray;
+}
+
+
+/*
+ #pragma mark Scrollview Methods
+ 
+ 
+ - (void)createPageView{
+ NSArray * colorsArray = @[[BeastColors darkBlue], [BeastColors reddishPink], [BeastColors lightOrange]];
+ CGRect frame = CGRectMake(0.0, 0.0, 0.0, 0.0);
+ for (int i = 0; i < [colorsArray count]; i++){
+ frame.origin.x = self.scrollView.frame.size.width * (float)i;
+ frame.size = self.scrollView.frame.size;
+ UIView *view = [[UIView alloc] initWithFrame:frame];
+ view.backgroundColor = colorsArray[i];
+ [self.scrollView addSubview:view];
+ }
+ 
+ self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * (float)colorsArray.count, self.scrollView.frame.size.height);
+ self.pageControl.numberOfPages = colorsArray.count;
+ self.scrollView.layer.cornerRadius = 14.0;
+ self.scrollView.layer.masksToBounds = YES;
+ }
+ 
+ -(void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView  {
+ NSLog(@"SCROLLING");
+ NSInteger pageNumber = roundf(scrollView.contentOffset.x / (scrollView.frame.size.width));
+ self.pageControl.currentPage = pageNumber;
+ }
+ 
+ */
+
+
 
 /*
 #pragma mark - Navigation

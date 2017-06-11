@@ -61,8 +61,11 @@
     // camera with video recording capability
     self.camera =  [[LLSimpleCamera alloc] initWithVideoEnabled:YES];
     // camera with precise quality, position and video parameters.
+//    self.camera = [[LLSimpleCamera alloc] initWithQuality:AVCaptureSessionPresetHigh
+//                                                 position:LLCameraPositionFront
+//                                             videoEnabled:YES];
     self.camera = [[LLSimpleCamera alloc] initWithQuality:AVCaptureSessionPresetHigh
-                                                 position:LLCameraPositionFront
+                                                 position:LLCameraPositionRear
                                              videoEnabled:YES];
     // attach to the view
     [self.camera attachToViewController:self withFrame:CGRectMake(0, 0, screenRect.size.width, screenRect.size.height)];
@@ -111,7 +114,7 @@
 - (void)addHeart {
     UIImageView *heartImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenWidth / 2.0, kScreenHeight * 9.0/10.0, 40, 40)];
     
-    heartImageView.image = [UIImage imageNamed:@"tiger"];
+    heartImageView.image = [UIImage imageNamed:@"fries"];
     heartImageView.transform = CGAffineTransformMakeScale(0, 0);
     [self.camera.view addSubview:heartImageView];
     
