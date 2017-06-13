@@ -20,6 +20,8 @@
 @property (strong, nonatomic) CAShapeLayer *progressBarLayer;
 @property (strong, nonatomic) FIRStorageReference *storageRef;
 @property int videoCount;
+@property (weak, nonatomic) IBOutlet UIButton *dislikeButton;
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
 @end
 
 @implementation WorkoutVideoViewController
@@ -40,6 +42,35 @@
     [self setupSwipeGestureRecognizer];
     [self setupTapGestureRecognizer];
     self.videoCount = 0;
+    
+    [self setupLikeDislikeButtons];
+
+}
+
+-(void) setupLikeDislikeButtons{
+    self.likeButton.hidden = YES;
+    self.dislikeButton.hidden = YES;
+    [self.likeButton addTarget:self action:@selector(likeOrDislike:) forControlEvents:UIControlEventTouchUpInside];
+    [self.dislikeButton addTarget:self action:@selector(likeOrDislike:) forControlEvents:UIControlEventTouchUpInside];
+
+}
+
+- (void)likeOrDislike:(UIButton *)button{
+    if([button.titleLabel.text isEqualToString:@"👍"]){
+        NSLog(@"\n\n\nLIKE\n\n\n");
+    }else{
+        NSLog(@"\n\n\nDISLIKE\n\n\n");
+    }
+}
+
+
+- (void)showLikeDislikeButtons{
+    //show like dislike buttons
+    NSLog(@"\n\nSHOW LIKE DISLIKE BUTTON\n\n");
+    [self.view bringSubviewToFront:self.likeButton];
+    [self.view bringSubviewToFront:self.dislikeButton];
+    self.likeButton.hidden = NO;
+    self.dislikeButton.hidden = NO;
 }
 
 
@@ -106,6 +137,10 @@
 
 - (void)playNextVideo{
     //play next video, if there are videos left to play
+    
+    if(self.videoCount == [self.exerciseArray count]-2){
+        [self showLikeDislikeButtons];
+    }
 
     if(self.videoCount < [self.exerciseArray count]-1) {
         NSLog(@"\n\n-----------IF------------");
@@ -118,9 +153,9 @@
         NSLog(@"\n\n-----------ELSE------------");
         [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
     }
-    
-    
+
 }
+
 
 #pragma mark delegate methods
 - (void)videoPlayerPlaybackWillStartFromBeginning:(PBJVideoPlayerController *)videoPlayer{

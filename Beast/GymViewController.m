@@ -9,11 +9,15 @@
 #import "GymViewController.h"
 #import "FriendCell.h"
 #import "BeastColors.h"
+#import <PBJVideoPlayer/PBJVideoPlayer.h>
+#import "FirebaseRefs.h"
 
-@interface GymViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface GymViewController ()<UITableViewDataSource, UITableViewDelegate, PBJVideoPlayerControllerDelegate>
 @property (nonatomic, strong) NSArray *pictureNames;
 @property (nonatomic, strong) NSArray *peopleNames;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *avatarView;
+@property (nonatomic, strong) PBJVideoPlayerController *videoPlayerController;
 @end
 
 @implementation GymViewController
@@ -27,6 +31,30 @@
     //remove cell separator after last cell
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self setupNavbar];
+    [self setupAvatarView];
+}
+
+- (void)setupAvatarView{
+    // allocate controller
+    self.videoPlayerController = [[PBJVideoPlayerController alloc] init];
+    self.videoPlayerController.delegate = self;
+    self.videoPlayerController.view.frame = self.avatarView.frame;
+    
+    // setup media
+    self.videoPlayerController.videoPath = @"http://manuchopra.in/fit1.mov";
+    
+   
+//    NSURL *url = [FirebaseRefs videoLocalURL:@1];
+//    NSString *urlPath = [url absoluteString];
+//    self.videoPlayerController.videoPath = urlPath;
+    
+    
+    // present
+    [self addChildViewController:self.videoPlayerController];
+    [self.avatarView addSubview:self.videoPlayerController.view];
+    [self.videoPlayerController didMoveToParentViewController:self];
+
+    [self.videoPlayerController playFromBeginning];
 }
 
 - (void)setupNavbar{

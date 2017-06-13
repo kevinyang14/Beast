@@ -140,7 +140,6 @@
                     <connections>
                         <outlet property="tableView" destination="Fqr-WP-79c" id="YJl-3a-YOW"/>
                         <outlet property="workoutButton" destination="QbC-iK-YUA" id="r4w-dB-lhj"/>
-                        <segue destination="ky7-TJ-4Ab" kind="custom" identifier="GymSegue" customClass="SlideRightSegue" id="UYv-HZ-4Kf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMg-vT-9OT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,7 +159,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Food" selectedImage="food" id="V7v-ea-4C9"/>
+                    <tabBarItem key="tabBarItem" title="Food" image="foodIcon" selectedImage="food" id="V7v-ea-4C9"/>
                     <navigationItem key="navigationItem" id="hPj-2V-ffk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                 </viewController>
@@ -179,12 +178,44 @@
                     <view key="view" contentMode="scaleToFill" id="t8b-1j-EUa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUB-mp-PZJ">
+                                <rect key="frame" x="192" y="281" width="88" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TUB-mp-PZJ" secondAttribute="height" multiplier="1:1" id="9kP-jG-xFj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                <state key="normal" title="👎"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JND-WW-jjE">
+                                <rect key="frame" x="102" y="281" width="61" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JND-WW-jjE" secondAttribute="height" multiplier="61:88" id="VKT-Of-4Kv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                <state key="normal" title="👍"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k3J-xG-RQs" firstAttribute="top" secondItem="JND-WW-jjE" secondAttribute="bottom" constant="298" id="EAR-qV-vjT"/>
+                            <constraint firstItem="k3J-xG-RQs" firstAttribute="top" secondItem="TUB-mp-PZJ" secondAttribute="bottom" constant="298" id="Jc9-AH-Lew"/>
+                            <constraint firstItem="JND-WW-jjE" firstAttribute="top" secondItem="kyj-hj-aVX" secondAttribute="bottom" constant="261" id="NNb-9X-4ez"/>
+                            <constraint firstItem="JND-WW-jjE" firstAttribute="leading" secondItem="t8b-1j-EUa" secondAttribute="leadingMargin" constant="86" id="UI4-Km-AVF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TUB-mp-PZJ" secondAttribute="trailing" constant="79" id="afy-iD-Gp4"/>
+                            <constraint firstItem="TUB-mp-PZJ" firstAttribute="leading" secondItem="JND-WW-jjE" secondAttribute="trailing" constant="29" id="bV7-O2-k6p"/>
+                            <constraint firstItem="TUB-mp-PZJ" firstAttribute="top" secondItem="kyj-hj-aVX" secondAttribute="bottom" constant="261" id="dzF-4B-spA"/>
+                            <constraint firstItem="TUB-mp-PZJ" firstAttribute="leading" secondItem="JND-WW-jjE" secondAttribute="trailing" constant="29" id="hsE-HD-6E2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dislikeButton" destination="TUB-mp-PZJ" id="s9k-bq-x75"/>
+                        <outlet property="likeButton" destination="JND-WW-jjE" id="nNG-IJ-KfG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8et-6Z-t5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1363.5" y="271.5"/>
+            <point key="canvasLocation" x="1054.5" y="687.5"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="EQa-1i-dQO">
@@ -203,7 +234,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEAST" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sux-LP-AsD">
-                                <rect key="frame" x="95" y="20" width="185" height="159"/>
+                                <rect key="frame" x="95.5" y="20" width="185" height="159"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="159" id="VWM-WW-BWy"/>
                                 </constraints>
@@ -228,7 +259,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAc-tl-4wI">
-                                <rect key="frame" x="97" y="617" width="183" height="30"/>
+                                <rect key="frame" x="97.5" y="617" width="183" height="30"/>
                                 <state key="normal" title="Already a member? Sign in">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -435,7 +466,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GwK-6f-r8h">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="286" width="375" height="381"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="133" id="R6X-PL-mAx" customClass="FriendCell">
@@ -489,42 +520,30 @@
                                     <outlet property="delegate" destination="QHv-dx-xDs" id="ejW-l1-giV"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="08m-ZW-ubf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="286"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GwK-6f-r8h" firstAttribute="height" secondItem="D95-1h-PdS" secondAttribute="height" id="4YA-SE-Rcy"/>
+                            <constraint firstItem="GwK-6f-r8h" firstAttribute="height" secondItem="D95-1h-PdS" secondAttribute="height" constant="-286" id="4YA-SE-Rcy"/>
                             <constraint firstItem="GwK-6f-r8h" firstAttribute="centerX" secondItem="D95-1h-PdS" secondAttribute="centerX" id="DIx-22-LmO"/>
-                            <constraint firstItem="GwK-6f-r8h" firstAttribute="centerY" secondItem="D95-1h-PdS" secondAttribute="centerY" id="FkV-9y-AIb"/>
+                            <constraint firstItem="GwK-6f-r8h" firstAttribute="centerY" secondItem="D95-1h-PdS" secondAttribute="centerY" constant="143" id="FkV-9y-AIb"/>
                             <constraint firstItem="GwK-6f-r8h" firstAttribute="width" secondItem="D95-1h-PdS" secondAttribute="width" id="WcD-cp-Epx"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="7RS-oP-4d4"/>
                     <navigationItem key="navigationItem" title="🏋️" id="oaf-vb-CAc"/>
                     <connections>
+                        <outlet property="avatarView" destination="08m-ZW-ubf" id="NY4-se-Vgs"/>
                         <outlet property="tableView" destination="GwK-6f-r8h" id="oct-3h-XTf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x1V-PV-hnl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958" y="-978"/>
-        </scene>
-        <!--Friends-->
-        <scene sceneID="Sw4-iO-iPE">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ky7-TJ-4Ab" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Friends" selectedImage="workout" id="5RT-SV-lFU"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eR3-l3-Q0N">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="QHv-dx-xDs" kind="relationship" relationship="rootViewController" id="pcr-Nh-nTM"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D70-3L-s9Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="515" y="-977"/>
+            <point key="canvasLocation" x="957.5" y="-978.5"/>
         </scene>
         <!--Workout-->
         <scene sceneID="Isv-L2-vND">
@@ -630,7 +649,7 @@
                             <constraint firstItem="r8e-wh-lNb" firstAttribute="trailing" secondItem="h6j-1g-L7e" secondAttribute="trailingMargin" id="zIg-vM-2eF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Workout" id="Z6D-4I-FTf"/>
+                    <tabBarItem key="tabBarItem" title="Workout" image="gymIcon" id="Z6D-4I-FTf"/>
                     <connections>
                         <outlet property="collectionView" destination="qm1-ZG-h7F" id="TOX-9x-MQi"/>
                         <outlet property="filterTitle" destination="r8e-wh-lNb" id="SQS-v9-JMI"/>
@@ -648,13 +667,14 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="RcO-Aa-BWF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Csx-F6-mMH">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="fdu-SG-1bK" kind="relationship" relationship="viewControllers" id="Lhn-D4-TdJ"/>
                         <segue destination="fbt-G0-s9x" kind="relationship" relationship="viewControllers" id="5V1-Wa-QX3"/>
-                        <segue destination="ky7-TJ-4Ab" kind="relationship" relationship="viewControllers" id="zcy-fw-5zF"/>
+                        <segue destination="QHv-dx-xDs" kind="relationship" relationship="viewControllers" id="lwA-Ze-Fxi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9c-ZY-ORp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -664,10 +684,11 @@
     </scenes>
     <resources>
         <image name="food" width="36" height="34"/>
+        <image name="foodIcon" width="25" height="25"/>
+        <image name="gymIcon" width="25" height="25"/>
         <image name="lightning" width="329" height="617"/>
         <image name="signinbutton" width="250" height="81"/>
         <image name="welcomeButton" width="226" height="152"/>
-        <image name="workout" width="60" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -675,8 +696,7 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zcy-fw-5zF"/>
-        <segue reference="LqY-fM-f04"/>
         <segue reference="SIA-bU-lju"/>
+        <segue reference="LqY-fM-f04"/>
     </inferredMetricsTieBreakers>
 </document>
