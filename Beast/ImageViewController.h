@@ -10,4 +10,8 @@
 
 @interface ImageViewController : UIViewController
 - (instancetype)initWithImage:(UIImage *)image;
+
+@property (nonatomic, strong) NSString *foodName;
+@property (nonatomic, strong) NSString *calories;
+
 @end

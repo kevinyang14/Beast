@@ -39,6 +39,10 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [self playExaggeratedAvatar];
+}
+
 - (void)setupAvatarView{
     // allocate controller
     self.videoPlayerController = [[PBJVideoPlayerController alloc] init];
@@ -61,6 +65,18 @@
 
     [self.videoPlayerController playFromBeginning];
     [self.view bringSubviewToFront:self.meLabel];
+}
+
+- (void)playExaggeratedAvatar{
+    NSString *fitOrFat = [[NSUserDefaults standardUserDefaults]
+                            stringForKey:@"fitOrFat"];
+    int randomVidNum = arc4random_uniform(2)+1;
+    if([fitOrFat isEqualToString:@"FAT"]){
+        self.videoPlayerController.videoPath = [NSString stringWithFormat:@"http://manuchopra.in/fat%d.mov", randomVidNum];;
+    }else{
+        self.videoPlayerController.videoPath = [NSString stringWithFormat:@"http://manuchopra.in/fit%d.mov", randomVidNum];
+    }
+    [self.videoPlayerController playFromBeginning];
 }
 
 - (void)setupNavbar{

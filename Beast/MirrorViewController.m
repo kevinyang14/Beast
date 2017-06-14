@@ -99,8 +99,6 @@
             
             NSLog(@"camera clicked");
             
-            ImageViewController *imageVC = [[ImageViewController alloc] initWithImage:image];
-            [weakSelf presentViewController:imageVC animated:NO completion:nil];
             
             // the boundary string : a random string, that will not repeat in post data, to separate post data fields.
             NSString *BoundaryConstant = @"----------V2ymHFg03ehbqgZCaKO6jy";
@@ -167,6 +165,8 @@
             
             NSString *returnString = [[NSString alloc] initWithData:returnData encoding: NSUTF8StringEncoding];
             
+            
+            
             NSRange range = [returnString rangeOfString:@"calories"];
             NSString *substring = [[returnString substringFromIndex:NSMaxRange(range)] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
             
@@ -189,8 +189,19 @@
             }
             
             substring4 =[substring4 substringFromIndex:3];
+            substring4 = [substring4 substringToIndex:[substring4 length] - 2];
             
             NSLog(@"Name:%@",substring4);//name
+            
+            ImageViewController *imageVC = [[ImageViewController alloc] initWithImage:image];
+
+            imageVC.foodName = substring4;
+            imageVC.calories = substring;
+            [weakSelf presentViewController:imageVC animated:NO completion:nil];
+            
+            NSString *valueToSave = @"FAT";
+            [[NSUserDefaults standardUserDefaults] setObject:valueToSave forKey:@"fitOrFat"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
         }
         else {
             NSLog(@"An error has occured: %@", error);

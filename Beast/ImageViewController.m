@@ -9,6 +9,7 @@
 #import "ImageViewController.h"
 #import "ViewUtils.h"
 #import "UIImage+Crop.h"
+#import "BeastColors.h"
 
 @interface ImageViewController ()
 @property (strong, nonatomic) UIImage *image;
@@ -41,12 +42,13 @@
     self.imageView.image = self.image;
     [self.view addSubview:self.imageView];
     
-    NSString *info = [NSString stringWithFormat:@"Size: %@  -  Orientation: %ld", NSStringFromCGSize(self.image.size), (long)self.image.imageOrientation];
+//    NSString *info = [NSString stringWithFormat:@"Size: %@  -  Orientation: %ld", NSStringFromCGSize(self.image.size), (long)self.image.imageOrientation];
+    NSString *info = [NSString stringWithFormat:@"%@ | %@ Calories", self.foodName, self.calories];
     
-    self.infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
-    self.infoLabel.backgroundColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0.7];
+    self.infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+    self.infoLabel.backgroundColor = [[BeastColors lightBlue] colorWithAlphaComponent:0.7];
     self.infoLabel.textColor = [UIColor whiteColor];
-    self.infoLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:13];
+    self.infoLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:25];
     self.infoLabel.textAlignment = NSTextAlignmentCenter;
     self.infoLabel.text = info;
     [self.view addSubview:self.infoLabel];

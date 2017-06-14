@@ -44,7 +44,10 @@
     self.videoCount = 0;
     
     [self setupLikeDislikeButtons];
-
+    
+    NSString *valueToSave = @"FIT";
+    [[NSUserDefaults standardUserDefaults] setObject:valueToSave forKey:@"fitOrFat"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 -(void) setupLikeDislikeButtons{
