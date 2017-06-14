@@ -48,7 +48,7 @@
     [super viewWillLayoutSubviews];
     
     self.snapButton.center = self.view.contentCenter;
-    self.snapButton.bottom = self.view.height - 35.0;
+    self.snapButton.bottom = self.view.height - 70.0;
 }
 
 #pragma mark Mirror
@@ -57,13 +57,13 @@
     self.view.backgroundColor = [BeastColors darkBlack];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-
+    
     // camera with video recording capability
     self.camera =  [[LLSimpleCamera alloc] initWithVideoEnabled:YES];
     // camera with precise quality, position and video parameters.
-//    self.camera = [[LLSimpleCamera alloc] initWithQuality:AVCaptureSessionPresetHigh
-//                                                 position:LLCameraPositionFront
-//                                             videoEnabled:YES];
+    //    self.camera = [[LLSimpleCamera alloc] initWithQuality:AVCaptureSessionPresetHigh
+    //                                                 position:LLCameraPositionFront
+    //                                             videoEnabled:YES];
     self.camera = [[LLSimpleCamera alloc] initWithQuality:AVCaptureSessionPresetHigh
                                                  position:LLCameraPositionRear
                                              videoEnabled:YES];
@@ -93,16 +93,109 @@
 - (void)snapButtonPressed:(UIButton *)button
 {
     __weak typeof(self) weakSelf = self;
-        // capture
-        [self.camera capture:^(LLSimpleCamera *camera, UIImage *image, NSDictionary *metadata, NSError *error) {
-            if(!error) {
-                ImageViewController *imageVC = [[ImageViewController alloc] initWithImage:image];
-                [weakSelf presentViewController:imageVC animated:NO completion:nil];
+    // capture
+    [self.camera capture:^(LLSimpleCamera *camera, UIImage *image, NSDictionary *metadata, NSError *error) {
+        if(!error) {
+            
+            NSLog(@"camera clicked");
+            
+            ImageViewController *imageVC = [[ImageViewController alloc] initWithImage:image];
+            [weakSelf presentViewController:imageVC animated:NO completion:nil];
+            
+            // the boundary string : a random string, that will not repeat in post data, to separate post data fields.
+            NSString *BoundaryConstant = @"----------V2ymHFg03ehbqgZCaKO6jy";
+            
+            // string constant for the post parameter 'file'. My server uses this name: `file`. Your's may differ
+            NSString* FileParamConstant = @"file";
+            
+            // the server url to which the image (or the media) is uploaded. Use your server url here
+            NSURL* requestURL = [NSURL URLWithString:@"https://api.caloriemama.ai/v1/foodrecognition"];
+            
+            // create request
+            NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+            [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
+            [request setHTTPShouldHandleCookies:NO];
+            [request setTimeoutInterval:30];
+            [request setHTTPMethod:@"POST"];
+            
+            // set Content-Type in HTTP header
+            NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", BoundaryConstant];
+            [request setValue:contentType forHTTPHeaderField: @"Content-Type"];
+            
+            //set Authorization
+            
+            NSString *auth = [NSString stringWithFormat:@"OAuth 12159392527544c97643dba010f53ef6487f5110130eeee67e2"];
+            [request setValue:auth forHTTPHeaderField: @"Authorization"];
+            
+            // post body
+            NSMutableData *body = [NSMutableData data];
+            
+            // Create rectangle from middle of current image
+            CGRect croprect = CGRectMake(image.size.width / 4, image.size.height / 4 ,
+                                         (image.size.width / 2), (image.size.height / 2));
+            
+            // Draw new image in current graphics context
+            CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], croprect);
+            
+            // Create new cropped UIImage
+            UIImage *croppedImage = [UIImage imageWithCGImage:imageRef];
+            
+            // add image data
+            NSData *imageData = UIImageJPEGRepresentation(croppedImage, 1.0);
+            if (imageData) {
+                [body appendData:[[NSString stringWithFormat:@"--%@\r\n", BoundaryConstant] dataUsingEncoding:NSUTF8StringEncoding]];
+                [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"image.jpg\"\r\n", FileParamConstant] dataUsingEncoding:NSUTF8StringEncoding]];
+                [body appendData:[@"Content-Type: image/jpeg\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+                [body appendData:imageData];
+                [body appendData:[[NSString stringWithFormat:@"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
             }
-            else {
-                NSLog(@"An error has occured: %@", error);
+            
+            [body appendData:[[NSString stringWithFormat:@"--%@--\r\n", BoundaryConstant] dataUsingEncoding:NSUTF8StringEncoding]];
+            
+            // setting the body of the post to the reqeust
+            [request setHTTPBody:body];
+            
+            // set the content-length
+            NSString *postLength = [NSString stringWithFormat:@"%d", [body length]];
+            [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+            
+            // set URL
+            [request setURL:requestURL];
+            
+            NSData *returnData = [ NSURLConnection sendSynchronousRequest: request returningResponse: nil error: nil ];
+            NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:returnData options:kNilOptions error:&error];
+            
+            NSString *returnString = [[NSString alloc] initWithData:returnData encoding: NSUTF8StringEncoding];
+            
+            NSRange range = [returnString rangeOfString:@"calories"];
+            NSString *substring = [[returnString substringFromIndex:NSMaxRange(range)] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+            
+            substring =[substring substringToIndex:6];
+            substring =[substring substringFromIndex:2];
+            
+            NSRange range2 = [returnString rangeOfString:@"name"];
+            NSString *substring2 = [[returnString substringFromIndex:NSMaxRange(range2)] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+            
+            NSRange range4 = [substring2 rangeOfString:@"}"];
+            NSString *substring4 = [[substring2 substringToIndex:NSMaxRange(range4)]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+            
+            NSLog(@"Calories:%@",substring);//calories
+            
+            NSRange range5 = [substring4 rangeOfString:@","];
+            
+            if (range5.location != NSNotFound){
+                
+                substring4 = [[substring4 substringToIndex:NSMaxRange(range5)]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
             }
-        } exactSeenImage:YES];
+            
+            substring4 =[substring4 substringFromIndex:3];
+            
+            NSLog(@"Name:%@",substring4);//name
+        }
+        else {
+            NSLog(@"An error has occured: %@", error);
+        }
+    } exactSeenImage:YES];
 }
 
 #pragma mark - Emoji Methods
@@ -114,7 +207,7 @@
 - (void)addHeart {
     UIImageView *heartImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenWidth / 2.0, kScreenHeight * 9.0/10.0, 40, 40)];
     
-    heartImageView.image = [UIImage imageNamed:@"fries"];
+    heartImageView.image = [UIImage imageNamed:@"gymIcon"];
     heartImageView.transform = CGAffineTransformMakeScale(0, 0);
     [self.camera.view addSubview:heartImageView];
     
@@ -187,13 +280,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
