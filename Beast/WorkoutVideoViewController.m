@@ -91,6 +91,7 @@
     self.videoPlayerController.delegate = self;
     self.videoPlayerController.view.frame = self.view.bounds;
     self.videoPlayerController.muted = YES;
+    //self.videoPlayerController.videoFillMode = AVLayerVideoGravityResizeAspectFill;
     [self addChildViewController:self.videoPlayerController];
     [self.view addSubview:self.videoPlayerController.view];
     [self.videoPlayerController didMoveToParentViewController:self];
@@ -110,7 +111,7 @@
     NSURL *url = [FirebaseRefs videoLocalURL:exerciseNum];
     NSString *urlPath = [url absoluteString];
     self.videoPlayerController.videoPath = urlPath;
-    NSDictionary *fileDictionary = [[NSFileManager defaultManager] attributesOfItemAtPath:urlPath error: NULL];
+    //NSDictionary *fileDictionary = [[NSFileManager defaultManager] attributesOfItemAtPath:urlPath error: NULL];
     [self.videoPlayerController playFromBeginning];
     
     // NSNumber *size = [fileDictionary objectForKey:NSFileSize];

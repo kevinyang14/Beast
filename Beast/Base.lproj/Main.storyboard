@@ -159,7 +159,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Food" image="foodIcon" selectedImage="food" id="V7v-ea-4C9"/>
+                    <tabBarItem key="tabBarItem" title="Food" image="foodIcon" selectedImage="foodIcon" id="V7v-ea-4C9"/>
                     <navigationItem key="navigationItem" id="hPj-2V-ffk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                 </viewController>
@@ -180,7 +180,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUB-mp-PZJ">
-                                <rect key="frame" x="192" y="281" width="88" height="88"/>
+                                <rect key="frame" x="182" y="283" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TUB-mp-PZJ" secondAttribute="height" multiplier="1:1" id="9kP-jG-xFj"/>
                                 </constraints>
@@ -188,9 +188,9 @@
                                 <state key="normal" title="👎"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JND-WW-jjE">
-                                <rect key="frame" x="102" y="281" width="61" height="88"/>
+                                <rect key="frame" x="87" y="283" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="JND-WW-jjE" secondAttribute="height" multiplier="61:88" id="VKT-Of-4Kv"/>
+                                    <constraint firstAttribute="width" secondItem="JND-WW-jjE" secondAttribute="height" multiplier="61:88" constant="30.681818181818173" id="VKT-Of-4Kv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="56"/>
                                 <state key="normal" title="👍"/>
@@ -198,14 +198,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="k3J-xG-RQs" firstAttribute="top" secondItem="JND-WW-jjE" secondAttribute="bottom" constant="298" id="EAR-qV-vjT"/>
-                            <constraint firstItem="k3J-xG-RQs" firstAttribute="top" secondItem="TUB-mp-PZJ" secondAttribute="bottom" constant="298" id="Jc9-AH-Lew"/>
-                            <constraint firstItem="JND-WW-jjE" firstAttribute="top" secondItem="kyj-hj-aVX" secondAttribute="bottom" constant="261" id="NNb-9X-4ez"/>
-                            <constraint firstItem="JND-WW-jjE" firstAttribute="leading" secondItem="t8b-1j-EUa" secondAttribute="leadingMargin" constant="86" id="UI4-Km-AVF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TUB-mp-PZJ" secondAttribute="trailing" constant="79" id="afy-iD-Gp4"/>
-                            <constraint firstItem="TUB-mp-PZJ" firstAttribute="leading" secondItem="JND-WW-jjE" secondAttribute="trailing" constant="29" id="bV7-O2-k6p"/>
-                            <constraint firstItem="TUB-mp-PZJ" firstAttribute="top" secondItem="kyj-hj-aVX" secondAttribute="bottom" constant="261" id="dzF-4B-spA"/>
-                            <constraint firstItem="TUB-mp-PZJ" firstAttribute="leading" secondItem="JND-WW-jjE" secondAttribute="trailing" constant="29" id="hsE-HD-6E2"/>
+                            <constraint firstItem="k3J-xG-RQs" firstAttribute="top" secondItem="JND-WW-jjE" secondAttribute="bottom" constant="284" id="EAR-qV-vjT"/>
+                            <constraint firstItem="k3J-xG-RQs" firstAttribute="top" secondItem="TUB-mp-PZJ" secondAttribute="bottom" constant="284" id="Jc9-AH-Lew"/>
+                            <constraint firstItem="JND-WW-jjE" firstAttribute="top" secondItem="kyj-hj-aVX" secondAttribute="bottom" constant="263" id="NNb-9X-4ez"/>
+                            <constraint firstItem="JND-WW-jjE" firstAttribute="leading" secondItem="t8b-1j-EUa" secondAttribute="leadingMargin" constant="71" id="UI4-Km-AVF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TUB-mp-PZJ" secondAttribute="trailing" constant="77" id="afy-iD-Gp4"/>
+                            <constraint firstItem="TUB-mp-PZJ" firstAttribute="leading" secondItem="JND-WW-jjE" secondAttribute="trailing" constant="-5" id="bV7-O2-k6p"/>
+                            <constraint firstItem="TUB-mp-PZJ" firstAttribute="top" secondItem="kyj-hj-aVX" secondAttribute="bottom" constant="263" id="dzF-4B-spA"/>
+                            <constraint firstItem="TUB-mp-PZJ" firstAttribute="leading" secondItem="JND-WW-jjE" secondAttribute="trailing" constant="-5" id="hsE-HD-6E2"/>
                         </constraints>
                     </view>
                     <connections>
@@ -520,30 +520,41 @@
                                     <outlet property="delegate" destination="QHv-dx-xDs" id="ejW-l1-giV"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="08m-ZW-ubf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="286"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08m-ZW-ubf">
+                                <rect key="frame" x="0.0" y="11" width="375" height="267"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Me" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PN8-oe-cEB">
+                                <rect key="frame" x="123" y="214" width="129" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GwK-6f-r8h" firstAttribute="height" secondItem="D95-1h-PdS" secondAttribute="height" constant="-286" id="4YA-SE-Rcy"/>
                             <constraint firstItem="GwK-6f-r8h" firstAttribute="centerX" secondItem="D95-1h-PdS" secondAttribute="centerX" id="DIx-22-LmO"/>
+                            <constraint firstItem="08m-ZW-ubf" firstAttribute="leading" secondItem="D95-1h-PdS" secondAttribute="leading" id="EbL-bT-wrW"/>
                             <constraint firstItem="GwK-6f-r8h" firstAttribute="centerY" secondItem="D95-1h-PdS" secondAttribute="centerY" constant="143" id="FkV-9y-AIb"/>
+                            <constraint firstItem="GwK-6f-r8h" firstAttribute="top" secondItem="08m-ZW-ubf" secondAttribute="bottom" constant="8" id="Lg2-xO-hJq"/>
                             <constraint firstItem="GwK-6f-r8h" firstAttribute="width" secondItem="D95-1h-PdS" secondAttribute="width" id="WcD-cp-Epx"/>
+                            <constraint firstAttribute="trailing" secondItem="08m-ZW-ubf" secondAttribute="trailing" id="dDo-wm-11T"/>
+                            <constraint firstItem="08m-ZW-ubf" firstAttribute="top" secondItem="D95-1h-PdS" secondAttribute="top" constant="11" id="xmO-tc-SNJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="7RS-oP-4d4"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="friendsIcon" selectedImage="friendsIcon" id="7RS-oP-4d4"/>
                     <navigationItem key="navigationItem" title="🏋️" id="oaf-vb-CAc"/>
                     <connections>
                         <outlet property="avatarView" destination="08m-ZW-ubf" id="NY4-se-Vgs"/>
+                        <outlet property="meLabel" destination="PN8-oe-cEB" id="orJ-JD-Jth"/>
                         <outlet property="tableView" destination="GwK-6f-r8h" id="oct-3h-XTf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x1V-PV-hnl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957.5" y="-978.5"/>
+            <point key="canvasLocation" x="831.5" y="-200.5"/>
         </scene>
         <!--Workout-->
         <scene sceneID="Isv-L2-vND">
@@ -649,7 +660,7 @@
                             <constraint firstItem="r8e-wh-lNb" firstAttribute="trailing" secondItem="h6j-1g-L7e" secondAttribute="trailingMargin" id="zIg-vM-2eF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Workout" image="gymIcon" id="Z6D-4I-FTf"/>
+                    <tabBarItem key="tabBarItem" title="Workout" image="workoutIcon" selectedImage="workoutIcon" id="Z6D-4I-FTf"/>
                     <connections>
                         <outlet property="collectionView" destination="qm1-ZG-h7F" id="TOX-9x-MQi"/>
                         <outlet property="filterTitle" destination="r8e-wh-lNb" id="SQS-v9-JMI"/>
@@ -661,10 +672,10 @@
             </objects>
             <point key="canvasLocation" x="592.5" y="687.5"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Beast Tab Bar Controller-->
         <scene sceneID="5R7-Ns-M1x">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="RcO-Aa-BWF" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="RcO-Aa-BWF" customClass="BeastTabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Csx-F6-mMH">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -673,8 +684,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="fdu-SG-1bK" kind="relationship" relationship="viewControllers" id="Lhn-D4-TdJ"/>
-                        <segue destination="fbt-G0-s9x" kind="relationship" relationship="viewControllers" id="5V1-Wa-QX3"/>
                         <segue destination="QHv-dx-xDs" kind="relationship" relationship="viewControllers" id="lwA-Ze-Fxi"/>
+                        <segue destination="fbt-G0-s9x" kind="relationship" relationship="viewControllers" id="5V1-Wa-QX3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9c-ZY-ORp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -683,12 +694,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="food" width="36" height="34"/>
         <image name="foodIcon" width="25" height="25"/>
-        <image name="gymIcon" width="25" height="25"/>
+        <image name="friendsIcon" width="25" height="25"/>
         <image name="lightning" width="329" height="617"/>
         <image name="signinbutton" width="250" height="81"/>
         <image name="welcomeButton" width="226" height="152"/>
+        <image name="workoutIcon" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

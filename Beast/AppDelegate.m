@@ -50,6 +50,13 @@ NSString *const kGCMMessageIDKey = @"gcm.message_id";
                       withObject:loginURL afterDelay:0.1];
     */
     
+//    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+//                                                             bundle: nil];
+    
+//    UITabBarController *tabBarController = (UITabBarController*)[mainStoryboard
+//                                                       instantiateViewControllerWithIdentifier: @"BeastTabBarController"];
+//    tabBarController.selectedIndex = 2;
+
     return YES;
 }
 

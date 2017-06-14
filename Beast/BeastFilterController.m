@@ -20,14 +20,22 @@
 @property (weak, nonatomic) IBOutlet UIButton *workoutButton;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (strong, nonatomic) NSMutableArray *workoutsArray;
 @property (strong, nonatomic) FIRDatabaseReference *databaseRef;
 @property (strong, nonatomic) FIRStorageReference *storageRef;
 @property (strong, nonatomic) NSMutableArray *filterEmojiArray;
 @property (strong, nonatomic) NSMutableArray *filterWordsArray;
 @property (strong, nonatomic) NSDictionary *emojiTofilterDictionary;
 @property (strong, nonatomic) NSMutableDictionary *filterToBooleanDictionary;
+@property (strong, nonatomic) NSString *mostRecentFilter;
+@property int numFilters;
 @property (weak, nonatomic) IBOutlet UILabel *filterTitle;
+
+
+//WORKOUT ARRAYS
+@property (strong, nonatomic) NSMutableArray *workoutsArray;
+@property (strong, nonatomic) NSMutableArray *filteredWorkoutsArray;
+@property (strong, nonatomic) NSDictionary *filterToVideosDictionary;
+
 @end
 
 @implementation BeastFilterController
@@ -51,27 +59,38 @@
 
 
 - (void)initializeValues{
-    NSArray *array1 = @[@"⭐️", @"😊", @"☠", @"🔥", @"🦄", @"🏀", @"🌊", @"🎈"];
+//    NSArray *array1 = @[@"⭐️", @"😊", @"☠", @"🔥", @"🦄", @"🏀", @"🌊", @"🎈"];
+    NSArray *array1 = @[@"⭐️", @"😊", @"☠", @"🔥", @"🏀", @"🎈"];
     self.filterEmojiArray = [array1 mutableCopy];
+    
+    
+    
+    
+    self.filterToVideosDictionary = @{
+                                     @"⭐️" : @[@3],
+                                     @"😊" : @[@0,@2,@3,@5],
+                                     @"☠" : @[@1, @2],
+                                     @"🔥" : @[@2, @3, @5],
+                                     @"🏀" : @[@3, @4, @5],
+                                     @"🎈" : @[@4, @5]
+                                     };
+    //FilterToVideos video numbers are normalized from 0-6, instead of 1-7 for easier array access
+    
     
     self.emojiTofilterDictionary = @{
                              @"⭐️" : @"recommended",
                              @"😊" : @"beginner",
                              @"☠" : @"legendary",
                              @"🔥" : @"fat-burning",
-                             @"🦄" : @"unicorn",
                              @"🏀" : @"sport",
-                             @"🌊" : @"swimming",
                              @"🎈" : @"fun"
                              };
-    NSDictionary *filterToBoolean =@{
+    NSDictionary *filterToBoolean = @{
                                    @"recommended" : @NO,
                                    @"beginner" :  @NO,
                                    @"legendary" : @NO,
                                    @"cardio": @NO,
-                                   @"unicorn" : @NO,
                                    @"sport" : @NO,
-                                   @"swimming": @NO,
                                    @"fun": @NO
                                    };
 
@@ -79,6 +98,21 @@
     self.filterToBooleanDictionary = [filterToBoolean mutableCopy];
     
     [self buildFilterTitle];
+}
+
+- (void)updateFilteredWorkoutArray{
+    self.filteredWorkoutsArray = [[NSMutableArray alloc] init];
+    NSArray *filteredVideosArray = [self.filterToVideosDictionary objectForKey:self.mostRecentFilter];
+    NSLog(@"FILTERED VIDEOS ARRAY%@", filteredVideosArray);
+    //create new filtered workouts array
+    for (NSNumber *videoIndex in filteredVideosArray){
+        int videoIndexInt = [videoIndex integerValue];
+        BeastWorkout *workout = self.workoutsArray[videoIndexInt];
+        NSLog(@"WORKOUT OBJECT - %@ lvl%@", workout.name, workout.lvl);
+        [self.filteredWorkoutsArray addObject:workout];
+    }
+    self.pageControl.numberOfPages = [self.filteredWorkoutsArray count];
+    [self.collectionView reloadData];
 }
 
 #pragma mark - Dynamic Title Methods
@@ -118,23 +152,31 @@
 
 - (void) filterButtonPressed:(UIButton *)button {
     NSString *emojiKey = button.titleLabel.text;
+    NSLog(@"\n\n\nEmoji%@\n\n\n", emojiKey);
+
     NSString *filter = [self.emojiTofilterDictionary objectForKey:emojiKey];
     
     UIColor *selectedColor = [[UIColor whiteColor] colorWithAlphaComponent:0.4];
     
-    if(button.selected){
-        NSLog(@"\nselected");
-        button.backgroundColor = [BeastColors lightBlue];
-        [button setSelected:NO];
-        [self removeFilter:filter];
+   
+        if(button.selected){ //UNCLICK FILTER
+            button.backgroundColor = [BeastColors lightBlue];
+            [button setSelected:NO];
+            [self removeFilter:filter];
+            self.numFilters = self.numFilters-1;
+        }else{ //CLICK FILTER
+             if(self.numFilters <=1){
+                button.backgroundColor = selectedColor;
+                [button setSelected:YES];
+                [self addFilter:filter];
+                self.mostRecentFilter = emojiKey;
+                NSLog(@"\n\n\nMOST RECENT FILTER %@", self.mostRecentFilter);
+                self.numFilters = self.numFilters+1;
+                 [self updateFilteredWorkoutArray];
+             }
+        }
+    
 
-    }else{
-        NSLog(@"\nis not selected");
-        button.backgroundColor = selectedColor;
-        [button setSelected:YES];
-        [self addFilter:filter];
-
-    }
     self.filterTitle.text = [self buildFilterTitle];
 }
 
@@ -189,15 +231,21 @@
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.workoutsArray count];
+    return [self.filteredWorkoutsArray count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BeastCollectionCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"workoutCell" forIndexPath:indexPath];
-    cell.backgroundColor = [self randomBackgroundColor:indexPath.row];
-    NSString *imageName = [NSString stringWithFormat:@"cover%ld.jpg", indexPath.row+1];
+    //get workout object
+    BeastWorkout *workout = self.filteredWorkoutsArray[indexPath.row];
+    int lvl = [self getVideoNumberFromBeastWorkout:workout];
+    NSString *imageName = [NSString stringWithFormat:@"cover%d.jpg", lvl];
     cell.imageView.image = [UIImage imageNamed:imageName];
     return cell;
+}
+
+- (int)getVideoNumberFromBeastWorkout:(BeastWorkout *)workout{
+    return [[self convertStringToNumber:workout.lvl] integerValue];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
@@ -227,7 +275,7 @@
         UICollectionViewCell *cell = (UICollectionViewCell *)sender;
         NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
         WorkoutVideoViewController* vc = [segue destinationViewController];
-        BeastWorkout *workout = [self.workoutsArray objectAtIndex:indexPath.row];
+        BeastWorkout *workout = [self.filteredWorkoutsArray objectAtIndex:indexPath.row];
         vc.exerciseArray = workout.exerciseArray;
     }
 }
@@ -280,6 +328,9 @@
             BeastWorkout *beastWorkout = [self beastWorkoutFromDict:workoutDictionary];
             [self.workoutsArray addObject:beastWorkout];
         }
+        self.filteredWorkoutsArray = self.workoutsArray;
+        //SORT WORKOUT ARRAY
+        [self sortWorkoutArray];
         [self downloadAllVideoWorkouts];
         [self.collectionView reloadData];
         [self selectDefaultWorkout];
@@ -371,6 +422,25 @@
     return _filterWordsArray;
 }
 
+
+#pragma mark Sort Firebase Array
+
+-(void)sortWorkoutArray{
+    NSArray *sortedArray = [self.workoutsArray sortedArrayUsingComparator:^NSComparisonResult(BeastWorkout *w1, BeastWorkout *w2){
+        NSNumber *w1LVL = [self convertStringToNumber:w1.lvl];
+        NSNumber *w2LVL = [self convertStringToNumber:w2.lvl];
+//        NSLog(@"lvlNumber %d", [w1LVL integerValue]);
+//        NSLog(@"lvlNumber %d", [w2LVL integerValue]);
+        return [w1LVL compare:w2LVL];
+    }];
+    self.workoutsArray = [sortedArray mutableCopy];
+}
+
+-(NSNumber *)convertStringToNumber:(NSString *)stringNumber{
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    f.numberStyle = NSNumberFormatterDecimalStyle;
+    return [f numberFromString:stringNumber];
+}
 
 /*
  #pragma mark Scrollview Methods

@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *avatarView;
 @property (nonatomic, strong) PBJVideoPlayerController *videoPlayerController;
+@property (weak, nonatomic) IBOutlet UILabel *meLabel;
 @end
 
 @implementation GymViewController
@@ -25,13 +26,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupSwipeGestureRecognizer];
-    self.pictureNames = @[@"KevinAvatar", @"KeithAvatar", @"ManuAvatar", @"TourajAvatar"];
-    self.peopleNames = @[@"Me", @"Keith Yang", @"Manu Chopra", @"Touraj Parang"];
+//    self.pictureNames = @[@"KevinAvatar", @"KeithAvatar", @"ManuAvatar", @"TourajAvatar"];
+//    self.peopleNames = @[@"Me", @"Keith Yang", @"Manu Chopra", @"Touraj Parang"];
 
+    self.pictureNames = @[@"KevinAvatar", @"KeithAvatar", @"TourajAvatar"];
+    self.peopleNames = @[@"Kevin Yang", @"Keith Yang", @"Touraj Parang"];
+    
     //remove cell separator after last cell
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self setupNavbar];
     [self setupAvatarView];
+    
 }
 
 - (void)setupAvatarView{
@@ -39,7 +44,7 @@
     self.videoPlayerController = [[PBJVideoPlayerController alloc] init];
     self.videoPlayerController.delegate = self;
     self.videoPlayerController.view.frame = self.avatarView.frame;
-    
+    self.videoPlayerController.videoFillMode = AVLayerVideoGravityResizeAspectFill;
     // setup media
     self.videoPlayerController.videoPath = @"http://manuchopra.in/fit1.mov";
     
@@ -55,6 +60,7 @@
     [self.videoPlayerController didMoveToParentViewController:self];
 
     [self.videoPlayerController playFromBeginning];
+    [self.view bringSubviewToFront:self.meLabel];
 }
 
 - (void)setupNavbar{
@@ -77,7 +83,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return [self.peopleNames count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

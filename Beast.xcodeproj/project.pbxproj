@@ -45,6 +45,7 @@
 		F066D1FD1EC040D30042FAA6 /* BeastFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = F066D1FC1EC040D30042FAA6 /* BeastFilterController.m */; };
 		F09403D11E726D2200AAD217 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F09403D01E726D2200AAD217 /* FriendCell.m */; };
 		F09403D21E726D2200AAD217 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F09403D01E726D2200AAD217 /* FriendCell.m */; };
+		F09B50791EF0A16C00F93DFB /* BeastTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F09B50781EF0A16C00F93DFB /* BeastTabBarController.m */; };
 		F0D653351ED572D8009401F2 /* BeastCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D653341ED572D8009401F2 /* BeastCollectionCell.m */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,8 @@
 		F066D1FC1EC040D30042FAA6 /* BeastFilterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeastFilterController.m; sourceTree = "<group>"; };
 		F09403CF1E726D2200AAD217 /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
 		F09403D01E726D2200AAD217 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
+		F09B50771EF0A16C00F93DFB /* BeastTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeastTabBarController.h; sourceTree = "<group>"; };
+		F09B50781EF0A16C00F93DFB /* BeastTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeastTabBarController.m; sourceTree = "<group>"; };
 		F0D653331ED572D8009401F2 /* BeastCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeastCollectionCell.h; sourceTree = "<group>"; };
 		F0D653341ED572D8009401F2 /* BeastCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeastCollectionCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,12 +186,20 @@
 		0A880BFC1D24ECAC00155296 /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
+				F09403CF1E726D2200AAD217 /* FriendCell.h */,
+				F09403D01E726D2200AAD217 /* FriendCell.m */,
 				0A880BFD1D24ED6000155296 /* BeastColors.h */,
 				0A880BFE1D24ED6000155296 /* BeastColors.m */,
 				0A5AE2781D08D35E001A23BC /* BeastWorkout.h */,
 				0A5AE2791D08D35E001A23BC /* BeastWorkout.m */,
 				0A5AE27B1D1B9088001A23BC /* FirebaseRefs.h */,
 				0A5AE27C1D1B9088001A23BC /* FirebaseRefs.m */,
+				F09B50771EF0A16C00F93DFB /* BeastTabBarController.h */,
+				F09B50781EF0A16C00F93DFB /* BeastTabBarController.m */,
+				0ADA768E1CCB2BEA00E39F39 /* BeastCell.h */,
+				0ADA768F1CCB2BEA00E39F39 /* BeastCell.m */,
+				F0D653331ED572D8009401F2 /* BeastCollectionCell.h */,
+				F0D653341ED572D8009401F2 /* BeastCollectionCell.m */,
 			);
 			name = CustomClasses;
 			sourceTree = "<group>";
@@ -223,24 +234,17 @@
 				0AA1B6F71CB6D83D00A594E1 /* Main.storyboard */,
 				0AA1B6F11CB6D83D00A594E1 /* AppDelegate.h */,
 				0AA1B6F21CB6D83D00A594E1 /* AppDelegate.m */,
-				0ADA768E1CCB2BEA00E39F39 /* BeastCell.h */,
-				0ADA768F1CCB2BEA00E39F39 /* BeastCell.m */,
-				F0D653331ED572D8009401F2 /* BeastCollectionCell.h */,
-				F0D653341ED572D8009401F2 /* BeastCollectionCell.m */,
-				F09403CF1E726D2200AAD217 /* FriendCell.h */,
-				F09403D01E726D2200AAD217 /* FriendCell.m */,
 				F066D1FB1EC040D30042FAA6 /* BeastFilterController.h */,
 				F066D1FC1EC040D30042FAA6 /* BeastFilterController.m */,
-				0ADA768B1CCB27A100E39F39 /* BeastViewController.h */,
-				0ADA768C1CCB27A100E39F39 /* BeastViewController.m */,
-				0A880C001D28C90100155296 /* GymViewController.h */,
-				0A880C011D28C90100155296 /* GymViewController.m */,
 				0AB420B61CD4AD7D008B66BD /* WorkoutVideoViewController.h */,
 				0AB420B71CD4AD7D008B66BD /* WorkoutVideoViewController.m */,
-				0A880BF81D24E3FB00155296 /* CustomSegues */,
-				0A880BE91D1FD75500155296 /* CameraUtilities */,
+				0A880C001D28C90100155296 /* GymViewController.h */,
+				0A880C011D28C90100155296 /* GymViewController.m */,
 				0A8E06951D1D2EC700AAFAC7 /* MirrorViewController.h */,
 				0A8E06961D1D2EC700AAFAC7 /* MirrorViewController.m */,
+				F09B507A1EF0A32D00F93DFB /* Old View Controller */,
+				0A880BF81D24E3FB00155296 /* CustomSegues */,
+				0A880BE91D1FD75500155296 /* CameraUtilities */,
 				0AA1B6FA1CB6D83D00A594E1 /* Images.xcassets */,
 				0AA1B6FC1CB6D83D00A594E1 /* LaunchScreen.xib */,
 				0A880BEE1D20DFF100155296 /* Spotify.framework */,
@@ -322,6 +326,15 @@
 				F03734381E36C6DC00BFA1E7 /* SignInViewController.m */,
 			);
 			name = "SignUp Flow";
+			sourceTree = "<group>";
+		};
+		F09B507A1EF0A32D00F93DFB /* Old View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0ADA768B1CCB27A100E39F39 /* BeastViewController.h */,
+				0ADA768C1CCB27A100E39F39 /* BeastViewController.m */,
+			);
+			name = "Old View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -551,6 +564,7 @@
 				F066D1FD1EC040D30042FAA6 /* BeastFilterController.m in Sources */,
 				0A880C021D28C90100155296 /* GymViewController.m in Sources */,
 				0A880BE71D1FD6EA00155296 /* UIImage+Resize.m in Sources */,
+				F09B50791EF0A16C00F93DFB /* BeastTabBarController.m in Sources */,
 				0A880BF71D24E3EE00155296 /* SlideLeftSegue.m in Sources */,
 				0A880BFF1D24ED6000155296 /* BeastColors.m in Sources */,
 				0ADA76901CCB2BEA00E39F39 /* BeastCell.m in Sources */,
